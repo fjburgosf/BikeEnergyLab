@@ -6,6 +6,33 @@
   "version": "1.0.0",
   "source_uploaded": true,
   "branch": "main",
-  "source_commit": "35c926a",
-  "documentation_revision": "plantillas-ilustradas-2026-10-06"
+  "source_commit": "e7fc5d1fcd3da4bf2cf1ae4e90408768375c6705",
+  "documentation_revision": "plantillas-ilustradas-2026-10-06",
+  "documentation_commit": "e7fc5d1fcd3da4bf2cf1ae4e90408768375c6705",
+  "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "final_documents_uploaded": true,
+  "remote_commit_verified": true,
+  "completed_utc": "2026-10-06T21:25:53.985242+00:00",
+  "documents": [
+    {
+      "path": "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx",
+      "sha256": "fcc12e20c3115d03264ff1597dbf92497f96d42ed222270d32d6f427d39ba76e"
+    },
+    {
+      "path": "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx",
+      "sha256": "9ef05c6d572c471614dedaaed1d085caed59a4c751421cd6b962fcc298b4e3bf"
+    },
+    {
+      "path": "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx",
+      "sha256": "8372ee571c7c0b4cc8c62e86c174ccc00b888c3b0ea08ffaec8095755f07e413"
+    },
+    {
+      "path": "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx",
+      "sha256": "f2add51241dd1a39886d515f47b8c0fe7b961660545cef21278496463805fc35"
+    },
+    {
+      "path": "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx",
+      "sha256": "a85591ca07f10724a2575b82e8a23b1003e8d4d624acd6a072c87de10391a654"
+    }
+  ]
 }
