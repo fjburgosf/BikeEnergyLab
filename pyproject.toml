@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bikeenergylab"
+version = "1.0.0"
+description = "A Scientific Framework for Energy Consumption and Range Modeling of Electric Bicycles"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  {name = "Francisco Javier Burgos Flórez", email = "fjburgosf@gmail.com"},
+  {name = "Juan Guillermo Popayán Hernández"}
+]
+dependencies = ["numpy>=1.26", "scipy>=1.11", "pandas>=2.1", "scikit-learn>=1.4", "matplotlib>=3.8", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1.2", "ruff>=0.8"]
+windows = ["pyinstaller>=6"]
+
+[project.scripts]
+bikeenergylab = "bikeenergylab.cli:main"
+bikeenergylab-gui = "bikeenergylab.gui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--basetemp=.test-tmp"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

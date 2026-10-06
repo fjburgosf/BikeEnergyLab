@@ -1,0 +1,476 @@
+{
+  "version": "1.0.0",
+  "completed_utc": "2026-10-06T16:16:20.940321+00:00",
+  "passed": true,
+  "cases_passed": 114,
+  "cases": [
+    {
+      "case": "navigation_es_home",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_bike",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_rider",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_motor",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_battery",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_route",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_environment",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_physics",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_calibration",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_hybrid",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_uncertainty",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_simulation",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_experiments",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_results",
+      "passed": true
+    },
+    {
+      "case": "navigation_es_export",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_home",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_bike",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_rider",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_motor",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_battery",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_route",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_environment",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_physics",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_calibration",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_hybrid",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_uncertainty",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_simulation",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_experiments",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_results",
+      "passed": true
+    },
+    {
+      "case": "navigation_en_export",
+      "passed": true
+    },
+    {
+      "case": "open_yaml",
+      "passed": true
+    },
+    {
+      "case": "save_yaml",
+      "passed": true
+    },
+    {
+      "case": "cancel_load",
+      "passed": true
+    },
+    {
+      "case": "cancel_save",
+      "passed": true
+    },
+    {
+      "case": "cancel_csv",
+      "passed": true
+    },
+    {
+      "case": "cancel_gpx",
+      "passed": true
+    },
+    {
+      "case": "cancel_calibrate",
+      "passed": true
+    },
+    {
+      "case": "cancel_learn",
+      "passed": true
+    },
+    {
+      "case": "cancel_telemetry",
+      "passed": true
+    },
+    {
+      "case": "cancel_load_model",
+      "passed": true
+    },
+    {
+      "case": "invalid_yaml_file",
+      "passed": true
+    },
+    {
+      "case": "import_route_csv",
+      "passed": true
+    },
+    {
+      "case": "import_route_gpx",
+      "passed": true
+    },
+    {
+      "case": "create_manual_route",
+      "passed": true
+    },
+    {
+      "case": "preview_route",
+      "passed": true
+    },
+    {
+      "case": "simulate",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_Home_46",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_Pan_47",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_Pan_48",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_Zoom_49",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_Zoom_50",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_save_png",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_save_svg",
+      "passed": true
+    },
+    {
+      "case": "plot_toolbar_save_pdf",
+      "passed": true
+    },
+    {
+      "case": "export_result",
+      "passed": true
+    },
+    {
+      "case": "cancel_export_result",
+      "passed": true
+    },
+    {
+      "case": "apply_yaml",
+      "passed": true
+    },
+    {
+      "case": "invalid_yaml_editor",
+      "passed": true
+    },
+    {
+      "case": "calibrate_csv",
+      "passed": true
+    },
+    {
+      "case": "convert_telemetry",
+      "passed": true
+    },
+    {
+      "case": "train_model_csv",
+      "passed": true
+    },
+    {
+      "case": "save_model",
+      "passed": true
+    },
+    {
+      "case": "open_model",
+      "passed": true
+    },
+    {
+      "case": "adapt_model_csv",
+      "passed": true
+    },
+    {
+      "case": "fresh_interval_calibration",
+      "passed": true
+    },
+    {
+      "case": "cancel_save_model",
+      "passed": true
+    },
+    {
+      "case": "cancel_adapt",
+      "passed": true
+    },
+    {
+      "case": "cancel_intervals",
+      "passed": true
+    },
+    {
+      "case": "mission_probability",
+      "passed": true
+    },
+    {
+      "case": "train_synthetic_demo",
+      "passed": true
+    },
+    {
+      "case": "sensitivity_oat",
+      "passed": true
+    },
+    {
+      "case": "sensitivity_spearman",
+      "passed": true
+    },
+    {
+      "case": "sensitivity_morris",
+      "passed": true
+    },
+    {
+      "case": "sensitivity_sobol",
+      "passed": true
+    },
+    {
+      "case": "id_ood_benchmark",
+      "passed": true
+    },
+    {
+      "case": "exp_01_to_15",
+      "passed": true
+    },
+    {
+      "case": "show_examples",
+      "passed": true
+    },
+    {
+      "case": "load_example_flat",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_flat",
+      "passed": true
+    },
+    {
+      "case": "load_example_hill",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_hill",
+      "passed": true
+    },
+    {
+      "case": "load_example_headwind",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_headwind",
+      "passed": true
+    },
+    {
+      "case": "load_example_rider",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_rider",
+      "passed": true
+    },
+    {
+      "case": "load_example_cold",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_cold",
+      "passed": true
+    },
+    {
+      "case": "load_example_calibration",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_calibration",
+      "passed": true
+    },
+    {
+      "case": "load_example_uncertainty",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_uncertainty",
+      "passed": true
+    },
+    {
+      "case": "load_example_hybrid",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_hybrid",
+      "passed": true
+    },
+    {
+      "case": "load_example_mission",
+      "passed": true
+    },
+    {
+      "case": "simulate_loaded_example_mission",
+      "passed": true
+    },
+    {
+      "case": "tutorial_toolbar",
+      "passed": true
+    },
+    {
+      "case": "loaded_example_energy_comparisons",
+      "passed": true
+    },
+    {
+      "case": "close_tutorial",
+      "passed": true
+    },
+    {
+      "case": "start_tutorial_home",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_1",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_1",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_2",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_2",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_3",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_3",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_4",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_4",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_5",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_5",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_6",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_6",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_7",
+      "passed": true
+    },
+    {
+      "case": "tutorial_next_7",
+      "passed": true
+    },
+    {
+      "case": "tutorial_action_8",
+      "passed": true
+    }
+  ],
+  "example_energy_wh": {
+    "flat": 11.07380730448491,
+    "hill": 36.79028769437157,
+    "headwind": 26.84803258092423,
+    "rider": 0.6944444444444453,
+    "cold": 11.997796337701205
+  },
+  "dialog_responses": "injected for deterministic file actions",
+  "limits": [
+    "Native Windows dialogs and every possible screen/input state are not certified",
+    "Synthetic fixtures do not establish field accuracy"
+  ]
+}

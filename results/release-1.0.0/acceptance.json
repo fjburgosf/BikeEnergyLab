@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "completed_utc": "2026-10-06T16:15:31.338064+00:00",
+  "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "checks": [
+    {
+      "check": "lint",
+      "exit_code": 0,
+      "log": "results/build_logs/lint-v1.0.0.log",
+      "log_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    },
+    {
+      "check": "format",
+      "exit_code": 0,
+      "log": "results/build_logs/format-v1.0.0.log",
+      "log_sha256": "76a3020934dea38d1b15d152d4e2878571b6df123589a3b61c06ca9bf4fba153"
+    },
+    {
+      "check": "tests",
+      "exit_code": 0,
+      "log": "results/build_logs/tests-v1.0.0.log",
+      "log_sha256": "a7af4da7d56731baa0c61c5ee58c5be874475a7f95b9d8f4bf7ad55c9ef09333"
+    },
+    {
+      "check": "gui",
+      "exit_code": 0,
+      "log": "results/build_logs/gui-v1.0.0.log",
+      "log_sha256": "23f8690c4004d04e4bca4060342f4bc1131dfc1421ed8dd1124b38622c1acaea"
+    }
+  ],
+  "scope": "software acceptance; historical scientific protocols retained"
+}

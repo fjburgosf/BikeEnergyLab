@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+  "completed_utc": "2026-10-06T16:25:29.806416+00:00",
+  "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "tests_passed": 80,
+  "acceptance": {
+    "version": "1.0.0",
+    "completed_utc": "2026-10-06T16:15:31.338064+00:00",
+    "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+    "checks": [
+      {
+        "check": "lint",
+        "exit_code": 0,
+        "log": "results/build_logs/lint-v1.0.0.log",
+        "log_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+      },
+      {
+        "check": "format",
+        "exit_code": 0,
+        "log": "results/build_logs/format-v1.0.0.log",
+        "log_sha256": "76a3020934dea38d1b15d152d4e2878571b6df123589a3b61c06ca9bf4fba153"
+      },
+      {
+        "check": "tests",
+        "exit_code": 0,
+        "log": "results/build_logs/tests-v1.0.0.log",
+        "log_sha256": "a7af4da7d56731baa0c61c5ee58c5be874475a7f95b9d8f4bf7ad55c9ef09333"
+      },
+      {
+        "check": "gui",
+        "exit_code": 0,
+        "log": "results/build_logs/gui-v1.0.0.log",
+        "log_sha256": "23f8690c4004d04e4bca4060342f4bc1131dfc1421ed8dd1124b38622c1acaea"
+      }
+    ],
+    "scope": "software acceptance; historical scientific protocols retained"
+  },
+  "distribution_verification": "results/distribution-verification-1.0.0/verification.json",
+  "distribution_checks": [
+    "predict M1-M4",
+    "physical and hybrid export",
+    "predictive Monte Carlo export",
+    "GUI simulation/hybrid/predictive/ES-EN",
+    "nine-example catalog and complete eight-step tutorial/export",
+    "isolated wheel import",
+    "pip check",
+    "Morris and Sobol designs",
+    "timestamped telemetry seconds/energy",
+    "adaptation replay and point-only inference"
+  ],
+  "scientific_baseline": "docs/validation_data/baseline/release_verification.json",
+  "scientific_baseline_wheel": "docs/validation_data/baseline/bikeenergylab-1.0.0-py3-none-any.whl",
+  "core_modules_identical_to_baseline_except_version": true,
+  "scope": "Two-action example loading/simulation, contact, frozen SciPy resources, three reviewed Word manuals and software regression; scientific core and historical results retained",
+  "extended_gui_acceptance": {
+    "source": {
+      "report": "results/gui-button-verification-1.0.0/source/verification.json",
+      "report_sha256": "c0a8761f6205f79c5ce16eeb655ebf566d52b65e6b1fceae55f1374b9106a01e",
+      "cases_passed": 114,
+      "log_sha256": "94c0675e1362975bd72422bdd8c3a703c8acced766edcb20be19287288f5e0d6",
+      "dialog_responses": "injected for deterministic file actions",
+      "limits": [
+        "Native Windows dialogs and every possible screen/input state are not certified",
+        "Synthetic fixtures do not establish field accuracy"
+      ]
+    },
+    "windows": {
+      "report": "results/gui-button-verification-1.0.0/windows/verification.json",
+      "report_sha256": "7f73ad9211c689b3468a5d3657ada5de6f75c27c8101fb8c5bebd69739f635f6",
+      "cases_passed": 114,
+      "log_sha256": "f8a2a11c30f3e58b1f19d8d29d52080963eab033dc95767c101afe4802dc0690",
+      "dialog_responses": "injected for deterministic file actions",
+      "limits": [
+        "Native Windows dialogs and every possible screen/input state are not certified",
+        "Synthetic fixtures do not establish field accuracy"
+      ]
+    }
+  },
+  "artifact_sha256": {
+    "dist/BikeEnergyLab/BikeEnergyLab.exe": "2dedbac7d864d253ef41f6914a83adbb048c172bd69588b17909ab6b40b0e754",
+    "dist/BikeEnergyLab-1.0.0-windows-x64.zip": "5217aa2b74b6c80975318b1b24a43d947dbfec1e2b87c8d3664f492a7191f8ae",
+    "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl": "ff4bce2951175349f51653176996119a0323edaa54223f58cb7331f719c744db",
+    "dist/packages/bikeenergylab-1.0.0.tar.gz": "3eacfaac1bb46eedabb7993b5e7f0776b5a226c55190ac00424d4da8de980a34",
+    "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx": "7329982131ebed5bec66982c2aae291afe474abe39113081cf145499a78da577",
+    "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx": "8ce04845af9ab0023793376b36fb13e61b5ecafc2821aeff1a383cf70579bc59",
+    "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx": "94d77f197653ee3d86d2f9c5bc5defce68acf0199042d82882fec4f0fac0ad33"
+  },
+  "limitations": [
+    "No real telemetry validation",
+    "No academic novelty claim",
+    "No cross-machine Windows/manual-all-states UI acceptance"
+  ],
+  "documents_verification": "results/documents-verification-1.0.0.json",
+  "reviewed_document_pages": 21
+}

@@ -1,0 +1,7 @@
+include README.md LICENSE CITATION.cff CHANGELOG.md requirements-lock.txt AGENTS.md .gitignore
+recursive-include docs *.md *.docx *.csv *.json *.whl
+recursive-include configs *.yaml
+recursive-include examples *.py *.md
+recursive-include scripts *.py *.ps1
+recursive-include tests *.py
+recursive-include datasets *.csv *.md

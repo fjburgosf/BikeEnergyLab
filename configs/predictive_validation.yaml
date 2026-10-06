@@ -1,0 +1,6 @@
+experiment:
+  seed: 42
+  seeds: [42, 73, 109]
+  n_train: 60
+  n_calibration: 30
+  n_test: 15

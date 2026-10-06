@@ -1,0 +1,36 @@
+experiment:
+  name: flat_route
+  seed: 42
+bike:
+  mass_kg: 25
+  cda_m2: 0.55
+  crr: 0.006
+rider:
+  mass_kg: 75
+  human_power_w: 100
+motor:
+  nominal_power_w: 500
+  efficiency: 0.82
+battery:
+  nominal_energy_wh: 500
+  initial_soc: 0.90
+  soc_min: 0.10
+  soc_max: 0.95
+environment:
+  temperature_c: 20
+  wind_mps: 0
+simulation:
+  timestep_s: 1
+route:
+  kind: synthetic
+  distance_m: 10000
+  speed_mps: 6.94
+  grade: 0
+  segments: 100
+uncertainty:
+  n_samples: 100
+  reserve_soc: 0.15
+  distributions:
+    bike.crr: {distribution: normal, mean: 0.006, std: 0.0005, low: 0.001, high: 0.03}
+    environment.wind_mps: {distribution: normal, mean: 0, std: 1, low: -5, high: 5}
+    rider.human_power_w: {distribution: normal, mean: 100, std: 10, low: 0, high: 250}

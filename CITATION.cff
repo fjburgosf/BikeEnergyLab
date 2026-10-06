@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite BikeEnergyLab when using this software in research."
+type: software
+title: "BikeEnergyLab: A Scientific Framework for Energy Consumption and Range Modeling of Electric Bicycles"
+version: 1.0.0
+date-released: 2026-10-06
+authors:
+  - family-names: "Burgos Flórez"
+    given-names: "Francisco Javier"
+    email: "fjburgosf@gmail.com"
+  - family-names: "Popayán Hernández"
+    given-names: "Juan Guillermo"
+abstract: "Scientific framework for physical modeling, calibration, residual learning, confidence gating and uncertainty in electric bicycles. Initial synthetic validation; no real-world performance claim."
+keywords:
+  - electric bicycles
+  - energy modeling
+  - residual learning
+  - uncertainty quantification

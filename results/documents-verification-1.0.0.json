@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "release_date": "2026-10-06",
+  "contact": "fjburgosf@gmail.com",
+  "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "completed_utc": "2026-10-06T16:24:04.049670+00:00",
+  "render_backend": "Microsoft Word native COM ExportAsFixedFormat",
+  "rasterizer": "documents skill render_docx.py with Word adapter and Poppler",
+  "raster_dpi": 150,
+  "documents": [
+    {
+      "path": "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx",
+      "sha256": "7329982131ebed5bec66982c2aae291afe474abe39113081cf145499a78da577",
+      "pages": 5,
+      "editable_equations": 0,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "qa_pdf_sha256": "e1e12a9bb1b225631584f4caee77547ce9bc829d562b59479b66b316110d6091",
+      "page_png_sha256": {
+        "1": "4edbf7f83cda7483d06228d973475e9b1b7d9617a27acfb594c1122043a0ef5e",
+        "2": "419d26b28703b606047f48e0125501ae036211ed7f0090f1d7f1d2b8d82f2b91",
+        "3": "87f279e7018f1b19521f84217322ea5ecaa3d55891799d140c4584368da5f09d",
+        "4": "84319504c18f72b705fc056ce268e5e2502dd4694773ae1cc535462e9eade7bd",
+        "5": "47d01280c8bffc3c6d5baa3f261b53886899b42942561ea282be0f7bc04fbd05"
+      }
+    },
+    {
+      "path": "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx",
+      "sha256": "8ce04845af9ab0023793376b36fb13e61b5ecafc2821aeff1a383cf70579bc59",
+      "pages": 7,
+      "editable_equations": 0,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "qa_pdf_sha256": "a5bc6952781f98240f241d11a064743d320ecac9aa2a772eda1f8b04b8aa4425",
+      "page_png_sha256": {
+        "1": "bc41ee3a5a120667c84c8dff1de253dfe4613f2f1456bc42198d5e30a091fbdb",
+        "2": "264628125bb5c8541e0c455082047ec0e2fb190d3fad57d7f2154b47d20aa16a",
+        "3": "b6e1b10f43d79ad56220941f2f5853898728053922aa1d843fab5351c2bf41b8",
+        "4": "598d9ffaf2e76ab97e71c6f27162b4bec7413cb79292950f372adde3e61f5f49",
+        "5": "c8710c72d9e6d3e4c561ee127118103bb962f912d869433489a15b89455841ec",
+        "6": "0e5f5a427746443013176271b4cc25ccd1b4487bdc741dc293d22d59a1f77b36",
+        "7": "76cfff616f871595eabbe5b6488656078f1d392b0f83652040406aacfecdd469"
+      }
+    },
+    {
+      "path": "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx",
+      "sha256": "94d77f197653ee3d86d2f9c5bc5defce68acf0199042d82882fec4f0fac0ad33",
+      "pages": 9,
+      "editable_equations": 26,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "qa_pdf_sha256": "5335be814cb9a447a548a261c6f55772abbc32ff73287493921672c585bdb17a",
+      "page_png_sha256": {
+        "1": "74b63f11336eb28a9de0b753bd56099af62d1606ea7c1a485fa951072ac2c975",
+        "2": "926346c8187707b086618c082ce69282aecba01c40d27a3994b2352022d38ea0",
+        "3": "e9986b76d25e9b9cbd742abe5fa7f65995b2abc2e93cbf748e7bfdb1a93e9fcc",
+        "4": "533fe8ba98ef88726d9794a1919da2b8cae576139ecde9464075fcf7b4801eae",
+        "5": "6bcf4783e4cecae27121c76692e6951b3c4b42e07ce2d3faf231142530443357",
+        "6": "6aae29b449a4e3a51d7a4f2c4a73c3255402b8260974f3720bee01d99d0b6d2a",
+        "7": "766764ab4c30b476caf703c98e25ac2ef2779f1a7af9099db067699366a58698",
+        "8": "75ac1c2bf195d7d5525428558cb362d357f86bc1ea10522b5e24f80f9b095b6b",
+        "9": "2e06d11982fd262e243e9aa1740004ba49baf53d8218a3a3fef8523a092c4560"
+      }
+    }
+  ],
+  "total_pages": 21,
+  "all_pages_visually_reviewed": true,
+  "structural_checks_passed": true,
+  "scope": "Final two-action Cargar ejemplo / Simular workflow, contact and deliverables synchronized; all 21 final pages visually reviewed; GitHub creation approval pending"
+}

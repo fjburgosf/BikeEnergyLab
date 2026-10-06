@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "completed_utc": "2026-10-04T16:29:59.679736+00:00",
+  "tests_passed": 73,
+  "source_sha256": "673a01840921e82c8904babd11a4a3f9cda7174edbbd6f5c198076d6e0088344",
+  "acceptance": {
+    "version": "1.0.0",
+    "completed_utc": "2026-10-04T16:20:25.324375+00:00",
+    "source_sha256": "673a01840921e82c8904babd11a4a3f9cda7174edbbd6f5c198076d6e0088344",
+    "checks": [
+      {
+        "check": "lint",
+        "exit_code": 0,
+        "log": "results/build_logs/lint-v1.0.0.log"
+      },
+      {
+        "check": "tests",
+        "exit_code": 0,
+        "log": "results/build_logs/tests-v1.0.0.log"
+      },
+      {
+        "check": "gui",
+        "exit_code": 0,
+        "log": "results/build_logs/gui-v1.0.0.log"
+      },
+      {
+        "check": "examples",
+        "exit_code": 0,
+        "log": "results/build_logs/examples-v1.0.0.log"
+      },
+      {
+        "check": "suite",
+        "exit_code": 0,
+        "log": "results/build_logs/suite-v1.0.0.log"
+      },
+      {
+        "check": "predictive",
+        "exit_code": 0,
+        "log": "results/build_logs/predictive-v1.0.0.log"
+      },
+      {
+        "check": "prequential",
+        "exit_code": 0,
+        "log": "results/build_logs/prequential-v1.0.0.log"
+      },
+      {
+        "check": "telemetry",
+        "exit_code": 0,
+        "log": "results/build_logs/telemetry-v1.0.0.log"
+      },
+      {
+        "check": "sensitivity-oat",
+        "exit_code": 0,
+        "log": "results/build_logs/sensitivity-oat-v1.0.0.log"
+      },
+      {
+        "check": "sensitivity-spearman",
+        "exit_code": 0,
+        "log": "results/build_logs/sensitivity-spearman-v1.0.0.log"
+      },
+      {
+        "check": "sensitivity-morris",
+        "exit_code": 0,
+        "log": "results/build_logs/sensitivity-morris-v1.0.0.log"
+      },
+      {
+        "check": "sensitivity-sobol",
+        "exit_code": 0,
+        "log": "results/build_logs/sensitivity-sobol-v1.0.0.log"
+      }
+    ],
+    "scope": "numerical and synthetic acceptance; no field performance claim"
+  },
+  "distribution_verification": "results/distribution-verification-1.0.0/verification.json",
+  "distribution_checks": [
+    "predict M1-M4",
+    "physical and hybrid export",
+    "predictive Monte Carlo export",
+    "GUI simulation/hybrid/predictive/ES-EN",
+    "isolated wheel import",
+    "pip check",
+    "Morris and Sobol designs",
+    "timestamped telemetry seconds/energy",
+    "adaptation replay and point-only inference"
+  ],
+  "predictive_validation_run": "results/release-1.0.0/predictive/EXP-20261004-111801-cadfae83",
+  "prequential_run": "results/release-1.0.0/prequential/EXP-20261004-111931-387d9cfc",
+  "suite_run": "results/release-1.0.0/suite/EXP-20261004-111632-2db2d0bc",
+  "hashed_predictive_inputs": 30,
+  "artifact_sha256": {
+    "dist/BikeEnergyLab/BikeEnergyLab.exe": "a2f2687d20d24740ac0bd727e050c38ae68631a9925535c212ca2c144a720cef",
+    "dist/BikeEnergyLab-1.0.0-windows-x64.zip": "8e2d33e8c885178435b13ee148980f29c14ead571c90dd03e9e47c4fe336b82b",
+    "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl": "9d930f028e24fa7348ac210be0295faf20e876e7fb91f9d19f4f1b87e453efe2",
+    "dist/packages/bikeenergylab-1.0.0.tar.gz": "48a13098ba71e9081a2e3ef0f7e19c7266378be4a61c74c9bf1d200003e09dd5"
+  },
+  "limitations": [
+    "No real telemetry validation",
+    "No academic novelty claim",
+    "No cross-machine Windows/manual-all-states UI acceptance"
+  ]
+}

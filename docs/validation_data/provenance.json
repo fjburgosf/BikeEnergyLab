@@ -1,0 +1,25 @@
+{
+  "scope": "Unmodified historical synthetic evidence from 4 October 2026",
+  "files": [
+    {
+      "file": "predictive_aggregate.csv",
+      "original_path": "results/release-1.0.0/predictive/EXP-20261004-111801-cadfae83/aggregate.csv",
+      "sha256": "a72cb9bec19279815891e3d17e1e62f920388ba87a7eafdc5cd3bb435099e83b"
+    },
+    {
+      "file": "prequential_metrics.csv",
+      "original_path": "results/release-1.0.0/prequential/EXP-20261004-111931-387d9cfc/metrics.csv",
+      "sha256": "0c851c5b859e81e9abc5a5b627e5b9ba1e2a3c15e258d73ec0235ee98a7df87e"
+    },
+    {
+      "file": "baseline/release_verification.json",
+      "original_path": "results/release_verification_1.0.0.json",
+      "sha256": "0a8deb4ba4f8daca18437443df5b8b79fa924057eda71c07e5f812b58c2483a3"
+    },
+    {
+      "file": "baseline/bikeenergylab-1.0.0-py3-none-any.whl",
+      "original_path": "results/history/before-version-normalization-2026-10-06/dist/packages/bikeenergylab-1.0.0-py3-none-any.whl",
+      "sha256": "9d930f028e24fa7348ac210be0295faf20e876e7fb91f9d19f4f1b87e453efe2"
+    }
+  ]
+}

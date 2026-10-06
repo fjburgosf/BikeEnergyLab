@@ -1,0 +1,20 @@
+{
+  "versions": {
+    "clean-wheel": "BikeEnergyLab 1.0.0",
+    "windows-executable": "BikeEnergyLab 1.0.0"
+  },
+  "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "checks": [
+    "predict M1-M4",
+    "physical and hybrid export",
+    "predictive Monte Carlo export",
+    "GUI simulation/hybrid/predictive/ES-EN",
+    "nine-example catalog and complete eight-step tutorial/export",
+    "isolated wheel import",
+    "pip check",
+    "Morris and Sobol designs",
+    "timestamped telemetry seconds/energy",
+    "adaptation replay and point-only inference"
+  ],
+  "matching_predictions": true
+}
