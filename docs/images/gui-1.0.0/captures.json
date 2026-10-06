@@ -1,0 +1,818 @@
+{
+  "version": "1.0.0",
+  "revision": "plantillas-ilustradas-2026-10-06",
+  "completed_utc": "2026-10-06T20:35:46.331598+00:00",
+  "backend": "PrintWindow of this process's own live Tk Application window",
+  "screenshots": [
+    {
+      "file": "docs/images/gui-1.0.0/01-inicio.png",
+      "sha256": "85351cc7178d65a6782ae46583edcba07e282a19103a73dad8edbfbd3c5aae22",
+      "width": 1176,
+      "height": 839,
+      "section": "home",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-home.png",
+      "sha256": "85351cc7178d65a6782ae46583edcba07e282a19103a73dad8edbfbd3c5aae22",
+      "width": 1176,
+      "height": 839,
+      "section": "home",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-bike.png",
+      "sha256": "2fbd8ec733aa3114f22b6582952c15fd48aa66ed1b7e6889f50cd16fdce7a4a9",
+      "width": 1176,
+      "height": 839,
+      "section": "bike",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-rider.png",
+      "sha256": "377cbcc951b422f03571603e6fc6865f3bb5f252f05261de471c24c64aa9d1d3",
+      "width": 1176,
+      "height": 839,
+      "section": "rider",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-motor.png",
+      "sha256": "622d49a47e9fb3fb3b2cd14c7a39969a661362568ba47430992d5638a950afc9",
+      "width": 1176,
+      "height": 839,
+      "section": "motor",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-battery.png",
+      "sha256": "fa5d709a06c42e3ab8b7916c99d610e09ea919e6f9ebc9eefc80b1c02fd3c8e2",
+      "width": 1176,
+      "height": 839,
+      "section": "battery",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-route.png",
+      "sha256": "47835aea40c9516419011db515b3d8c34bcada1e0a472e5c37ad4f90fb5ca54d",
+      "width": 1176,
+      "height": 839,
+      "section": "route",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-environment.png",
+      "sha256": "8f47f25a39cce1883f27d01863ed34c9c1ddcc35d2229c4062e1f56505339c51",
+      "width": 1176,
+      "height": 839,
+      "section": "environment",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-physics.png",
+      "sha256": "096a164cfcc45946ce027a8290459243034946bf4acc63c632d71fc1d19434ad",
+      "width": 1176,
+      "height": 839,
+      "section": "physics",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-calibration.png",
+      "sha256": "b69ee3d8b308a391e780f2c44b4516600edf9cd0a8825c2830b81f0201f2886b",
+      "width": 1176,
+      "height": 839,
+      "section": "calibration",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-hybrid.png",
+      "sha256": "12671ed4122ac6d39a6f02f9844fdab582769264ecab0a86402359b92de0e510",
+      "width": 1176,
+      "height": 839,
+      "section": "hybrid",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-uncertainty.png",
+      "sha256": "a507d2089aeb101a25f9f7bb1c3a11a03cdfdd9c102cc95202d2d994c86bac04",
+      "width": 1176,
+      "height": 839,
+      "section": "uncertainty",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-simulation.png",
+      "sha256": "361a4ee75840ac922f712ea5928b25598a3ca6dbe4526fc38c21c0f83d6ffdc1",
+      "width": 1176,
+      "height": 839,
+      "section": "simulation",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-experiments.png",
+      "sha256": "e73773cfc1ad10786f6e104be4026896765b1b7a1a5c3ed093a66b511f0cdcfa",
+      "width": 1176,
+      "height": 839,
+      "section": "experiments",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-results.png",
+      "sha256": "c96bfc2ae3d9e8ac3d92a6b6ab7d3370ab7a8bfec30186eddba50592abac2005",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/panel-export.png",
+      "sha256": "b9d623fd80653c30016ad1475acae162a19eaab6eb15e58c272015b2c584f510",
+      "width": 1176,
+      "height": 839,
+      "section": "export",
+      "loaded_example": null
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-01-flat.png",
+      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "flat"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-02-hill.png",
+      "sha256": "0fae625b5983fe037cdc21bd2f78c3ca33d0f7b6272f7d2706ffaa259fbb01c2",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "hill"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-03-headwind.png",
+      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "headwind"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-04-rider.png",
+      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "rider"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-05-cold.png",
+      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "cold"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-06-calibration.png",
+      "sha256": "d600e63875f97206130bbfd1cea10fb1383924cc33d9881f4c70e88ea4c99708",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "calibration"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-07-uncertainty.png",
+      "sha256": "6fdff8a8afe357983a2e50b183f366842e255e7b5711e0a4811e1524cfc90b6c",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "uncertainty"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-08-hybrid.png",
+      "sha256": "d0e6f56cddfa264b81211ed80e260ec7f1fcbec27d6a81ca5ff3340b6d620ea3",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "hybrid"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/ejemplo-09-mission.png",
+      "sha256": "4faa903a13c8baac3b97afa25903830edbbf3535a07f126420df62964ef1c700",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "mission"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/tutorial-inicio.png",
+      "sha256": "b763eb49183496900a678db04984a00d86e7223651674685be01f1ea98268952",
+      "width": 1176,
+      "height": 839,
+      "section": "home",
+      "loaded_example": "flat"
+    },
+    {
+      "file": "docs/images/gui-1.0.0/resultado-plano.png",
+      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "width": 1176,
+      "height": 839,
+      "section": "results",
+      "loaded_example": "flat"
+    }
+  ],
+  "buttons": [
+    "Abrir GPX",
+    "Abrir YAML",
+    "Abrir modelo CGPRA guardado",
+    "Abrir ruta CSV",
+    "Adaptar modelo con rutas observadas nuevas",
+    "Analizar sensibilidad",
+    "Anterior",
+    "Aplicar YAML",
+    "Back",
+    "Calibrar desde CSV observado",
+    "Cargar ejemplo",
+    "Cargar ruta plana",
+    "Cerrar tutorial",
+    "Convertir CSV de sensores",
+    "Crear ruta manual",
+    "Ejecutar EXP-01–15",
+    "Ejecutar benchmark ID/OOD",
+    "Ejemplos",
+    "Entrenar CGPRA desde CSV",
+    "Entrenar demostración sintética",
+    "Exportar último resultado",
+    "Forward",
+    "Guardar YAML",
+    "Guardar modelo CGPRA reutilizable",
+    "Home",
+    "Iniciar tutorial guiado",
+    "Misión / autonomía",
+    "Pan",
+    "Recalibrar intervalos con rutas nuevas",
+    "Save",
+    "Siguiente",
+    "Simular",
+    "Subplots",
+    "Tutorial",
+    "Visualizar ruta",
+    "Zoom"
+  ],
+  "example_results": {
+    "flat": {
+      "energy_wh": 11.07380730448491,
+      "distance_km": 3.0000000000000346,
+      "route_distance_km": 3.0,
+      "duration_s": 500.0000000000034,
+      "final_soc": 0.8766867214642696,
+      "wh_per_km": 3.6912691014949277,
+      "completed_route": true,
+      "feasible": true,
+      "unmet_mechanical_energy_wh": 9.868649107779176e-16,
+      "available_energy_wh": 380.0,
+      "unmet_auxiliary_energy_wh": 0.0,
+      "stationary_equivalent_range_km": 102.94562372765067,
+      "decomposition": {
+        "rolling_wh": 4.903325000000005,
+        "grade_wh": 0.0,
+        "aero_wh": 9.933976110090583,
+        "acceleration_wh": 0.0,
+        "human_wh": 6.666666666666666,
+        "braking_wh": 0.0,
+        "drivetrain_loss_wh": 0.34044310180933074,
+        "motor_loss_wh": 1.8682853148072958,
+        "regen_loss_wh": 0.0,
+        "aux_wh": 0.6944444444444452,
+        "regen_wh": 0.0,
+        "unmet_wh": 9.868649107779176e-16
+      },
+      "max_energy_balance_error_w": 0.0,
+      "battery_model": "soc"
+    },
+    "hill": {
+      "energy_wh": 36.79028769437157,
+      "distance_km": 3.0,
+      "route_distance_km": 3.0,
+      "duration_s": 600.0,
+      "final_soc": 0.8225467627486985,
+      "wh_per_km": 12.26342923145719,
+      "completed_route": true,
+      "feasible": true,
+      "unmet_mechanical_energy_wh": 4.736951571734001e-15,
+      "available_energy_wh": 380.0,
+      "unmet_auxiliary_energy_wh": 0.0,
+      "stationary_equivalent_range_km": 30.986438852295386,
+      "decomposition": {
+        "rolling_wh": 4.90111999201881,
+        "grade_wh": 24.50559996009404,
+        "aero_wh": 6.898594520896234,
+        "acceleration_wh": 0.0,
+        "human_wh": 8.0,
+        "braking_wh": 0.0,
+        "drivetrain_loss_wh": 1.1793881030420477,
+        "motor_loss_wh": 6.472251784986834,
+        "regen_loss_wh": 0.0,
+        "aux_wh": 0.8333333333333334,
+        "regen_wh": 0.0,
+        "unmet_wh": 4.736951571734001e-15
+      },
+      "max_energy_balance_error_w": 0.0,
+      "battery_model": "soc"
+    },
+    "headwind": {
+      "energy_wh": 26.84803258092423,
+      "distance_km": 3.0000000000000346,
+      "route_distance_km": 3.0,
+      "duration_s": 500.0000000000034,
+      "final_soc": 0.8434778261453971,
+      "wh_per_km": 8.949344193641306,
+      "completed_route": true,
+      "feasible": true,
+      "unmet_mechanical_energy_wh": 0.0,
+      "available_energy_wh": 380.0,
+      "unmet_auxiliary_energy_wh": 0.0,
+      "stationary_equivalent_range_km": 42.46121188075411,
+      "decomposition": {
+        "rolling_wh": 4.903325000000005,
+        "grade_wh": 0.0,
+        "aero_wh": 22.351446247703787,
+        "acceleration_wh": 0.0,
+        "human_wh": 6.666666666666666,
+        "braking_wh": 0.0,
+        "drivetrain_loss_wh": 0.8578376908765463,
+        "motor_loss_wh": 4.707645864566424,
+        "regen_loss_wh": 0.0,
+        "aux_wh": 0.6944444444444452,
+        "regen_wh": 0.0,
+        "unmet_wh": 0.0
+      },
+      "max_energy_balance_error_w": 0.0,
+      "battery_model": "soc"
+    },
+    "rider": {
+      "energy_wh": 0.6944444444444453,
+      "distance_km": 3.0000000000000346,
+      "route_distance_km": 3.0,
+      "duration_s": 500.0000000000034,
+      "final_soc": 0.8985380116959144,
+      "wh_per_km": 0.2314814814814791,
+      "completed_route": true,
+      "feasible": true,
+      "unmet_mechanical_energy_wh": 0.0,
+      "available_energy_wh": 380.0,
+      "unmet_auxiliary_energy_wh": 0.0,
+      "stationary_equivalent_range_km": 1641.600000000017,
+      "decomposition": {
+        "rolling_wh": 4.903325000000005,
+        "grade_wh": 0.0,
+        "aero_wh": 9.933976110090583,
+        "acceleration_wh": 0.0,
+        "human_wh": 14.837301110090575,
+        "braking_wh": 0.0,
+        "drivetrain_loss_wh": 0.0,
+        "motor_loss_wh": 0.0,
+        "regen_loss_wh": 0.0,
+        "aux_wh": 0.6944444444444452,
+        "regen_wh": 0.0,
+        "unmet_wh": 0.0
+      },
+      "max_energy_balance_error_w": 0.0,
+      "battery_model": "soc"
+    },
+    "cold": {
+      "energy_wh": 11.997796337701205,
+      "distance_km": 3.0000000000000346,
+      "route_distance_km": 3.0,
+      "duration_s": 500.0000000000034,
+      "final_soc": 0.8747414813942903,
+      "wh_per_km": 3.9992654459003556,
+      "completed_route": true,
+      "feasible": true,
+      "unmet_mechanical_energy_wh": 0.0,
+      "available_energy_wh": 380.0,
+      "unmet_auxiliary_energy_wh": 0.0,
+      "stationary_equivalent_range_km": 95.01744886415023,
+      "decomposition": {
+        "rolling_wh": 4.903325000000005,
+        "grade_wh": 0.0,
+        "aero_wh": 10.661340277038464,
+        "acceleration_wh": 0.0,
+        "human_wh": 6.666666666666666,
+        "braking_wh": 0.0,
+        "drivetrain_loss_wh": 0.37074994209882567,
+        "motor_loss_wh": 2.0346033407862327,
+        "regen_loss_wh": 0.0,
+        "aux_wh": 0.6944444444444452,
+        "regen_wh": 0.0,
+        "unmet_wh": 0.0
+      },
+      "max_energy_balance_error_w": 0.0,
+      "battery_model": "soc"
+    },
+    "calibration": {
+      "parameters": {
+        "bike.crr": 0.008000000000000002,
+        "bike.cda_m2": 0.47999999999999987
+      },
+      "covariance": [
+        [
+          1.2504165407624226e-36,
+          -5.78800540387816e-35
+        ],
+        [
+          -5.788005403878161e-35,
+          3.0558666317264586e-33
+        ]
+      ],
+      "identifiability": {
+        "rank": 2,
+        "scaled_condition_number": 5.818860015198992,
+        "scaled_singular_values": [
+          412.9035571537579,
+          70.95952748051072
+        ],
+        "sensitivity_cosine": [
+          [
+            1.0,
+            0.9363417208526978
+          ],
+          [
+            0.9363417208526978,
+            0.9999999999999998
+          ]
+        ],
+        "warnings": [],
+        "covariance_assumption": "local linear, independent errors; approximate for robust loss"
+      },
+      "residuals_wh": [
+        7.105427357601002e-15,
+        1.7763568394002505e-15,
+        0.0,
+        0.0,
+        0.0,
+        -1.7763568394002505e-15,
+        1.7763568394002505e-15,
+        0.0,
+        0.0,
+        3.552713678800501e-15,
+        1.4210854715202004e-14,
+        0.0,
+        0.0,
+        -2.6645352591003757e-15,
+        1.7763568394002505e-15,
+        0.0,
+        0.0,
+        0.0,
+        -1.7763568394002505e-15,
+        -3.552713678800501e-15,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -7.105427357601002e-15,
+        0.0,
+        0.0,
+        0.0,
+        -3.552713678800501e-15,
+        0.0,
+        0.0,
+        1.7763568394002505e-15,
+        -7.105427357601002e-15,
+        0.0,
+        -3.552713678800501e-15,
+        0.0,
+        0.0,
+        -3.552713678800501e-15
+      ],
+      "success": true,
+      "message": "`gtol` termination condition is satisfied.",
+      "synthetic": true,
+      "known_crr": 0.008,
+      "known_cda_m2": 0.48,
+      "observed_energy_wh": [
+        20.324481888487167,
+        13.38967327126787,
+        13.438531579812365,
+        21.482502099341563,
+        26.031275223637802,
+        14.945443295838432,
+        12.398902958053252,
+        18.3441720797396,
+        24.90722663746968,
+        22.30786690032606,
+        50.81964990743689,
+        32.52197768922991,
+        33.7175282726649,
+        3.9461777587606286,
+        11.94069694862947,
+        24.068606598077924,
+        24.806355079204756,
+        32.278260136342716,
+        12.703698351892003,
+        22.92510871837396,
+        30.297905350037386,
+        9.811733918781062,
+        31.859116524073027,
+        13.38215753259685,
+        20.018281048162073,
+        17.511235270408516,
+        32.89193161119144,
+        26.698120290754588,
+        34.17197241030004,
+        19.653209471907246,
+        16.934099593501593,
+        38.30870298961089,
+        21.19537492877786,
+        11.767539613195295,
+        27.707447499856865,
+        25.673881832805815,
+        14.498043040963449,
+        16.799317754152856,
+        14.701972788901028,
+        23.55222656498116
+      ],
+      "fitted_energy_wh": [
+        20.324481888487174,
+        13.389673271267872,
+        13.438531579812365,
+        21.482502099341563,
+        26.031275223637802,
+        14.94544329583843,
+        12.398902958053254,
+        18.3441720797396,
+        24.90722663746968,
+        22.307866900326065,
+        50.819649907436904,
+        32.52197768922991,
+        33.7175282726649,
+        3.946177758760626,
+        11.940696948629471,
+        24.068606598077924,
+        24.806355079204756,
+        32.278260136342716,
+        12.703698351892001,
+        22.925108718373956,
+        30.297905350037386,
+        9.811733918781062,
+        31.859116524073027,
+        13.38215753259685,
+        20.018281048162073,
+        17.511235270408516,
+        32.89193161119143,
+        26.698120290754588,
+        34.17197241030004,
+        19.653209471907246,
+        16.93409959350159,
+        38.30870298961089,
+        21.19537492877786,
+        11.767539613195297,
+        27.70744749985686,
+        25.673881832805815,
+        14.498043040963445,
+        16.799317754152856,
+        14.701972788901028,
+        23.552226564981158
+      ]
+    },
+    "uncertainty": {
+      "n_samples": 30,
+      "seed": 42,
+      "reserve_soc": 0.1,
+      "mission_probability": 1.0,
+      "mission_probability_mc_interval95": [
+        0.8864829086095221,
+        1
+      ],
+      "range_km": {
+        "mean": 77.51377949832921,
+        "median": 80.0,
+        "sd": 5.6493539166971845,
+        "p2_5": 61.43271117847523,
+        "p97_5": 80.0
+      },
+      "energy_wh": {
+        "mean": 10.62929526069856,
+        "median": 9.634532562472653,
+        "sd": 4.047025308154697,
+        "p2_5": 4.31000994060734,
+        "p97_5": 18.567083695430092
+      },
+      "full_route_demand_wh": {
+        "mean": 10.62929526069856,
+        "median": 9.63453256247265,
+        "sd": 4.047025308154698,
+        "p2_5": 4.310009940607336,
+        "p97_5": 18.567083695430103
+      },
+      "soc_final": {
+        "mean": 0.8776225362932663,
+        "median": 0.8797167735526887,
+        "sd": 0.008520053280325507,
+        "p2_5": 0.860911402746464,
+        "p97_5": 0.890926294861878
+      },
+      "range_censoring_fraction": 0.7666666666666667,
+      "range_horizon_km": 80,
+      "distribution_scope": "physical parameters and operational assumptions; no learned predictive-error component",
+      "interval_interpretation": "central 95% simulation intervals conditional on specified distributions, not confidence intervals for reality",
+      "trajectory_bands_scope": "Physical endpoint interpolation on normalized route progress, conditional on samples reaching each point; n_reached reports attrition, no extrapolation after depletion"
+    },
+    "hybrid": {
+      "energy_wh": 14.223782894810238,
+      "distance_km": 3.0000000000000346,
+      "route_distance_km": 3.0,
+      "duration_s": 500.0000000000034,
+      "final_soc": 0.8700551939056359,
+      "wh_per_km": 4.741260964936691,
+      "completed_route": true,
+      "feasible": true,
+      "unmet_mechanical_energy_wh": 1.973729821555835e-15,
+      "available_energy_wh": 380.0,
+      "unmet_auxiliary_energy_wh": 0.0,
+      "stationary_equivalent_range_km": 80.14745503574576,
+      "decomposition": {
+        "rolling_wh": 8.175719454751707,
+        "grade_wh": 0.0,
+        "aero_wh": 9.141242440042948,
+        "acceleration_wh": 0.0,
+        "human_wh": 6.666666666666666,
+        "braking_wh": 0.0,
+        "drivetrain_loss_wh": 0.44376230117199916,
+        "motor_loss_wh": 2.4352809210658566,
+        "regen_loss_wh": 0.0,
+        "aux_wh": 0.6944444444444452,
+        "regen_wh": 0.0,
+        "unmet_wh": 1.973729821555835e-15
+      },
+      "max_energy_balance_error_w": 0.0,
+      "battery_model": "soc",
+      "CGPRA": {
+        "full_route_energy_wh": 14.072031058680329,
+        "physical_full_route_demand_wh": 14.223782894810284,
+        "alpha": 0.5781726829688916,
+        "ood_score": 0.94194399168107,
+        "prediction_interval_wh": [
+          13.05783349297528,
+          15.086228624385377
+        ],
+        "coverage": 0.95,
+        "interval_status": "calibrated",
+        "scope": "requested full route; physical SOC trace is unchanged"
+      }
+    },
+    "mission": {
+      "n_samples": 30,
+      "seed": 48,
+      "reserve_soc": 0.15,
+      "mission_probability": 0.6666666666666666,
+      "mission_probability_mc_interval95": [
+        0.48779725813830266,
+        0.807697044731538
+      ],
+      "range_km": {
+        "mean": 36.94910657946478,
+        "median": 35.85443194466291,
+        "sd": 10.150226973392797,
+        "p2_5": 21.741250809538535,
+        "p97_5": 58.803112510376344
+      },
+      "energy_wh": {
+        "mean": 98.05609527975828,
+        "median": 96.47773565857139,
+        "sd": 23.41142385429271,
+        "p2_5": 58.841325371316316,
+        "p97_5": 133.0000000000004
+      },
+      "full_route_demand_wh": {
+        "mean": 100.89839960974027,
+        "median": 96.47773565857149,
+        "sd": 29.1449171175004,
+        "p2_5": 58.84132537131633,
+        "p97_5": 160.17181986704085
+      },
+      "soc_final": {
+        "mean": 0.1735661152005087,
+        "median": 0.17688897756090194,
+        "sd": 0.04928720811430009,
+        "p2_5": 0.1,
+        "p97_5": 0.2561235255340686
+      },
+      "range_censoring_fraction": 0.0,
+      "range_horizon_km": 80,
+      "distribution_scope": "physical parameters and operational assumptions; no learned predictive-error component",
+      "interval_interpretation": "central 95% simulation intervals conditional on specified distributions, not confidence intervals for reality",
+      "trajectory_bands_scope": "Physical endpoint interpolation on normalized route progress, conditional on samples reaching each point; n_reached reports attrition, no extrapolation after depletion"
+    }
+  },
+  "errors": [],
+  "limits": "Documentation fixtures are synthetic; capture is source GUI, not native dialog certification",
+  "tutorial": [
+    {
+      "title": "Su primera simulación",
+      "description": "Empezaremos con una ruta plana sintética de 3 km. Pulse Cargar ruta plana. Reemplazará la configuración en pantalla; los archivos guardados se conservan. Los ejemplos permiten practicar sin importar datos.",
+      "button": "Cargar ruta plana",
+      "action": "load"
+    },
+    {
+      "title": "Entender los parámetros",
+      "description": "Revise masa, Crr y CdA en Bicicleta. Pase el cursor sobre un campo para consultar su ayuda y unidades. En Ciclista, 50 W es potencia en pedales. Puede editar valores; Simular toma la configuración actual.",
+      "button": "Ver aporte del ciclista",
+      "action": "rider"
+    },
+    {
+      "title": "Comprobar la ruta",
+      "description": "Visualice elevación, velocidad, pendiente y superficie. 6 m/s equivale a 21.6 km/h; 0.03 significa pendiente del 3%. Si edita los campos de ruta, pulse Crear ruta manual para aplicarlos antes de simular.",
+      "button": "Visualizar ruta",
+      "action": "preview"
+    },
+    {
+      "title": "Ejecutar el cálculo",
+      "description": "Pulse Simular y espere a que termine. Durante el cálculo los controles se bloquean y la barra inferior indica Calculando. Al finalizar se abrirán los resultados automáticamente.",
+      "button": "Simular",
+      "action": "simulate"
+    },
+    {
+      "title": "Leer los resultados",
+      "description": "Explore las pestañas de potencias, batería y balance. Wh es energía; Wh/km es consumo por distancia; SOC es la fracción de carga. En Detalles, completed_route indica recorrido completo y feasible indica potencia suficiente. Revise ambos.",
+      "button": "Abrir gráficas",
+      "action": "results"
+    },
+    {
+      "title": "Practicar con incertidumbre",
+      "description": "Esta acción carga y ejecuta el ejemplo 07: 30 muestras de viento incierto. Observe distribución de energía y bandas de SOC. Las probabilidades dependen de los supuestos; estas muestras sintéticas no verifican precisión real.",
+      "button": "Ejecutar ejemplo 07",
+      "action": "uncertainty"
+    },
+    {
+      "title": "Guardar el trabajo",
+      "description": "Exporte el último resultado y elija una carpeta. Se crea una carpeta EXP nueva con configuración, tablas, metadatos y figuras. Guardar YAML en la barra superior conserva una configuración para abrirla después.",
+      "button": "Exportar resultado",
+      "action": "export"
+    },
+    {
+      "title": "Seguir explorando",
+      "description": "Ya conoce el flujo principal. Compare los ejemplos 01–05, pruebe la calibración 06, el híbrido 08 y la misión 09. Puede reiniciar este tutorial cuando quiera desde la barra superior; funciona sin conexión.",
+      "button": "Finalizar tutorial",
+      "action": "finish"
+    }
+  ],
+  "examples": [
+    {
+      "key": "flat",
+      "title": "01 · Ruta plana",
+      "description": "Primer recorrido: 3 km a 6 m/s (21.6 km/h), sin pendiente y con 50 W humanos. Observe energía en Wh, consumo en Wh/km y SOC final. Es la referencia para comparar los ejemplos 02–05.",
+      "operation": "simulation"
+    },
+    {
+      "key": "hill",
+      "title": "02 · Subida del 3%",
+      "description": "Recorra 3 km a 5 m/s con pendiente 0.03 (3%). Compare la energía con la ruta plana y observe la contribución gravitacional en el balance. La velocidad también cambia en este ejemplo.",
+      "operation": "simulation"
+    },
+    {
+      "key": "headwind",
+      "title": "03 · Viento frontal",
+      "description": "La misma ruta plana con viento de −3 m/s. Compare el consumo con el ejemplo 01. Un viento negativo es frontal y aumenta la resistencia aerodinámica a esta velocidad.",
+      "operation": "simulation"
+    },
+    {
+      "key": "rider",
+      "title": "04 · Mayor aporte humano",
+      "description": "La misma ruta plana con 120 W en pedales. Compare con los 50 W del ejemplo 01: el motor necesita aportar menos energía. Revise las potencias humana, del motor y de batería.",
+      "operation": "simulation"
+    },
+    {
+      "key": "cold",
+      "title": "05 · Ambiente frío",
+      "description": "La misma ruta a 0 °C. Observe el efecto de la densidad del aire. No se ha definido una curva térmica de batería: este ejemplo no supone una pérdida de capacidad por frío.",
+      "operation": "simulation"
+    },
+    {
+      "key": "calibration",
+      "title": "06 · Calibración sintética",
+      "description": "Ajuste Crr y CdA con 40 rutas sintéticas sin ruido ni discrepancia. Los valores conocidos son Crr = 0.008 y CdA = 0.48 m². Revise el ajuste observado/predicho y los parámetros recuperados.",
+      "operation": "calibration"
+    },
+    {
+      "key": "uncertainty",
+      "title": "07 · Viento incierto y autonomía",
+      "description": "Ejecute 30 muestras con viento normal de media 0 y desviación 1 m/s. Revise dispersión de energía, bandas de SOC y autonomía. El horizonte de 80 km puede censurar la autonomía; revise ese indicador.",
+      "operation": "uncertainty"
+    },
+    {
+      "key": "hybrid",
+      "title": "08 · Modelo híbrido CGPRA",
+      "description": "Entrene con 60 rutas sintéticas y calibre intervalos con 25 rutas independientes; después simule la ruta plana. Revise energía CGPRA, alpha e indicador OOD. El modelo queda disponible para otras rutas y para guardar.",
+      "operation": "hybrid"
+    },
+    {
+      "key": "mission",
+      "title": "09 · ¿Alcanza la batería?",
+      "description": "Ruta de 26 km, SOC inicial del 38%, reserva del 15% y viento incierto. Ejecute 30 muestras y revise mission_probability: exige completar la ruta con potencia suficiente y conservar la reserva.",
+      "operation": "uncertainty"
+    }
+  ]
+}

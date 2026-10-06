@@ -54,3 +54,11 @@ identidad y los límites de resultados históricos, incluidos los desfavorables.
 No presentar datos sintéticos como mediciones reales ni pruebas de software
 como validación de precisión física. Las correcciones de interfaz no justifican
 atribuir nuevos resultados a protocolos científicos que no se hayan ejecutado.
+
+## Plantillas y documentación ilustrada
+
+La entrega incluye además Descripcion_del_Software y Titulo_y_descripcion_de_funciones
+en docs/docx, con la misma versión. Los cinco DOCX usan los maestros de estilo
+de docs/templates y su contrato artifact.md. Mantener capturas y explicación de
+botones, tutorial y nueve ejemplos en el manual de usuario. Verificar los cinco
+documentos y sus hashes al regenerar Entregables y publicar en GitHub.

@@ -19,7 +19,7 @@ for name in ["configs", "docs", "examples", "datasets"]:
         ROOT / name,
         TARGET / name,
         dirs_exist_ok=True,
-        ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
+        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "~$*"),
     )
 for name in ["README.md", "CHANGELOG.md", "CITATION.cff", "LICENSE", "requirements-lock.txt"]:
     shutil.copyfile(ROOT / name, TARGET / name)
@@ -85,7 +85,7 @@ for directory in (Path(sys.base_prefix) / "tcl").glob("*"):
     "Extraer la carpeta completa / Extract the complete folder.\n"
     "Abrir BikeEnergyLab.exe para la GUI / Open BikeEnergyLab.exe for the GUI.\n"
     "Inicio: menu Ejemplos y Tutorial / Home: Examples dropdown and Tutorial.\n"
-    "Word: docs/docx (usuario, tecnico, metodologia) / Word manuals in docs/docx.\n"
+    "Word: docs/docx (cinco documentos: usuario, tecnico, metodologia, descripcion y funciones).\n"
     "Manual: docs/user_manual.md; docs/windows_distribution.md\n"
     "CLI: BikeEnergyLab.exe simulate configs/flat.yaml --output results\n"
     "El programa funciona offline. Los ejemplos son sintéticos. / Offline; synthetic examples.\n"

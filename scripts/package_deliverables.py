@@ -63,7 +63,7 @@ else:
 (TARGET / "LEEME_ENTREGA.txt").write_text(
     f"BikeEnergyLab {VERSION}\nContacto: fjburgosf@gmail.com\n\n"
     "Abrir BikeEnergyLab.exe; conservar _internal y la carpeta completa.\n"
-    "Los tres manuales Word están en esta carpeta y en docs/docx.\n"
+    "Los cinco documentos Word están en esta carpeta y en docs/docx.\n"
     f"Código fuente: {source_zip.name}. Descomprimir e instalar según README.md.\n"
     f"Paquete portátil para compartir: {portable_zip.name}.\n"
     "Cargar ejemplo prepara el caso; Simular ejecuta el ejemplo activo.\n"

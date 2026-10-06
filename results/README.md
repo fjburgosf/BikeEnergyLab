@@ -1,7 +1,7 @@
 # Results index — BikeEnergyLab 1.0.0
 
 Current release dated 6 October 2026: `release-1.0.0/acceptance.json`, `release_verification.json`, `distribution-verification-1.0.0/verification.json` and `documents-verification-1.0.0.json`.
-Source SHA256 `25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f`; 80 regression tests and complete examples/tutorial/export checks. Three reviewed Word manuals comprise 21 pages.
+Source SHA256 `25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f`; 80 regression tests and complete examples/tutorial/export checks. Five template-based Word documents comprise 80 reviewed pages; the user manual includes 25 actual GUI captures and nine executed examples.
 
 ## Historical scientific evidence
 

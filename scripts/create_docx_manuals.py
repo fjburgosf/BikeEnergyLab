@@ -1,4 +1,4 @@
-"""Build three Spanish manuals with bundled python-docx and editable Word math.
+"""Build five template-based Spanish documents with editable Word math.
 
 Run with the Python returned by load_workspace_dependencies, then render every page.
 """
@@ -7,17 +7,17 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import json
 import re
 import tomllib
 from datetime import date
 from pathlib import Path
 
-from docx import Document
-from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
+from document_templates import chapter, data_table, figure, functions_document, template_document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Inches, Pt, RGBColor
+from docx.shared import Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs/docx"
@@ -289,56 +289,57 @@ def inline(paragraph, text):
 
 
 def table(doc, rows, widths=None):
-    widths = widths or ([2.1, 4.4] if len(rows[0]) == 2 else [6.5 / len(rows[0])] * len(rows[0]))
-    t = doc.add_table(rows=0, cols=len(rows[0]))
-    t.autofit = False
-    for column, width in zip(t.columns, widths):
-        column.width = Inches(width)
-    borders = OxmlElement("w:tblBorders")
-    for side in ["top", "left", "bottom", "right", "insideH", "insideV"]:
-        edge = OxmlElement(f"w:{side}")
-        for key, val in [("val", "single"), ("sz", "4"), ("color", "D9D9D9")]:
-            edge.set(qn(f"w:{key}"), val)
-        borders.append(edge)
-    t._tbl.tblPr.append(borders)
-    for index, values in enumerate(rows):
-        row = t.add_row()
-        row._tr.get_or_add_trPr().append(OxmlElement("w:cantSplit"))
-        if index == 0:
-            row._tr.get_or_add_trPr().append(OxmlElement("w:tblHeader"))
-        for column, (cell, value, width) in enumerate(zip(row.cells, values, widths)):
-            cell.width = Inches(width)
-            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-            props = cell._tc.get_or_add_tcPr()
-            margins = OxmlElement("w:tcMar")
-            for side, val in [("top", "75"), ("bottom", "75"), ("left", "105"), ("right", "105")]:
-                element = OxmlElement(f"w:{side}")
-                element.set(qn("w:w"), val)
-                element.set(qn("w:type"), "dxa")
-                margins.append(element)
-            props.append(margins)
-            shade = OxmlElement("w:shd")
-            shade.set(
-                qn("w:fill"), "36454F" if index == 0 else ("F1F3F4" if index % 2 == 0 else "FFFFFF")
-            )
-            props.append(shade)
-            p = cell.paragraphs[0]
-            p.paragraph_format.space_after = Pt(0)
-            p.paragraph_format.line_spacing = 1.05
-            if len(values) >= 4 and column:
-                p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            inline(p, value)
-            for run in p.runs:
-                run.font.size = Pt(10)
-                run.font.color.rgb = RGBColor(255, 255, 255) if index == 0 else BLACK
-                run.bold = index == 0
-    spacer = doc.add_paragraph()
-    spacer.paragraph_format.line_spacing = Pt(5)
-    spacer.paragraph_format.space_after = Pt(6)
+    return data_table(doc, rows, widths)
 
 
 def special(doc, text):
-    if text.startswith("{{EQ:"):
+    if text == "{{TUTORIAL}}":
+        data = json.loads(
+            (ROOT / "docs/images/gui-1.0.0/captures.json").read_text(encoding="utf-8")
+        )
+        table(
+            doc,
+            [["Paso y botón", "Uso"]]
+            + [
+                [f"{i}. {s['title']}\n{s['button']}", s["description"]]
+                for i, s in enumerate(data["tutorial"], 1)
+            ],
+            [2.2, 4.3],
+        )
+    elif text == "{{EXAMPLES}}":
+        data = json.loads(
+            (ROOT / "docs/images/gui-1.0.0/captures.json").read_text(encoding="utf-8")
+        )
+        for i, example in enumerate(data["examples"], 1):
+            key = example["key"]
+            doc.add_heading(f"4.14.{i} {example['title'].split('·')[-1].strip()}", 3)
+            doc.add_paragraph(example["description"])
+            doc.add_paragraph(
+                "Procedimiento: seleccione este ejemplo en Inicio, pulse Cargar ejemplo, confirme el caso activo y pulse Simular. Abra Resultados al terminar."
+            )
+            result = data["example_results"][key]
+            if i <= 5:
+                values = f"Energía {result['energy_wh']:.3f} Wh; consumo {result['wh_per_km']:.3f} Wh/km; SOC final {result['final_soc']:.5f}. Ruta completada y factible en esta práctica."
+            elif key == "calibration":
+                values = "Se recuperaron Crr = 0.008 y CdA = 0.48 m²; rango del Jacobiano 2. El caso carece de ruido/discrepancia y no demuestra recuperación con datos reales."
+            elif key == "hybrid":
+                values = "El modelo se entrenó con 60 rutas y calibró intervalos con 25 independientes. Queda disponible en memoria para volver a simular y guardar. Revise predicción M4, alpha y soporte OOD; el SOC sigue la simulación física."
+            else:
+                values = f"Muestras {result['n_samples']}; probabilidad física de misión {100 * result['mission_probability']:.2f}%; demanda media de ruta completa {result['full_route_demand_wh']['mean']:.3f} Wh. El intervalo Monte Carlo refleja muestreo bajo los supuestos configurados."
+                if key == "uncertainty":
+                    values += " La mediana de autonomía alcanza el horizonte de 80 km; examine la fracción censurada."
+                else:
+                    values += " SOC inicial 0.38 y reserva 0.15. Se exige completar los 26 km con potencia y reserva; consumo hasta agotamiento y demanda completa pueden diferir."
+            doc.add_paragraph("Resultado observado: " + values)
+            figure(
+                doc,
+                f"docs/images/gui-1.0.0/ejemplo-{i:02d}-{key}.png",
+                f"Ejecución del ejemplo {i:02d} {example['title'].split('·')[-1].strip()}.",
+            )
+    elif text.startswith("{{IMAGE:"):
+        relative, caption = text[8:-2].split("|", 1)
+        figure(doc, relative, caption)
+    elif text.startswith("{{EQ:"):
         for tokens in EQUATIONS[text[5:-2]]:
             add_equation(doc, tokens)
     elif text == "{{SOURCE}}":
@@ -401,8 +402,7 @@ def markdown(doc, content, user_manual=False):
             special(doc, line)
         elif line.startswith("##"):
             level = len(line) - len(line.lstrip("#")) - 1
-            heading = re.sub(r"[^\w\s]", " ", line.lstrip("# "), flags=re.UNICODE)
-            doc.add_heading(re.sub(r"\s+", " ", heading).strip(), min(level, 3))
+            chapter(doc, line.lstrip("# ").strip(), min(level, 3))
         elif line.startswith("```"):
             while i < len(lines) and not lines[i].startswith("```"):
                 p = doc.add_paragraph(lines[i], "Code")
@@ -488,99 +488,7 @@ def markdown(doc, content, user_manual=False):
 
 
 def new_document(title, short, introduction):
-    doc = Document()
-    for border in list(doc.styles.element.xpath(".//w:pBdr")):
-        border.getparent().remove(border)
-    sec = doc.sections[0]
-    sec.page_width, sec.page_height = Inches(8.5), Inches(11)
-    sec.top_margin, sec.bottom_margin = Inches(0.8), Inches(0.8)
-    sec.left_margin, sec.right_margin = Inches(1), Inches(1)
-    sec.header_distance, sec.footer_distance = Inches(0.35), Inches(0.35)
-    for name in ["Normal", "Title", "Subtitle", "Heading 1", "Heading 2", "Heading 3", "Caption"]:
-        style = doc.styles[name]
-        style.font.name = "Arial"
-        style.font.color.rgb = BLACK
-        style.font.underline = False
-    normal = doc.styles["Normal"]
-    normal.font.size = Pt(11)
-    normal.paragraph_format.space_after = Pt(7 if short == "Manual de usuario" else 4)
-    normal.paragraph_format.line_spacing = 1.12
-    normal.paragraph_format.widow_control = True
-    for level, size in [(1, 16), (2, 13), (3, 11.5)]:
-        style = doc.styles[f"Heading {level}"]
-        style.font.size = Pt(size)
-        style.font.bold = True
-        style.paragraph_format.space_before = Pt(13)
-        style.paragraph_format.space_after = Pt(6)
-        style.paragraph_format.keep_with_next = True
-    code = doc.styles.add_style("Code", 1)
-    code.font.name, code.font.size, code.font.color.rgb = "Consolas", Pt(9.5), BLACK
-    code.paragraph_format.space_after = Pt(1)
-    code.paragraph_format.line_spacing = 1.05
-    for name in ["TOC 1", "TOC 2", "TOC 3"]:
-        if name not in doc.styles:
-            doc.styles.add_style(name, 1)
-        doc.styles[name].font.name = "Arial"
-        doc.styles[name].font.size = Pt(10)
-        doc.styles[name].font.color.rgb = BLACK
-        doc.styles[name].paragraph_format.space_after = Pt(2)
-        doc.styles[name].paragraph_format.line_spacing = 1.0
-    language = OxmlElement("w:lang")
-    language.set(qn("w:val"), "es-CO")
-    normal.element.get_or_add_rPr().append(language)
-    settings = doc.settings.element
-    update = OxmlElement("w:updateFields")
-    update.set(qn("w:val"), "true")
-    settings.append(update)
-    header = sec.header.paragraphs[0]
-    header.text = f"BikeEnergyLab     {short}"
-    header.runs[0].font.name, header.runs[0].font.size = "Arial", Pt(9)
-    header.runs[0].font.color.rgb = BLACK
-    footer = sec.footer.paragraphs[0]
-    footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    footer.add_run(f"Versión {VERSION}     Página ")
-    field(footer, " PAGE ")
-    footer.add_run(" de ")
-    field(footer, " NUMPAGES ")
-    for run in footer.runs:
-        run.font.name, run.font.size, run.font.color.rgb = "Arial", Pt(9), BLACK
-    doc.styles["Title"].font.size = Pt(24)
-    doc.styles["Title"].paragraph_format.space_after = Pt(12)
-    doc.add_paragraph(title, "Title")
-    months = [
-        "enero",
-        "febrero",
-        "marzo",
-        "abril",
-        "mayo",
-        "junio",
-        "julio",
-        "agosto",
-        "septiembre",
-        "octubre",
-        "noviembre",
-        "diciembre",
-    ]
-    doc.add_paragraph(
-        f"Versión {VERSION}   •   {RELEASE_DATE.day} de {months[RELEASE_DATE.month - 1]} de {RELEASE_DATE.year}"
-    )
-    doc.add_paragraph(
-        "Francisco Javier Burgos Flórez\nJuan Guillermo Popayán Hernández\nfjburgosf@gmail.com"
-    )
-    doc.add_paragraph(introduction)
-    doc.add_paragraph(
-        "Los datos de práctica y los experimentos de esta entrega son sintéticos. La verificación de software no establece precisión con bicicletas reales."
-    )
-    contents = doc.add_paragraph("Contenido")
-    contents.runs[0].bold = True
-    contents.runs[0].font.size = Pt(14)
-    field(doc.add_paragraph(), ' TOC \\o "1-1" \\h \\z \\u ')
-    doc.add_page_break()
-    doc.core_properties.title = title
-    doc.core_properties.author = "Francisco Javier Burgos Flórez; Juan Guillermo Popayán Hernández"
-    doc.core_properties.language = "es-CO"
-    doc.core_properties.subject = f"Documentación de BikeEnergyLab {VERSION}"
-    return doc
+    return template_document(title, short, introduction, VERSION)
 
 
 def main():
@@ -610,22 +518,32 @@ def main():
             ROOT / "docs/docx_sources/metodologia_es.md",
             False,
         ),
+        (
+            f"Descripcion_del_Software_BikeEnergyLab_{VERSION}.docx",
+            "Descripción del software BikeEnergyLab",
+            "Descripción del software",
+            "Plataforma científica de escritorio para modelar el consumo energético, la autonomía y la probabilidad de misión de bicicletas eléctricas. Integra física, calibración, aprendizaje residual y análisis de incertidumbre con ejemplos sintéticos reproducibles.",
+            ROOT / "docs/docx_sources/descripcion_es.md",
+            False,
+        ),
     ]
     for filename, title, short, intro, source, user in specifications:
         doc = new_document(title, short, intro)
-        if user:
-            doc.add_heading("Abrir la distribución portátil", 1)
-            doc.add_paragraph(
-                "Extraiga toda la carpeta BikeEnergyLab del ZIP y abra BikeEnergyLab.exe. Conserve _internal junto al ejecutable. Esta distribución Windows x64 incluye las dependencias y funciona sin instalar Python ni conectarse a Internet. Si usa la API o CLI Python, instale Python 3.11 o superior y las dependencias indicadas en README.md."
-            )
         markdown(doc, source.read_text(encoding="utf-8"), user_manual=user)
-        doc.add_heading("Autoría y condiciones de uso", 1)
+        doc.add_heading("Autoría y condiciones de uso", 2)
         doc.add_paragraph(
             "Autores: Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Contacto: fjburgosf@gmail.com. Conserve CITATION.cff para citar el software. Los derechos y condiciones de uso son los indicados en LICENSE; no se presume una licencia abierta."
         )
         path = OUT / filename
         doc.save(path)
         print(path)
+    content = (
+        (ROOT / "docs/docx_sources/titulo_funciones_es.md").read_text(encoding="utf-8").strip()
+    )
+    doc = functions_document(content, VERSION)
+    path = OUT / f"Titulo_y_descripcion_de_funciones_BikeEnergyLab_{VERSION}.docx"
+    doc.save(path)
+    print(path)
 
 
 if __name__ == "__main__":

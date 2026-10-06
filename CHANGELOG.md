@@ -55,3 +55,10 @@
 - Added Monte Carlo range/mission analysis, EXP-01–15 and eleven runnable examples.
 - Added bilingual offline Tk GUI, API, CLI, artifact exports and Windows build.
 - Added explicit scientific assumptions, limitations, manuals and verified references.
+
+## Revisión documental del 6 de octubre de 2026
+
+Cinco DOCX recreados con las plantillas suministradas, manual de usuario con 25
+capturas reales, explicación de controles y resultados de los nueve ejemplos.
+Maestros de estilo depurados, generación reproducible, Entregables y GitHub
+sincronizados. El código numérico y el ejecutable verificado conservan su identidad.

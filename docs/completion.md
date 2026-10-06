@@ -77,4 +77,4 @@ se conservan como historial con su propia identidad.
 
 El ZIP conserva `_internal`, configuraciones, manuales, ejemplos, datasets y
 avisos de dependencias. La licencia del proyecto mantiene los derechos reservados
-de los autores. No se ha publicado código ni configurado un repositorio remoto.
+de los autores. Las fuentes y los documentos se mantienen en https://github.com/fjburgosf/BikeEnergyLab.

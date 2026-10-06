@@ -49,7 +49,7 @@ y la validación de precisión con bicicletas reales son evidencias adicionales
 que no se sustituyen por estas pruebas de distribución.
 
 La entrega final se encuentra en **Entregables**, con el ejecutable y sus
-dependencias, los tres DOCX, el ZIP portátil, el ZIP de código fuente y los
+dependencias, los cinco DOCX, el ZIP portátil, el ZIP de código fuente y los
 registros de verificación. El estado de publicación del código en GitHub figura
-en `PUBLICACION_GITHUB.json`; la creación del repositorio privado está pendiente
-de autorización explícita.
+en `PUBLICACION_GITHUB.json`; las fuentes y la documentación se publican en
+https://github.com/fjburgosf/BikeEnergyLab.

@@ -1,0 +1,434 @@
+{
+  "user": {
+    "reference": "D:\\Primbiolab\\Registro de software\\IPFramework\\manual_de_usuario.docx",
+    "reference_sha256": "c6f069962dcb384d07d16ee62fe8cd8e36c835c623bcafe6493ea19da2e593ed",
+    "master": "docs/templates/user.template",
+    "master_sha256": "014ef2a9942525c76a70b974529dc6229541822e4f8854bc519297731f6ecda1",
+    "sections": 7,
+    "title_paragraph": 0,
+    "subtitle_paragraph": 1,
+    "introduction_paragraph": 5,
+    "divider_paragraph": 3,
+    "preserve_parts": {
+      "word/theme/theme1.xml": {
+        "size": 8397,
+        "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2"
+      },
+      "word/numbering.xml": {
+        "size": 34740,
+        "sha256": "9071cd441637b358544b3ffd1ee09e8ec24044a1872aa497ccda86ae77f467a6"
+      },
+      "word/styles.xml": {
+        "size": 47850,
+        "sha256": "cf34d299b004b87da12b1ceb57ec9aab13220fb0bbc45f9ef1adb64e68fd05d2"
+      },
+      "word/fontTable.xml": {
+        "size": 3086,
+        "sha256": "b4dd4b0cb865d157a990d6b4c0eded127153c8c447c217ac2e23628d02973ef2"
+      }
+    },
+    "package_inventory": {
+      "[Content_Types].xml": {
+        "size": 2199,
+        "sha256": "f017e0e00bb80e56b11a380c576e15e1a21413b919ca51fad6400ead19a0c474"
+      },
+      "_rels/.rels": {
+        "size": 590,
+        "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df"
+      },
+      "word/document.xml": {
+        "size": 358324,
+        "sha256": "f799985516822d10a013720ec837c84af2ddcad2fb92b2fceff52d1dac5de411"
+      },
+      "word/_rels/document.xml.rels": {
+        "size": 3482,
+        "sha256": "dec27052cdd3e67e67e73f2d3a79ec629e3067d3f8305a1dbcd4bf40c1aca493"
+      },
+      "word/footnotes.xml": {
+        "size": 3268,
+        "sha256": "a79620b3518dcccec6f454e38980be34d4f766a6f7fd0c83765f7233f828f6a9"
+      },
+      "word/endnotes.xml": {
+        "size": 3262,
+        "sha256": "b9ab6dea826f9df0d8d431c537145bb98ba8c02d0fd610a5f784739b1365c092"
+      },
+      "word/header1.xml": {
+        "size": 2916,
+        "sha256": "2a822db5ac976d8cc3d3008415b21f23626416295fdb57eb5c3b5531329d72d7"
+      },
+      "word/header2.xml": {
+        "size": 3889,
+        "sha256": "700db5c1822b52c079d0e1ef2cbf821a09d41ec7977d8caffd6522ba199c03f5"
+      },
+      "word/media/image1.png": {
+        "size": 1965483,
+        "sha256": "2a690c5a739347ba6a4bfe2b1d3a780e0a9ee2284011bd0f1ab95bfd512b1a7c"
+      },
+      "word/media/image2.png": {
+        "size": 122616,
+        "sha256": "86c6c0c739fcc8b2b5c2b28dbd2b9dc3cd3986747d91f44ff18480f593142db5"
+      },
+      "word/media/image3.jpeg": {
+        "size": 115291,
+        "sha256": "0ef36ba5bc2f5ee963e4fc865ef86c6849a9ae80449c98954a50575edec265b7"
+      },
+      "word/media/image4.png": {
+        "size": 203513,
+        "sha256": "2a3159bf70827ec855d64f4c425f01e4b633fe179fee01a3d5ee680ef9b46a64"
+      },
+      "word/media/image8.png": {
+        "size": 2013369,
+        "sha256": "d1b9529f5f201c051430cf293443b81f646cb614abe2a9ba8f0d9c12b438c199"
+      },
+      "word/media/image9.png": {
+        "size": 2036799,
+        "sha256": "d9c74e7680a81a0b92bd71457c7c412351d1386de7004a8370812f4b0788ea16"
+      },
+      "word/media/image10.png": {
+        "size": 125952,
+        "sha256": "e650821138838723cc72a887d23853f624687c46ea4f52abb90c8222d327e1c3"
+      },
+      "word/media/image11.png": {
+        "size": 1304433,
+        "sha256": "488c4ad6f28368ef267c8a3a43afd6b6638ca9ed6f4ea6b15f49905bbef866f0"
+      },
+      "word/media/image12.png": {
+        "size": 1059591,
+        "sha256": "e1c676a6508d051c0ca19fef40559950a720d2debee4e983bab56449b81d5601"
+      },
+      "word/media/image13.png": {
+        "size": 891288,
+        "sha256": "1bbd830e694b50aff2e38ab6b5d9ba29d98ba75f53e918cd58417c01b44ed0f6"
+      },
+      "word/media/image14.png": {
+        "size": 6532,
+        "sha256": "74b918e1fb99f6f9cf64e80a5e4bd5bc7009dd1bea57c1d5c1e59902a8711774"
+      },
+      "word/theme/theme1.xml": {
+        "size": 8397,
+        "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2"
+      },
+      "word/media/image5.png": {
+        "size": 150859,
+        "sha256": "d3189bd20e30f5afe1938850d35937ac8439200bf0d99f35d140695fcb90fc5b"
+      },
+      "word/media/image7.png": {
+        "size": 151053,
+        "sha256": "ec258bdea38f39537225b1bac574e94b19632a66f3f6e88b870afee3cf1be625"
+      },
+      "word/media/image6.png": {
+        "size": 94442,
+        "sha256": "bb28e257e20db2dfca504365a3ec486d70d068fcc41ab06ac2b385cc5831a6f8"
+      },
+      "word/settings.xml": {
+        "size": 14383,
+        "sha256": "ffaad44ff7b8b4590a6c28c47ec3b496ee8adf5b95013a274852563fc9069df7"
+      },
+      "customXml/item1.xml": {
+        "size": 289,
+        "sha256": "b30b8fd758aa47aada70ee7d8d8287349d6a21eb03c79bcb2e8930a1789022cc"
+      },
+      "customXml/itemProps1.xml": {
+        "size": 341,
+        "sha256": "65d1ea30db954e3797cf089ddb0ca456afce95a2f874f35d9a47c766f4a83450"
+      },
+      "word/numbering.xml": {
+        "size": 34740,
+        "sha256": "9071cd441637b358544b3ffd1ee09e8ec24044a1872aa497ccda86ae77f467a6"
+      },
+      "word/styles.xml": {
+        "size": 47850,
+        "sha256": "cf34d299b004b87da12b1ceb57ec9aab13220fb0bbc45f9ef1adb64e68fd05d2"
+      },
+      "word/webSettings.xml": {
+        "size": 1069,
+        "sha256": "f2f6fe7679634963bf49bae65f941f41934de42ceeb3a806afac4bab92274853"
+      },
+      "word/fontTable.xml": {
+        "size": 3086,
+        "sha256": "b4dd4b0cb865d157a990d6b4c0eded127153c8c447c217ac2e23628d02973ef2"
+      },
+      "docProps/core.xml": {
+        "size": 761,
+        "sha256": "ad874f33fd80b1fdc4b01acb4efa07766c715a685c4c81d89a43ee7805e9392a"
+      },
+      "docProps/app.xml": {
+        "size": 1000,
+        "sha256": "9d7d8f9430c5f2f7d4cfc5bdcce2be587fd6d53a2909a36da2a1b6c0b12605da"
+      },
+      "customXml/_rels/item1.xml.rels": {
+        "size": 296,
+        "sha256": "80482f86e196171d66001e0e74d1900408a3aaf2463e54005d251b5f2db9a0b0"
+      }
+    }
+  },
+  "technical": {
+    "reference": "D:\\Primbiolab\\Registro de software\\IPFramework\\manual_tecnico.docx",
+    "reference_sha256": "4434f45e79f4b0fef6ced3fbed53ade5341dc98aac4bc284cf7d97aee937378d",
+    "master": "docs/templates/technical.template",
+    "master_sha256": "655f3061f6dcc7c90b687e6d51d8c24f399a9ca640d9201761bd9fa688b19963",
+    "sections": 11,
+    "title_paragraph": 0,
+    "subtitle_paragraph": 1,
+    "introduction_paragraph": 5,
+    "divider_paragraph": 3,
+    "preserve_parts": {
+      "word/theme/theme1.xml": {
+        "size": 8397,
+        "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2"
+      },
+      "word/numbering.xml": {
+        "size": 83187,
+        "sha256": "c8fc21a7c9276c5a3653da42165e9d9b3d14f476711b9078ece7622671de2912"
+      },
+      "word/styles.xml": {
+        "size": 47850,
+        "sha256": "cf34d299b004b87da12b1ceb57ec9aab13220fb0bbc45f9ef1adb64e68fd05d2"
+      },
+      "word/fontTable.xml": {
+        "size": 3086,
+        "sha256": "b4dd4b0cb865d157a990d6b4c0eded127153c8c447c217ac2e23628d02973ef2"
+      }
+    },
+    "package_inventory": {
+      "[Content_Types].xml": {
+        "size": 2147,
+        "sha256": "52a9b45498fd4e4a7aaca88eb783436cf5d9233fde9beaa39eb84943edff8fd0"
+      },
+      "_rels/.rels": {
+        "size": 590,
+        "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df"
+      },
+      "word/document.xml": {
+        "size": 504864,
+        "sha256": "1dc2a1b59026ffebd592ebff6d357d8e54aacb0182a27ea89c9e997246d04a68"
+      },
+      "word/_rels/document.xml.rels": {
+        "size": 2013,
+        "sha256": "7f4241de533b93fb6f6f40845d0cfac6e53080c80c92a207662b64c4f4343483"
+      },
+      "word/footnotes.xml": {
+        "size": 3268,
+        "sha256": "6c55d582da4378f709983a91ff87f7b364125c572225e67b1ce64618787a4bb1"
+      },
+      "word/endnotes.xml": {
+        "size": 3262,
+        "sha256": "10d9ed78ddb24e9da4ce79a04a9b754d3215e36956e9b1e2cd8e7fe8f01a830d"
+      },
+      "word/header1.xml": {
+        "size": 2916,
+        "sha256": "2a822db5ac976d8cc3d3008415b21f23626416295fdb57eb5c3b5531329d72d7"
+      },
+      "word/header2.xml": {
+        "size": 3887,
+        "sha256": "cd525c68602bc1f1bdb10bd1e3cf94fc1e249ddc6956a0169626e3a76853c662"
+      },
+      "word/media/image1.png": {
+        "size": 481292,
+        "sha256": "e30c6927f34fec38550a92e1d70fdb01857cbdc11974368070e10fb7bade235b"
+      },
+      "word/media/image2.png": {
+        "size": 367801,
+        "sha256": "360a501bfa7f514a40248ed8a75090cc368e964c8b3b53fa08e89eb59f167b0a"
+      },
+      "word/media/image3.png": {
+        "size": 344421,
+        "sha256": "0cb7c290343e06f5ea88140bbf8ec9f6579d7daa6de9735cef76977ce5f5b897"
+      },
+      "word/theme/theme1.xml": {
+        "size": 8397,
+        "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2"
+      },
+      "word/settings.xml": {
+        "size": 16021,
+        "sha256": "46d7f5a2b2d2e24ca80f37dbf4ba2fc3dfead749073460b6a789aa93187b29f0"
+      },
+      "customXml/item1.xml": {
+        "size": 289,
+        "sha256": "b30b8fd758aa47aada70ee7d8d8287349d6a21eb03c79bcb2e8930a1789022cc"
+      },
+      "customXml/itemProps1.xml": {
+        "size": 341,
+        "sha256": "65d1ea30db954e3797cf089ddb0ca456afce95a2f874f35d9a47c766f4a83450"
+      },
+      "word/numbering.xml": {
+        "size": 83187,
+        "sha256": "c8fc21a7c9276c5a3653da42165e9d9b3d14f476711b9078ece7622671de2912"
+      },
+      "word/styles.xml": {
+        "size": 47850,
+        "sha256": "cf34d299b004b87da12b1ceb57ec9aab13220fb0bbc45f9ef1adb64e68fd05d2"
+      },
+      "word/webSettings.xml": {
+        "size": 1069,
+        "sha256": "f2f6fe7679634963bf49bae65f941f41934de42ceeb3a806afac4bab92274853"
+      },
+      "word/fontTable.xml": {
+        "size": 3086,
+        "sha256": "b4dd4b0cb865d157a990d6b4c0eded127153c8c447c217ac2e23628d02973ef2"
+      },
+      "docProps/core.xml": {
+        "size": 761,
+        "sha256": "c67481ca429b18c73aaf7d24d3eecf3627d85105edcbcdc15f6291eebccea2f2"
+      },
+      "docProps/app.xml": {
+        "size": 1002,
+        "sha256": "b49ef6ce71304aa99a4482da229fb161e2fd8cc52316f038967fccb3b1a18a2d"
+      },
+      "customXml/_rels/item1.xml.rels": {
+        "size": 296,
+        "sha256": "80482f86e196171d66001e0e74d1900408a3aaf2463e54005d251b5f2db9a0b0"
+      }
+    }
+  },
+  "description": {
+    "reference": "D:\\Primbiolab\\Registro de software\\IPFramework\\Descripcion_del_Software.docx",
+    "reference_sha256": "db4ae5f327f55061b887b5c096d295e704d27c33a59ac8b56151645c12979de0",
+    "master": "docs/templates/description.template",
+    "master_sha256": "1ff724093d2b44f38f5115d11df0d3a6f1e9c9e1174eb2584a7bc471d10077fc",
+    "sections": 1,
+    "title_paragraph": 0,
+    "subtitle_paragraph": 1,
+    "introduction_paragraph": 2,
+    "divider_paragraph": null,
+    "preserve_parts": {
+      "word/theme/theme1.xml": {
+        "size": 8717,
+        "sha256": "e7948e69d1ab51203d82e7e57d491987a16229547a1b6bfd124133a3a895c0ac"
+      },
+      "word/numbering.xml": {
+        "size": 4754,
+        "sha256": "d9e4626401bd8b61e1bbdfb2237a8eee7cd2e0e5b737447ffde30a5a5a306134"
+      },
+      "word/styles.xml": {
+        "size": 34359,
+        "sha256": "34f6858c42dcfe00c904ed38f21ac396c17d6a7da24b33d10e6a44ad628eae0c"
+      },
+      "word/fontTable.xml": {
+        "size": 2015,
+        "sha256": "99fc6e8e14293f1734086206f109b5606d3544b1ed30911c534326749b29eb54"
+      }
+    },
+    "package_inventory": {
+      "[Content_Types].xml": {
+        "size": 1445,
+        "sha256": "72e1a7e789e238175e21a964870a263fd2426d6877bd868693e211a4eb23e587"
+      },
+      "_rels/.rels": {
+        "size": 590,
+        "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df"
+      },
+      "word/document.xml": {
+        "size": 351394,
+        "sha256": "447817b4182203f00df0df419b79c49dcb15e48e0bb14822a6331dfb2a0a24bc"
+      },
+      "word/_rels/document.xml.rels": {
+        "size": 1134,
+        "sha256": "b8c54d9474338a24ff320928e108787e899871235eef291e440bd0d6f4946cae"
+      },
+      "word/theme/theme1.xml": {
+        "size": 8717,
+        "sha256": "e7948e69d1ab51203d82e7e57d491987a16229547a1b6bfd124133a3a895c0ac"
+      },
+      "word/settings.xml": {
+        "size": 4427,
+        "sha256": "da206fe4802ddcdf6fd2999f1f575fb3a2ff7a2bb5fd1eda876a0b228c143fc9"
+      },
+      "word/numbering.xml": {
+        "size": 4754,
+        "sha256": "d9e4626401bd8b61e1bbdfb2237a8eee7cd2e0e5b737447ffde30a5a5a306134"
+      },
+      "word/styles.xml": {
+        "size": 34359,
+        "sha256": "34f6858c42dcfe00c904ed38f21ac396c17d6a7da24b33d10e6a44ad628eae0c"
+      },
+      "word/webSettings.xml": {
+        "size": 1018,
+        "sha256": "3346314c93078070b454a95d0485bf9721dade13d89cfaa579cc32645fa7edef"
+      },
+      "word/fontTable.xml": {
+        "size": 2015,
+        "sha256": "99fc6e8e14293f1734086206f109b5606d3544b1ed30911c534326749b29eb54"
+      },
+      "docProps/core.xml": {
+        "size": 761,
+        "sha256": "9a8d4ec6f4d4123c6bb885224ef1002e4ee2e347e23e98d48723f8b01ce3b263"
+      },
+      "docProps/app.xml": {
+        "size": 725,
+        "sha256": "1e407806d9eb8a3655ba6f745681ae3552de25311a9dc495bf36050b7bf1646f"
+      }
+    }
+  },
+  "functions": {
+    "reference": "D:\\Primbiolab\\Registro de software\\IPFramework\\titulo_ y_descripcion_de_funciones.docx",
+    "reference_sha256": "d919f7d597ddd9bb92907af71135b5746701090ed43ae3c7dbed968a1f4468ab",
+    "master": "docs/templates/functions.template",
+    "master_sha256": "0e6b77994491b6e577e0a200fac5e4e7a2e6b4e622e5a08c7149c7fe39995d0b",
+    "sections": 1,
+    "title_paragraph": 0,
+    "subtitle_paragraph": 1,
+    "introduction_paragraph": 5,
+    "divider_paragraph": null,
+    "preserve_parts": {
+      "word/theme/theme1.xml": {
+        "size": 8397,
+        "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2"
+      },
+      "word/styles.xml": {
+        "size": 42745,
+        "sha256": "4fca726d70492a4c6d110d3055c0870d60f9b044fdc3e4ab507d0c03e5ad0a6d"
+      },
+      "word/fontTable.xml": {
+        "size": 1749,
+        "sha256": "9e857292db1612f2c79861038bcfded30d3bf0fe73684393785dbfaa273561e7"
+      }
+    },
+    "package_inventory": {
+      "[Content_Types].xml": {
+        "size": 1312,
+        "sha256": "dfa90f373b8fd8147ee3e4bfe1ee059e536cc1b068f7ec140c3fc0e6554f331a"
+      },
+      "_rels/.rels": {
+        "size": 590,
+        "sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df"
+      },
+      "word/document.xml": {
+        "size": 4340,
+        "sha256": "891906d2f124e380da5331fc720a817a875d17327e91e61ae6569519329a5378"
+      },
+      "word/_rels/document.xml.rels": {
+        "size": 817,
+        "sha256": "b725d5476e76f555fc24ecb908474fd29b671687336e5e1177a5c4c35cb5939f"
+      },
+      "word/theme/theme1.xml": {
+        "size": 8397,
+        "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2"
+      },
+      "word/settings.xml": {
+        "size": 3465,
+        "sha256": "4b1247310d37ede99c5258518f9dc4baaaa1c56696e783ad1e9b3b62b84d3ad6"
+      },
+      "word/styles.xml": {
+        "size": 42745,
+        "sha256": "4fca726d70492a4c6d110d3055c0870d60f9b044fdc3e4ab507d0c03e5ad0a6d"
+      },
+      "word/webSettings.xml": {
+        "size": 1069,
+        "sha256": "f2f6fe7679634963bf49bae65f941f41934de42ceeb3a806afac4bab92274853"
+      },
+      "word/fontTable.xml": {
+        "size": 1749,
+        "sha256": "9e857292db1612f2c79861038bcfded30d3bf0fe73684393785dbfaa273561e7"
+      },
+      "docProps/core.xml": {
+        "size": 759,
+        "sha256": "1c85e2179e43bd8e8dc974d50c77ad985ec68b1b9542d00f6f911dfbc739a506"
+      },
+      "docProps/app.xml": {
+        "size": 714,
+        "sha256": "29906595c79aa3dafbc6747f831c22621127eedbd78ab03643ab9c669cf73662"
+      }
+    }
+  }
+}

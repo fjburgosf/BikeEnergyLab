@@ -1,9 +1,11 @@
 {
   "repository_full_name": "fjburgosf/BikeEnergyLab",
   "url": "https://github.com/fjburgosf/BikeEnergyLab",
-  "private": true,
-  "status": "pending_repository_creation_approval",
+  "private": false,
+  "status": "published",
   "version": "1.0.0",
-  "source_uploaded": false,
-  "reason": "Automatic approval review requires explicit authorization to create this private persistent repository."
+  "source_uploaded": true,
+  "branch": "main",
+  "source_commit": "35c926a",
+  "documentation_revision": "plantillas-ilustradas-2026-10-06"
 }

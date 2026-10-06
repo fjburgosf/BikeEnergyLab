@@ -158,10 +158,10 @@ Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 
 ## Ejecutable Windows
 
-La carpeta **Entregables** reúne el ejecutable con `_internal`, los tres DOCX,
+La carpeta **Entregables** reúne el ejecutable con `_internal`, los cinco DOCX,
 el ZIP portátil y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. `Verificacion` contiene
 los registros de pruebas. `PUBLICACION_GITHUB.json` informa del estado de GitHub;
-la creación del repositorio privado `fjburgosf/BikeEnergyLab` requiere autorización.
+el código fuente se encuentra en [fjburgosf/BikeEnergyLab](https://github.com/fjburgosf/BikeEnergyLab).
 
 ```powershell
 .\scripts\build_windows.ps1

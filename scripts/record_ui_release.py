@@ -102,13 +102,13 @@ def main():
     ]
     documents_path = ROOT / f"results/documents-verification-{version}.json"
     if not documents_path.is_file():
-        raise ValueError("Release requires the three reviewed Word manuals")
+        raise ValueError("Release requires the five reviewed Word documents")
     documents = None
     if documents_path.exists():
         documents = json.loads(documents_path.read_text(encoding="utf-8"))
         if documents["version"] != version or not documents["all_pages_visually_reviewed"]:
             raise ValueError("Document review does not match this release")
-        if documents.get("source_sha256") != identity or len(documents["documents"]) != 3:
+        if documents.get("source_sha256") != identity or len(documents["documents"]) != 5:
             raise ValueError("Reviewed manuals must match current software sources")
         for document in documents["documents"]:
             path = ROOT / document["path"]
@@ -126,7 +126,7 @@ def main():
         "scientific_baseline": baseline_path.relative_to(ROOT).as_posix(),
         "scientific_baseline_wheel": wheel.relative_to(ROOT).as_posix(),
         "core_modules_identical_to_baseline_except_version": True,
-        "scope": "Two-action example loading/simulation, contact, frozen SciPy resources, three reviewed Word manuals and software regression; scientific core and historical results retained",
+        "scope": "Five template-based Word documents, illustrated user guide and delivery packaging; scientific core and verified executable retained",
         "extended_gui_acceptance": gui_acceptance,
         "artifact_sha256": {p.relative_to(ROOT).as_posix(): sha(p) for p in artifacts},
         "limitations": baseline["limitations"],

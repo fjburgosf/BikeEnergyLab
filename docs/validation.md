@@ -22,12 +22,15 @@ are retained in [the 1.0.0 record](validation_1.0.0.md) and
 `results/release_verification_1.0.0.json`. All practice data are synthetic.
 Field accuracy, probability calibration and academic novelty remain unverified.
 
-Three Spanish DOCX manuals accompany this release: user, technical and scientific
-methodology. Microsoft Word updated their native contents/page fields and rendered
-5, 7 and 9 pages respectively. All 21 pages were visually reviewed at 150 dpi;
-the methodology contains 26 editable Word equations. Document identities and QA
-are recorded in `results/documents-verification-1.0.0.json`. These documentation
-checks do not add physical validation results.
+Five Spanish DOCX documents accompany this revision. The user manual contains
+25 actual GUI captures and nine executed examples; the technical manual and
+scientific methodology retain API, equations and historical evidence. Software
+description and title/functions follow the supplied document organization.
+Microsoft Word updated their contents fields and rendered 33, 14, 15, 17 and 1
+pages respectively. All 80 final pages were visually reviewed at native 150 dpi.
+The methodology retains 26 editable Word equations. Identities, source-template
+style fidelity and review are recorded in documents-verification-1.0.0.json.
+These documentation checks do not add physical validation results.
 Manual acceptance of every native window state and another Windows machine are
 additional evidence; automated GUI checks do not establish these.
 
