@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-01",
+  "tests_passed": 43,
+  "lint": "passed",
+  "format": "passed",
+  "gui_simulation_and_language_smoke": "passed",
+  "clean_wheel_install_without_system_site_packages": "passed",
+  "clean_wheel_cli_gui_benchmark": "passed",
+  "clean_pip_check": "passed",
+  "windows_version_simulation_export_gui_smoke": "passed",
+  "source_sha256": "e11c1182ac2bc897009a69c9feb58b287048c7f30d0f093d9ec14368240e4a4c",
+  "multi_seed_runs": [
+    "EXP-20261001-141649-efab56e0",
+    "EXP-20261001-141736-c2e000d2",
+    "EXP-20261001-141821-e5d4a082"
+  ],
+  "examples_executed": 11,
+  "experiments_executed": "EXP-01 through EXP-15",
+  "benchmark": "final-benchmark/EXP-20261001-141550-86b156d7",
+  "science_scope": "Synthetic validation; no real measurements or universal CGPRA superiority"
+}

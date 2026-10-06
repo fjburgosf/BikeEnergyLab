@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "date": "2026-10-01",
+  "tests_passed": 59,
+  "lint": "passed",
+  "format": "passed",
+  "gui_physical_hybrid_predictive_language_smoke": "passed",
+  "clean_wheel_install_without_system_site_packages": "passed",
+  "clean_wheel_windows_model_replay_prediction_exports": "passed",
+  "pip_check": "passed",
+  "cross_environment_prediction_tolerance": 1e-08,
+  "source_sha256": "32ff74960874466d12fc71864900daac8445c88ab071dd8fd678179bbfc061fc",
+  "predictive_validation_run": "results/predictive-validation/EXP-20261001-151847-7f343a36",
+  "predictive_seeds": [
+    42,
+    73,
+    109
+  ],
+  "hashed_predictive_input_csvs": 30,
+  "distribution_verification": "results/distribution-verification/verification.json",
+  "previous_release_evidence": "results/release_verification_0.1.0.json",
+  "artifact_sha256": {
+    "dist/BikeEnergyLab/BikeEnergyLab.exe": "84e4538340393c8c1dc5361e80bc11abd1360b0b7a372d788cce1c6f57342837",
+    "dist/packages/bikeenergylab-0.2.0-py3-none-any.whl": "3ac539ee35a613d8a6396b11ccfa92766c50eabb77b63e4e4666f5823bf5ed1e",
+    "dist/packages/bikeenergylab-0.2.0.tar.gz": "6feb84671ffdd0e478cc0691e48a196d73116523ecdd533e3260caceafa84074"
+  },
+  "limitations": [
+    "Synthetic validation only",
+    "ID errors lose coverage under OOD",
+    "Aggregate energy is not a hybrid dynamic SOC/mission trajectory",
+    "Full native GUI and cross-machine acceptance remain pending"
+  ]
+}
