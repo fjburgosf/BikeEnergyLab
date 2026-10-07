@@ -23,7 +23,7 @@ are retained in [the 1.0.0 record](validation_1.0.0.md) and
 Field accuracy, probability calibration and academic novelty remain unverified.
 
 Five Spanish DOCX documents accompany this revision. The user manual contains
-25 actual GUI captures and nine executed examples; the technical manual and
+25 actual GUI captures and nine executed examples. The technical manual and
 scientific methodology retain API, equations and historical evidence. Software
 description and title/functions follow the supplied document organization.
 Microsoft Word updated their contents fields and rendered 33, 14, 15, 17 and 1
@@ -32,6 +32,11 @@ The methodology retains 26 editable Word equations. Identities, source-template
 style fidelity and review are recorded in documents-verification-1.0.0.json.
 These documentation checks do not add physical validation results.
 Manual acceptance of every native window state and another Windows machine are
-additional evidence; automated GUI checks do not establish these.
+additional evidence. Automated GUI checks do not establish these.
 
 Expanded GUI acceptance passed 114 checks in source and 114 in the Windows executable. It checks the nine Cargar ejemplo → Simular workflows, file/model buttons, all four sensitivity methods, benchmark, EXP 01–15, guide and PNG/SVG/PDF exports through actual Tk widget invocation with controlled dialog responses. Native Windows dialog rendering is not certified. Reports: results/gui-button-verification-1.0.0. Contact: fjburgosf@gmail.com.
+
+The editorial revision of 7 October 2026 preserves the verified application
+and scientific baseline. All five DOCX were rendered and reviewed again. Their
+80 pages retain 25 captures, button explanations, nine examples and 26 editable
+equations. The final editable prose contains no semicolons or code-host links.

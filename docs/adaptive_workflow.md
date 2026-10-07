@@ -15,7 +15,7 @@ bikeenergylab predict configs/flat.yaml --model CARPETA_ADAPTADA --point-only
 
 La GUI ofrece adaptación y recalibración de intervalos por separado. Cada adaptación
 invalida los intervalos conformales y las muestras empíricas de error previas. Se
-pueden simular o predecir puntos; para incertidumbre aprendida se requieren rutas
+pueden simular o predecir puntos. Para incertidumbre aprendida se requieren rutas
 frescas independientes (al menos 19 para el intervalo conformal del 95%). El artefacto
 guarda el historial, parámetros y covarianza secuencial. Si falla entrenamiento o
 adaptación, el objeto original conserva su estado válido. La CLI guarda siempre
@@ -30,7 +30,7 @@ causalidad altera la última etiqueta y verifica que ninguna predicción previa
 ni la predicción de esa última ruta haya cambiado.
 
 La calibración adaptativa no observa SOC ni demuestra identificación universal.
-RLS puede distribuir una discrepancia entre parámetros correlacionados; comparar
+RLS puede distribuir una discrepancia entre parámetros correlacionados. Comparar
 energía y diagnósticos de identificabilidad además de parámetros. Este experimento
 evalúa deriva sintética declarada. La eficacia con deriva real requiere telemetría.
 

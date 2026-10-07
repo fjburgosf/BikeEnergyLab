@@ -16,11 +16,14 @@ paquete de fuentes:
   una página con la descripción compacta para identificación del software.
 
 Los índices y números de página se actualizaron en Microsoft Word. Se revisaron
-visualmente las 80 páginas finales renderizadas; el registro de integridad está en
+visualmente las 80 páginas finales renderizadas. El registro de integridad está en
 `results/documents-verification-1.0.0.json` dentro del proyecto de desarrollo.
 Las imágenes y PDF usados para esta revisión son archivos internos de QA.
-Los estilos y secciones proceden de las plantillas entregadas; los maestros
+Los estilos y secciones proceden de las plantillas entregadas. Los maestros
 depurados y su contrato de fidelidad se conservan en docs/templates.
 
 Los datos de práctica son sintéticos. Las pruebas de software y los resultados
 presentados no sustituyen la validación con mediciones de bicicletas reales.
+
+Revisión editorial del 7 de octubre de 2026. Se simplificó la puntuación de los
+textos y se conservó la identificación local del software y sus archivos de entrega.

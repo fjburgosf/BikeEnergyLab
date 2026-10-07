@@ -74,12 +74,12 @@ Cargar reconstruye Ridge, Random Forest y gate en los parámetros físicos ya
 guardados, recalibra errores/intervalos con el holdout y verifica todas las
 predicciones de referencia con tolerancia numérica 1e-8. Una diferencia material
 se rechaza en lugar de aceptar un modelo distinto. No se ejecuta pickle ni código
-incluido en el artefacto. Los checksums detectan modificación accidental; no son
+incluido en el artefacto. Los checksums detectan modificación accidental. No son
 firmas que autentiquen al autor. Las rutas de activos deben quedar dentro de la
 carpeta. La reconstrucción no implica ejecutables binariamente idénticos.
 
 `adapt` invalida errores e intervalos. Los grupos de calibración invalidados no
-se reutilizan después de observar nuevos datos; se necesitan rutas frescas. El
+se reutilizan después de observar nuevos datos. Se necesitan rutas frescas. El
 estado RLS se conserva al guardar para continuar la misma actualización causal.
 
 ## Distribución de energía
@@ -95,13 +95,13 @@ En cada muestra física b, escoger j uniformemente y calcular:
 Los errores no se centran: conservan el sesgo observado. Tampoco se multiplican
 por alpha: reducir la corrección residual no elimina el error de la física. Un
 flujo aleatorio separado conserva las mismas muestras físicas con/sin aprendizaje.
-La componente física usa la configuración efectivamente muestreada; parámetros
+La componente física usa la configuración efectivamente muestreada. Parámetros
 calibrados no sustituyen Crr/CdA después del muestreo. En API, el usuario elige
 explícitamente la configuración/prior física, normalmente en torno al ajuste.
 El Crr global es un parámetro latente calibrado: las features del gate usan la misma
 referencia calibrada al entrenar y predecir, conservando contrastes conocidos de
 superficie. Cambiar del valor inicial al ajustado no crea por sí mismo un OOD. Los
-Crr muestreados sí se conservan en las ecuaciones físicas; no se aprende de este
+Crr muestreados sí se conservan en las ecuaciones físicas. No se aprende de este
 modo una respuesta residual a su posterior incierto.
 
 Se supone que los errores Wh/km son transferibles y estadísticamente independientes
@@ -147,7 +147,7 @@ corrección del modelo ni validez de supuestos.
 bikeenergylab predictive-validation configs/predictive_validation.yaml
 ```
 
-Tres semillas 42, 73 y 109; 60 rutas de entrenamiento, 30 reservadas y 15 por cada
+Tres semillas 42, 73 y 109. 60 rutas de entrenamiento, 30 reservadas y 15 por cada
 uno de ocho escenarios. Toda la distribución equiprobable de errores reservados
 se usa para CRPS exacto y cuantiles empíricos centrales 95%. No se utilizan bandas
 conformales como si fueran una distribución probabilística.
@@ -157,5 +157,5 @@ de consultar etiquetas de test. Brier evalúa si la energía terminal observada 
 menor que ese presupuesto. Las tablas de confiabilidad son descriptivas: los tres
 presupuestos de una ruta están correlacionados y no son réplicas independientes.
 Se retienen todos los datos, modelos, predicciones y métricas por escenario/semilla.
-El generador es sintético y declara discrepancia y ruido; sus resultados no
+El generador es sintético y declara discrepancia y ruido. Sus resultados no
 establecen precisión real ni superioridad universal de CGPRA.

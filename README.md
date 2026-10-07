@@ -4,33 +4,33 @@
 
 BikeEnergyLab es un framework científico para modelado, calibración, predicción e
 investigación reproducible del consumo energético y autonomía de bicicletas eléctricas.
-Versión **1.0.0**. La carpeta de partida estaba vacía; véase el
+Versión **1.0.0**. La carpeta de partida estaba vacía. Véase el
 [diagnóstico](docs/diagnostic.md). No se dispone de validación con bicicletas reales.
 
 ## Capacidades
 
 - Dinámica longitudinal SI: rodadura, pendiente, viento con signo, aceleración.
 - Ciclista constante, perfiles temporales o respuesta configurable a pendiente,
-  cadencia y fatiga; asistencia genérica por demanda o proporcional.
+  cadencia y fatiga. Asistencia genérica por demanda o proporcional.
 - Motor con eficiencia constante o mapa CSV, torque, potencia, velocidad y corriente limitados.
-- Batería energética/SOC y Thevenin de un RC con conteo de coulombs; SOC mínimo/máximo.
-- Temperatura por densidad del aire y curvas empíricas opcionales; regeneración opt-in.
-- Rutas manuales, sintéticas, CSV y GPX offline; suavizado registrado y segmentación.
+- Batería energética/SOC y Thevenin de un RC con conteo de coulombs. SOC mínimo/máximo.
+- Temperatura por densidad del aire y curvas empíricas opcionales. Regeneración opt-in.
+- Rutas manuales, sintéticas, CSV y GPX offline. Suavizado registrado y segmentación.
 - Calibración acotada y robusta, diagnóstico de identificabilidad y RLS secuencial.
 - M1 física, M2 Ridge, M3 Random Forest residual fijo y M4 CGPRA.
 - Gates kNN y kNN + Mahalanobis regularizado + dispersión del ensemble.
-- Intervalos conformales con rutas independientes; pruebas ID, siete escenarios OOD y ablaciones.
+- Intervalos conformales con rutas independientes. Pruebas ID, siete escenarios OOD y ablaciones.
 - Monte Carlo: distribución de energía/SOC/autonomía y probabilidad de completar misión.
 - Modelos CGPRA portables en CSV/JSON con replay verificado, accesibles por API/CLI/GUI.
 - Energía predictiva con errores independientes observados, CRPS, cobertura y Brier
-  de presupuesto energético; diagnóstico explícito de transferencia OOD.
-- API Python, CLI headless, GUI Tk ES/EN; exports CSV/JSON/YAML/PNG/SVG/PDF.
+  de presupuesto energético. Diagnóstico explícito de transferencia OOD.
+- API Python, CLI headless, GUI Tk ES/EN. Exports CSV/JSON/YAML/PNG/SVG/PDF.
 - Sensibilidad OAT, Spearman, Morris y Sobol con diseños guardados y supuestos explícitos.
 - Adaptación causal, conversión de telemetría, gráficas completas y bandas físicas de incertidumbre.
 
 ## Instalación
 
-Python 3.11 o posterior; Python 3.12 recomendado para el build verificado en Windows.
+Python 3.11 o posterior. Python 3.12 recomendado para el build verificado en Windows.
 
 ```powershell
 python -m venv .venv
@@ -38,7 +38,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-Tkinter debe estar disponible para la GUI; viene con el instalador oficial Python
+Tkinter debe estar disponible para la GUI. Viene con el instalador oficial Python
 para Windows. El núcleo, la CLI y los experimentos no importan Tk.
 Para reproducir el entorno comprobado: instalar primero `requirements-lock.txt`.
 
@@ -76,12 +76,14 @@ destino. `--no-figures` desactiva figuras en simulate/uncertainty/benchmark/vali
 
 El paquete portátil `dist/BikeEnergyLab-1.0.0-windows-x64.zip` incluye el programa,
 dependencias, manuales, configuraciones y ejemplos. Extraer la carpeta completa y
-abrir `BikeEnergyLab.exe`. La CLI del ejecutable acepta los mismos comandos;
-véase [distribución Windows](docs/windows_distribution.md).
-Incluye tres documentos Word en español: [manual de usuario](docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
-[manual técnico](docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx) y
+abrir `BikeEnergyLab.exe`. La CLI del ejecutable acepta los mismos comandos.
+Véase [distribución Windows](docs/windows_distribution.md).
+Incluye cinco documentos Word en español: [manual de usuario](docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
+[manual técnico](docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx),
 [metodología científica](docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx),
-con ecuaciones editables, referencias y resultados sintéticos documentados.
+[descripción del software](docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx) y
+[título y funciones](docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx).
+Conservan capturas, ecuaciones editables, referencias y resultados sintéticos documentados.
 La [matriz de funcionalidades](docs/completion.md) identifica implementación,
 verificación y alcance científico de la entrega.
 
@@ -128,10 +130,10 @@ que la predicción sea correcta. CGPRA es una metodología de trabajo provisiona
 La dinámica es inversa con velocidad prescrita. `feasible=false` significa que la
 misión no se completó o faltó potencia. La autonomía equivalente estacionaria
 se distingue de la distancia obtenida al repetir una ruta hasta agotar la reserva.
-Los cuantiles Monte Carlo dependen de las distribuciones elegidas; los intervalos
+Los cuantiles Monte Carlo dependen de las distribuciones elegidas. Los intervalos
 conformales requieren exchangeability y no garantizan cobertura OOD.
 La incertidumbre aprendida utiliza errores con signo de rutas reservadas y conserva
-su sesgo; no transforma un intervalo conformal en una distribución. Su evaluación
+su sesgo. No transforma un intervalo conformal en una distribución. Su evaluación
 del presupuesto energético se identifica por separado: no reconstruye trayectorias
 SOC/corriente del modelo híbrido. Véase [metodología](docs/methodology.md).
 
@@ -144,14 +146,14 @@ ejecución en background y gráfica SOC. La GUI reutiliza la misma API.
 
 ## Experimentos y reproducibilidad
 
-`experiments` ejecuta EXP-01–15; `examples/run_examples.py` ejecuta los once
+`experiments` ejecuta EXP-01–15. `examples/run_examples.py` ejecuta los once
 ejemplos. Cada run incluye identificador único, fecha en America/Bogota, versión,
 semilla, hashes SHA256 de entradas y fuentes, versiones de dependencias,
 configuración, parámetros, predicciones, métricas y figuras. Los datasets
 sintéticos y sus ecuaciones de generación se guardan junto al benchmark.
 
 La entrada estándar de rutas es una tabla de intervalos `length_m, dt_s,
-speed_mps, grade`; las mediciones de sensores tienen esquema independiente.
+speed_mps, grade`. Las mediciones de sensores tienen esquema independiente.
 Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 [manual técnico](docs/technical_manual.md), [manual de usuario](docs/user_manual.md),
 [referencias verificadas](docs/references.md) y [estado de validación](docs/validation.md).
@@ -160,15 +162,14 @@ Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 
 La carpeta **Entregables** reúne el ejecutable con `_internal`, los cinco DOCX,
 el ZIP portátil y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. `Verificacion` contiene
-los registros de pruebas. `PUBLICACION_GITHUB.json` informa del estado de GitHub;
-el código fuente se encuentra en [fjburgosf/BikeEnergyLab](https://github.com/fjburgosf/BikeEnergyLab).
+los registros de pruebas.
 
 ```powershell
 .\scripts\build_windows.ps1
 ```
 
 El build genera `dist/BikeEnergyLab/BikeEnergyLab.exe` y su directorio de
-dependencias; conservar la carpeta completa. Sin argumentos abre la GUI; con
+dependencias. Conservar la carpeta completa. Sin argumentos abre la GUI. Con
 argumentos ofrece los mismos subcomandos que la CLI. El ejecutable es adicional
 a la API y al paquete instalable. Consulte el manual técnico para verificarlo.
 
@@ -179,5 +180,5 @@ a la API y al paquete instalable. Consulte el manual técnico para verificarlo.
 
 Metadatos de citación en [CITATION.cff](CITATION.cff). No se ha registrado DOI ni
 publicado un artículo de validación. Historial en [CHANGELOG.md](CHANGELOG.md).
-Los derechos permanecen reservados según [LICENSE](LICENSE); la selección de una
+Los derechos permanecen reservados según [LICENSE](LICENSE). La selección de una
 licencia de distribución abierta queda pendiente de los autores.

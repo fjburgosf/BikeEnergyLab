@@ -36,13 +36,13 @@ En Inicio, el menú **Ejemplos** ofrece nueve ejercicios ejecutables. El botón
 ES/EN y no requieren los archivos Python externos ni conexión.
 Después de **Cargar ejemplo**, **Simular** ejecuta su flujo completo. Estas son
 las dos acciones del flujo de ejemplos.
-Los archivos `.py` de `examples` son ejemplos de la API para una instalación Python;
-sus configuraciones también pueden ejecutarse con el programa portátil.
+Los archivos `.py` de `examples` son ejemplos de la API para una instalación Python.
+Sus configuraciones también pueden ejecutarse con el programa portátil.
 
 El ejecutable se verifica en este equipo con simulación, inferencia M1–M4,
 incertidumbre aprendida y GUI ES/EN. El wheel se comprueba en un entorno Python
 aislado, sin bibliotecas heredadas del sistema. El código fuente, lock y scripts
-permiten repetir el proceso de build; no se promete igualdad binaria entre builds.
+permiten repetir el proceso de build. No se promete igualdad binaria entre builds.
 
 No incluye instalador ni firma de código. La verificación en otro equipo Windows
 y la validación de precisión con bicicletas reales son evidencias adicionales
@@ -50,6 +50,5 @@ que no se sustituyen por estas pruebas de distribución.
 
 La entrega final se encuentra en **Entregables**, con el ejecutable y sus
 dependencias, los cinco DOCX, el ZIP portátil, el ZIP de código fuente y los
-registros de verificación. El estado de publicación del código en GitHub figura
-en `PUBLICACION_GITHUB.json`; las fuentes y la documentación se publican en
-https://github.com/fjburgosf/BikeEnergyLab.
+registros de verificación. El ZIP de fuentes contiene el código, los documentos
+y los scripts necesarios para reproducir la distribución.

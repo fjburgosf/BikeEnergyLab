@@ -7,18 +7,17 @@
 | Nombre y versión | BikeEnergyLab 1.0.0 |
 | Tipo de producto | Framework científico de modelado energético de bicicletas eléctricas |
 | Autores | Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández |
-| Año y revisión | 2026; plantillas e interfaz ilustrada del 6 de octubre |
+| Año y revisión | 2026, revisión editorial del 7 de octubre |
 | Contacto | fjburgosf@gmail.com |
-| Lenguaje y distribución | Python 3.11 o superior; aplicación portátil Windows x64 |
-| Repositorio | https://github.com/fjburgosf/BikeEnergyLab |
+| Lenguaje y distribución | Python 3.11 o superior. Aplicación portátil Windows x64 |
 | Estado | Funcional y verificado mediante pruebas de software y datos sintéticos |
-| Derechos | Los establecidos en LICENSE; no se presume una licencia abierta |
+| Derechos | Los establecidos en LICENSE. No se presume una licencia abierta |
 
 ## 2. Descripción general del software
 
 BikeEnergyLab calcula la demanda energética necesaria para seguir una ruta con velocidad prescrita. El usuario define la bicicleta, el ciclista, la asistencia del motor, la batería y las condiciones ambientales. El software integra fuerzas longitudinales, pérdidas de transmisión y motor, auxiliares y regeneración opcional, y registra el estado de batería, la demanda no satisfecha y la finalización de la ruta.
 
-La física explícita puede calibrarse con energías observadas de rutas completas. El modelo CGPRA añade una corrección residual ponderada por una compuerta de confianza. El análisis Monte Carlo estudia energía, autonomía y misión bajo distribuciones configuradas; la sensibilidad permite explorar la influencia de parámetros. La GUI, la CLI y la API comparten los mismos componentes numéricos.
+La física explícita puede calibrarse con energías observadas de rutas completas. El modelo CGPRA añade una corrección residual ponderada por una compuerta de confianza. El análisis Monte Carlo estudia energía, autonomía y misión bajo distribuciones configuradas. La sensibilidad permite explorar la influencia de parámetros. La GUI, la CLI y la API comparten los mismos componentes numéricos.
 
 ### 2.1 Requisitos de hardware y software
 
@@ -26,7 +25,7 @@ El ejecutable requiere Windows x64 y conservar su carpeta _internal. Funciona si
 
 ### 2.2 Justificación de los requisitos
 
-NumPy y SciPy proporcionan cálculo e identificación; pandas procesa datos; scikit-learn implementa regresión y aprendizaje residual; Matplotlib genera figuras; PyYAML conserva configuraciones. La distribución onedir incluye estas dependencias, sus licencias y los datos de SciPy necesarios para Sobol. El costo de cálculo crece con las rutas, segmentos, muestras y protocolos seleccionados; no se atribuye un tiempo universal de ejecución.
+NumPy y SciPy proporcionan cálculo e identificación. Pandas procesa datos. Scikit-learn implementa regresión y aprendizaje residual. Matplotlib genera figuras. PyYAML conserva configuraciones. La distribución onedir incluye estas dependencias, sus licencias y los datos de SciPy necesarios para Sobol. El costo de cálculo crece con las rutas, segmentos, muestras y protocolos seleccionados. No se atribuye un tiempo universal de ejecución.
 
 ## 3. Objetivos y área de aplicación
 
@@ -54,7 +53,7 @@ Los scripts de distribución y generación documental forman parte de las fuente
 
 ### 6.1 Robustez
 
-La configuración rechaza secciones y campos desconocidos, verifica límites y conserva los errores de entrada. Las operaciones de entrenamiento y adaptación son transaccionales. La GUI realiza cálculos con un trabajador y actualiza los widgets desde el hilo principal; bloquea los controles mientras calcula. No produce resultados exitosos cuando una tarea falla.
+La configuración rechaza secciones y campos desconocidos, verifica límites y conserva los errores de entrada. Las operaciones de entrenamiento y adaptación son transaccionales. La GUI realiza cálculos con un trabajador y actualiza los widgets desde el hilo principal. Bloquea los controles mientras calcula. No produce resultados exitosos cuando una tarea falla.
 
 ### 6.2 Desempeño
 
@@ -72,7 +71,7 @@ Quince secciones organizan el flujo desde Inicio hasta Exportar. El menú de eje
 
 La aplicación es local y no implementa cuentas ni acceso remoto. Los archivos se guardan en formatos legibles sin cifrado. Los hashes comprueban identidad e integridad, pero no constituyen una firma de autenticidad. El usuario controla permisos, copias y divulgación de sus datos. Los ejemplos de entrega son sintéticos.
 
-El importador valida formatos y coherencia. Los mapas y rutas utilizados se copian en la exportación. El modelo se reconstruye desde datos declarados y verifica replay; no necesita ejecutar un archivo pickle arbitrario. El ejecutable de esta entrega no tiene firma digital.
+El importador valida formatos y coherencia. Los mapas y rutas utilizados se copian en la exportación. El modelo se reconstruye desde datos declarados y verifica replay. No necesita ejecutar un archivo pickle arbitrario. El ejecutable de esta entrega no tiene firma digital.
 
 ## 9. Portabilidad y compatibilidad
 
@@ -90,15 +89,15 @@ CSV, YAML, JSON y figuras permiten analizar resultados sin depender de la sesió
 
 ## 10. Documentación y soporte técnico
 
-La entrega incluye manual de usuario ilustrado, manual técnico, metodología científica, descripción del software y título/funciones en Word. El código y la documentación están en https://github.com/fjburgosf/BikeEnergyLab. Entregables reúne estos cinco DOCX, las fuentes ZIP, el EXE con sus dependencias y el paquete portátil.
+La entrega incluye manual de usuario ilustrado, manual técnico, metodología científica, descripción del software y título/funciones en Word. Entregables reúne estos cinco DOCX, las fuentes ZIP, el EXE con sus dependencias y el paquete portátil.
 
 El contacto del proyecto es fjburgosf@gmail.com. Al informar un problema, conservar la versión, YAML, datos, mensaje de error y carpeta de exportación. Revisar antes la sección de solución de problemas del manual.
 
 ## 11. Pruebas validación y desempeño
 
-La evidencia de software comprueba los botones mediante widgets reales de Tk y respuestas controladas de diálogos; cubre archivos, ejemplos, modelos, tutorial, sensibilidad, benchmark, EXP 01 a 15 y exportaciones. No certifica el aspecto de todos los diálogos nativos ni todos los estados posibles. Los hashes de los documentos finales y los paquetes se registran en results.
+La evidencia de software comprueba los botones mediante widgets reales de Tk y respuestas controladas de diálogos. Cubre archivos, ejemplos, modelos, tutorial, sensibilidad, benchmark, EXP 01 a 15 y exportaciones. No certifica el aspecto de todos los diálogos nativos ni todos los estados posibles. Los hashes de los documentos finales y los paquetes se registran en results.
 
-La evidencia científica histórica conserva su identidad y resultados: M3 tuvo menor CRPS que M4 en el protocolo ID y M4 perdió cobertura en escenarios térmicos/combinados OOD. En deriva sintética, M1 adaptativo obtuvo el menor MAE. Estos hallazgos se explican en la metodología; no se sustituyen por resultados favorables ni por las pruebas de GUI.
+La evidencia científica histórica conserva su identidad y resultados: M3 tuvo menor CRPS que M4 en el protocolo ID y M4 perdió cobertura en escenarios térmicos/combinados OOD. En deriva sintética, M1 adaptativo obtuvo el menor MAE. Estos hallazgos se explican en la metodología. No se sustituyen por resultados favorables ni por las pruebas de GUI.
 
 ## 12. Impacto y utilización
 
@@ -126,7 +125,7 @@ La formulación utiliza modelado longitudinal del ciclismo, circuitos equivalent
 
 ### 13.3 Límites y contribución propuesta
 
-CGPRA es una formulación provisional evaluable. La integración de física, corrección ponderada, adaptación y protocolos permite estudiar sus límites; no demuestra por sí misma originalidad académica ni superioridad universal. Faltan datos reales independientes y una revisión sistemática de trabajos previos.
+CGPRA es una formulación provisional evaluable. La integración de física, corrección ponderada, adaptación y protocolos permite estudiar sus límites. No demuestra por sí misma originalidad académica ni superioridad universal. Faltan datos reales independientes y una revisión sistemática de trabajos previos.
 
 ## 14. Aportes y autoría
 
@@ -134,6 +133,6 @@ Los autores identificados del software son Francisco Javier Burgos Flórez y Jua
 
 ## Referencias
 
-Las referencias bibliográficas verificadas del proyecto se mantienen en docs/references.md y se desarrollan en Metodología científica de BikeEnergyLab. Las fuentes de evidencia conservan los protocolos del 4 de octubre de 2026 y su identidad histórica. La revisión documental del 6 de octubre no constituye una nueva validación física.
+Las referencias bibliográficas verificadas del proyecto se mantienen en docs/references.md y se desarrollan en Metodología científica de BikeEnergyLab. Las fuentes de evidencia conservan los protocolos del 4 de octubre de 2026 y su identidad histórica. La revisión editorial del 7 de octubre no constituye una nueva validación física.
 
 {{SOURCE}}

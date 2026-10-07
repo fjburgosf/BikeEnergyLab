@@ -2,7 +2,7 @@
 
 Referencias originales inalteradas en D:/Primbiolab/Registro de software/IPFramework.
 catalog.json conserva sus rutas, SHA256 y el inventario de cada parte del paquete.
-Las copias de lectura y los renders están en build/template-reference; se revisaron
+Las copias de lectura y los renders están en build/template-reference. Se revisaron
 las 24 páginas de descripción, 26 del manual de usuario, 32 del técnico y una de
 título y funciones. Todas las páginas se inspeccionaron en hojas a resolución
 nativa de 100 dpi, sin reducir sus imágenes.
@@ -22,24 +22,24 @@ separador azul, introducción en cursiva y tabla de metadatos con primera column
 azul clara. El cuerpo utiliza Calibri 11, justificación, títulos negros de 18 y
 14 puntos, encabezado en cursiva de 9 puntos y línea azul. La descripción utiliza
 Calibri 10.5, títulos de primer nivel de 16 puntos azul 1F3864 y segundo nivel de
-13 puntos verde 0F6E6E; portada de 28 puntos y subtítulo de 17. Las tablas de la
-descripción usan encabezados azules y bordes finos; los manuales usan sus tablas
+13 puntos verde 0F6E6E. Portada de 28 puntos y subtítulo de 17. Las tablas de la
+descripción usan encabezados azules y bordes finos. Los manuales usan sus tablas
 originales sobrias. Se clonan los componentes, incluyendo pPr, rPr, tblPr y tcPr.
 Los archivos styles.xml, numbering.xml, fontTable.xml y los temas son autoridad de
-diseño y se conservan; se permite añadir el estilo Code para fragmentos técnicos.
+diseño y se conservan. Se permite añadir el estilo Code para fragmentos técnicos.
 
 ## Mapa de sustitución
 
 - word/document.xml: todo el contenido anterior se sustituye. Se reutilizan
   los patrones de portada, tabla de metadatos, encabezados, cuerpo, listas,
   tablas y secciones. La tabla de contenido se regenera como campo Word.
-- word/header*.xml: sustituir el nombre del producto y el tipo de documento;
+- word/header*.xml: sustituir el nombre del producto y el tipo de documento.
   preservar tipografía, alineación y separador. Las portadas y contenidos
   mantienen sus encabezados vacíos.
 - Imágenes anteriores: retirar y sustituir por capturas propias de BikeEnergyLab.
   Figuras de 6.5 pulgadas de ancho, leyendas numeradas y texto alternativo.
-- Hipervínculos anteriores y propiedades: retirar; usar los autores reales,
-  contacto fjburgosf@gmail.com y repositorio fjburgosf/BikeEnergyLab.
+- Hipervínculos anteriores y propiedades: retirar. Usar los autores reales,
+  contacto fjburgosf@gmail.com.
 - Título y funciones: conservar el patrón compacto de dos párrafos, sin portada
   adicional ni tabla de contenido. Incorporar versión, revisión y contacto en
   esos párrafos.
@@ -67,3 +67,9 @@ del producto anterior. Se mantienen los límites científicos de BikeEnergyLab.
 Antes de entregar se comparan los estilos y las medidas con los maestros,
 se actualizan campos con Word, se renderizan e inspeccionan todas las páginas
 finales y se guardan sus hashes. Cada corrección exige render y revisión nuevos.
+
+## Revisión editorial del 7 de octubre de 2026
+
+La instrucción del usuario autoriza retirar la fila de ubicación del código
+de las portadas y la tabla descriptiva, además de simplificar la puntuación.
+Los estilos, las secciones, las capturas y las ecuaciones se conservan.

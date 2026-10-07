@@ -15,8 +15,7 @@ from docx.text.paragraph import Paragraph
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "docs/templates/catalog.json"
 AUTHORS = "Francisco Javier Burgos Flórez\nJuan Guillermo Popayán Hernández"
-REVISION = "Plantillas e interfaz ilustrada del 6 de octubre de 2026"
-REPOSITORY = "https://github.com/fjburgosf/BikeEnergyLab"
+REVISION = "Revisión editorial del 7 de octubre de 2026"
 
 
 def replace_text(paragraph, text):
@@ -140,10 +139,9 @@ def template_document(title, short, introduction, version):
     metadata = [
         ["Autores", AUTHORS],
         ["Versión", version],
-        ["Fecha", "6 de octubre de 2026"],
+        ["Fecha", "7 de octubre de 2026"],
         ["Revisión", REVISION],
         ["Contacto", "fjburgosf@gmail.com"],
-        ["Repositorio", REPOSITORY],
     ]
     data_table(doc, metadata, metadata=True)
     if kind == "description":
@@ -168,7 +166,7 @@ def template_document(title, short, introduction, version):
         code.base_style = doc.styles["Normal"]
         code.font.name, code.font.size = "Consolas", Pt(9)
     doc.core_properties.title = title
-    doc.core_properties.author = AUTHORS.replace("\n", "; ")
+    doc.core_properties.author = AUTHORS.replace("\n", " y ")
     doc.core_properties.subject = f"BikeEnergyLab {version} — {REVISION}"
     doc.core_properties.language = "es-CO"
     return doc
@@ -207,6 +205,6 @@ def functions_document(content, version):
     replace_text(doc.paragraphs[0], f"BikeEnergyLab {version}")
     replace_text(doc.paragraphs[1], content)
     doc.core_properties.title = "Título y descripción de funciones de BikeEnergyLab"
-    doc.core_properties.author = AUTHORS.replace("\n", "; ")
+    doc.core_properties.author = AUTHORS.replace("\n", " y ")
     doc.core_properties.subject = REVISION
     return doc

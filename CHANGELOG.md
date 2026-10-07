@@ -16,13 +16,13 @@
 - Added a packaged dropdown with nine offline ES/EN examples, including physical
   comparisons, parameter recovery, uncertainty, CGPRA training and mission probability.
 - Added an eight-step contextual tutorial with runnable actions, Back/Next controls,
-  route previews, result interpretation and export; language changes retain guide progress.
+  route previews, result interpretation and export. Language changes retain guide progress.
 - Tested preset independence, scientific effects, recovered parameters, held-out
   model groups and the complete guided GUI/export workflow in Windows distributions.
 - Bundled the SVG/PDF rendering backends needed by exports from the frozen executable.
 
 - Completed Morris, Sobol and seeded Spearman sensitivity with explicit input laws,
-  exported designs and finite-design diagnostics; verified against linear and Ishigami cases.
+  exported designs and finite-design diagnostics. Verified against linear and Ishigami cases.
 - Completed scrollable ES/EN desktop forms, route/surface previews, powers, SOC,
   Wh/km, energy balance, uncertainty bands, calibration/residual and confidence plots.
 - Cleaned obsolete Tk/Matplotlib objects on the UI thread and verified callbacks
@@ -33,7 +33,7 @@
 - Added physical trajectory quantiles with sample attrition and no post-depletion extrapolation.
 - Fixed GPX/telemetry datetime resolution across pandas versions and retained timed GPX stops.
 - Added a portable Windows ZIP with manuals, examples, configurations, datasets and dependency notices.
-- Completed the requirement traceability and software release checks; empirical accuracy
+- Completed the requirement traceability and software release checks. Empirical accuracy
   and academic novelty remain questions for measured validation.
 
 - Added portable CGPRA replay artifacts with input/asset checksums and prediction verification.
@@ -43,7 +43,7 @@
   predictive errors, OOD diagnostics and explicitly bounded energy-budget screening.
 - Added independent three-seed ID/OOD energy-distribution validation with CRPS, coverage,
   energy-budget Brier scores and descriptive reliability tables.
-- Invalidated predictive-error pools after adaptation; retained sequential covariance in replay.
+- Invalidated predictive-error pools after adaptation. Retained sequential covariance in replay.
 - Fixed joint uncertainty overridden by route profiles, asynchronous export status and ES/EN plot axes.
 - Made latent Crr features consistent before/after calibration, preventing artificial inference OOD.
 - Preserved explicit physical priors in exported YAML reruns and hashed all predictive validation inputs.
@@ -60,5 +60,12 @@
 
 Cinco DOCX recreados con las plantillas suministradas, manual de usuario con 25
 capturas reales, explicación de controles y resultados de los nueve ejemplos.
-Maestros de estilo depurados, generación reproducible, Entregables y GitHub
+Maestros de estilo depurados, generación reproducible y Entregables
 sincronizados. El código numérico y el ejecutable verificado conservan su identidad.
+
+## Revisión editorial del 7 de octubre de 2026
+
+Se simplificó la puntuación de los documentos y los textos de entrega.
+Los cinco Word conservan las plantillas, las capturas, los ejemplos y las
+ecuaciones editables. La distribución utiliza el ZIP de fuentes como
+referencia para acceder al código. El núcleo científico permanece intacto.

@@ -292,6 +292,12 @@ def table(doc, rows, widths=None):
     return data_table(doc, rows, widths)
 
 
+def documentation_prose(text):
+    """Split explanatory clauses without changing packaged GUI text or labels."""
+    parts = text.split("; ")
+    return ". ".join(part[0].upper() + part[1:] if part else part for part in parts)
+
+
 def special(doc, text):
     if text == "{{TUTORIAL}}":
         data = json.loads(
@@ -301,7 +307,7 @@ def special(doc, text):
             doc,
             [["Paso y botón", "Uso"]]
             + [
-                [f"{i}. {s['title']}\n{s['button']}", s["description"]]
+                [f"{i}. {s['title']}\n{s['button']}", documentation_prose(s["description"])]
                 for i, s in enumerate(data["tutorial"], 1)
             ],
             [2.2, 4.3],
@@ -313,23 +319,23 @@ def special(doc, text):
         for i, example in enumerate(data["examples"], 1):
             key = example["key"]
             doc.add_heading(f"4.14.{i} {example['title'].split('·')[-1].strip()}", 3)
-            doc.add_paragraph(example["description"])
+            doc.add_paragraph(documentation_prose(example["description"]))
             doc.add_paragraph(
                 "Procedimiento: seleccione este ejemplo en Inicio, pulse Cargar ejemplo, confirme el caso activo y pulse Simular. Abra Resultados al terminar."
             )
             result = data["example_results"][key]
             if i <= 5:
-                values = f"Energía {result['energy_wh']:.3f} Wh; consumo {result['wh_per_km']:.3f} Wh/km; SOC final {result['final_soc']:.5f}. Ruta completada y factible en esta práctica."
+                values = f"Energía {result['energy_wh']:.3f} Wh, consumo {result['wh_per_km']:.3f} Wh/km y SOC final {result['final_soc']:.5f}. Ruta completada y factible en esta práctica."
             elif key == "calibration":
-                values = "Se recuperaron Crr = 0.008 y CdA = 0.48 m²; rango del Jacobiano 2. El caso carece de ruido/discrepancia y no demuestra recuperación con datos reales."
+                values = "Se recuperaron Crr = 0.008 y CdA = 0.48 m². El rango del Jacobiano fue 2. El caso carece de ruido/discrepancia y no demuestra recuperación con datos reales."
             elif key == "hybrid":
-                values = "El modelo se entrenó con 60 rutas y calibró intervalos con 25 independientes. Queda disponible en memoria para volver a simular y guardar. Revise predicción M4, alpha y soporte OOD; el SOC sigue la simulación física."
+                values = "El modelo se entrenó con 60 rutas y calibró intervalos con 25 independientes. Queda disponible en memoria para volver a simular y guardar. Revise predicción M4, alpha y soporte OOD. El SOC sigue la simulación física."
             else:
-                values = f"Muestras {result['n_samples']}; probabilidad física de misión {100 * result['mission_probability']:.2f}%; demanda media de ruta completa {result['full_route_demand_wh']['mean']:.3f} Wh. El intervalo Monte Carlo refleja muestreo bajo los supuestos configurados."
+                values = f"Con {result['n_samples']} muestras, la probabilidad física de misión fue {100 * result['mission_probability']:.2f}% y la demanda media de ruta completa fue {result['full_route_demand_wh']['mean']:.3f} Wh. El intervalo Monte Carlo refleja muestreo bajo los supuestos configurados."
                 if key == "uncertainty":
-                    values += " La mediana de autonomía alcanza el horizonte de 80 km; examine la fracción censurada."
+                    values += " La mediana de autonomía alcanza el horizonte de 80 km. Examine la fracción censurada."
                 else:
-                    values += " SOC inicial 0.38 y reserva 0.15. Se exige completar los 26 km con potencia y reserva; consumo hasta agotamiento y demanda completa pueden diferir."
+                    values += " SOC inicial 0.38 y reserva 0.15. Se exige completar los 26 km con potencia y reserva. El consumo hasta agotamiento y la demanda completa pueden diferir."
             doc.add_paragraph("Resultado observado: " + values)
             figure(
                 doc,
@@ -532,7 +538,7 @@ def main():
         markdown(doc, source.read_text(encoding="utf-8"), user_manual=user)
         doc.add_heading("Autoría y condiciones de uso", 2)
         doc.add_paragraph(
-            "Autores: Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Contacto: fjburgosf@gmail.com. Conserve CITATION.cff para citar el software. Los derechos y condiciones de uso son los indicados en LICENSE; no se presume una licencia abierta."
+            "Autores: Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Contacto: fjburgosf@gmail.com. Conserve CITATION.cff para citar el software. Los derechos y condiciones de uso son los indicados en LICENSE. No se presume una licencia abierta."
         )
         path = OUT / filename
         doc.save(path)

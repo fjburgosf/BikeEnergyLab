@@ -13,7 +13,7 @@ result is used as a BikeEnergyLab validation result.
    study of dynamic performance and electric consumption of an electric bicycle*,
    Energy Procedia 158, 2865–2871 (2019).
    [Publisher / DOI](https://doi.org/10.1016/j.egypro.2019.01.937).
-   Title, journal, year and DOI verified in publisher indexed content; no
+   Title, journal, year and DOI verified in publisher indexed content. No
    unverified author list or experimental values are transcribed.
 3. **Motor/system efficiency maps.** *Improving the Autonomy of a Mid-Drive Motor
    Electric Bicycle Based on System Efficiency Maps and Its Performance*, World
@@ -24,27 +24,27 @@ result is used as a BikeEnergyLab validation result.
    Angel Urbina, Thomas L. Paez, *Modeling of Battery Life I. The Equivalent Circuit
    Model (ECM) Approach*, Sandia National Laboratories, EESAT proceedings (2003).
    [Primary PDF](https://www.sandia.gov/ess-ssl/EESAT/2003_papers/Liaw.pdf).
-   Explicitly chemistry-specific OCV/impedance; no universal coefficients imported.
+   Explicitly chemistry-specific OCV/impedance. No universal coefficients imported.
 5. **Physics–data models.** *Physics-guided Neural Networks (PGNN): An Application
    in Lake Temperature Modeling* (2017).
    [Author paper](https://arxiv.org/abs/1710.11431).
-   Conceptual context only; this software uses a forest residual, not that network.
+   Conceptual context only. This software uses a forest residual, not that network.
 6. **Ensemble uncertainty.** Balaji Lakshminarayanan, Alexander Pritzel, Charles
    Blundell, *Simple and Scalable Predictive Uncertainty Estimation using Deep
    Ensembles*, NeurIPS 2017.
    [Author paper](https://arxiv.org/abs/1612.01474).
-   Conceptual uncertainty context; forest tree spread is not asserted equivalent
+   Conceptual uncertainty context. Forest tree spread is not asserted equivalent
    to independent deep ensembles or a calibrated posterior.
 7. **OOD and Mahalanobis support.** Kimin Lee, Kibok Lee, Honglak Lee, Jinwoo Shin,
    *A Simple Unified Framework for Detecting Out-of-Distribution Samples and
    Adversarial Attacks*, NeurIPS 2018.
    [Author paper](https://arxiv.org/abs/1807.03888).
-   The current gate applies shrinkage covariance in route features; it does not
+   The current gate applies shrinkage covariance in route features. It does not
    reproduce the paper's class-conditional neural detector.
 8. **Distribution-free uncertainty / conformal.** *A Gentle Introduction to
    Conformal Prediction and Distribution-Free Uncertainty Quantification* (2021).
    [Author tutorial](https://arxiv.org/abs/2107.07511).
-   Split-conformal interpretation is limited by exchangeability; shifts can
+   Split-conformal interpretation is limited by exchangeability. Shifts can
    invalidate coverage guarantees.
 
 9. **Morris elementary effects.** Max D. Morris, *Factorial Sampling Plans for

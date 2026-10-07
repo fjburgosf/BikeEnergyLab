@@ -23,7 +23,7 @@ The package keeps numerical work independent of GUI and visualization:
 | cli.py | Validated offline command dispatcher and logging |
 
 Rider/environment equations remain small and are composed in the operating-profile
-method; separate packages would add no useful abstraction at this fidelity.
+method. Separate packages would add no useful abstraction at this fidelity.
 Do not import GUI from the public numerical API.
 
 ## Public classes and workflow
@@ -35,7 +35,7 @@ Do not import GUI from the public numerical API.
 `Observation(route, energy_wh, config, group, weight)` explicitly couples known
 operating conditions to a measured total. `CalibrationResult` returns parameters,
 residuals, covariance and identifiability. `CGPRAModel.fit`, `predict`,
-`calibrate_intervals`, `adapt`, `save`, `load`, `annotate_simulation`;
+`calibrate_intervals`, `adapt`, `save`, `load`, `annotate_simulation`.
 `ConfidenceGate.fit/evaluate`. Optional `predict(physical_energy_wh=...)` preserves
 sampled physical parameters in uncertainty propagation. Invalid interval
 recalibration does not damage previous valid state. Replay and predictive-energy
@@ -61,28 +61,28 @@ prediction = model.predict(test, model="M4", coverage=0.95)
 ```
 
 For causal adaptation, `model.adapt(new_observation)` updates the physical model
-and residual; old intervals are invalid. Do not adapt with holdout/test labels
+and residual. Old intervals are invalid. Do not adapt with holdout/test labels
 before reporting the original prediction. Fit new intervals on a fresh split.
 
 ## Input/output and reproducibility
 
 YAML rejects unknown sections and misspelled dataclass attributes. CSV/GPX require
-explicit units; malformed data are rejected or reported. Quality checks do not
-fix data. Exports produce a new EXP directory; existing runs are not overwritten.
+explicit units. Malformed data are rejected or reported. Quality checks do not
+fix data. Exports produce a new EXP directory. Existing runs are not overwritten.
 Metadata stores seed, Bogota timestamp, version, dependencies and SHA256 hashes.
 `io.telemetry.load_telemetry` validates sample groups, derives interval speed from
 distance/time and integrates measured terminal V*I with endpoint trapezoids,
 retaining explicit conversion provenance and all quality warnings.
 `uncertainty.sensitivity.one_at_a_time` covers Crr, CdA, mass, rider power, speed,
-wind, temperature and motor efficiency; Spearman associations are also available.
+wind, temperature and motor efficiency. Spearman associations are also available.
 `uncertainty.global_sensitivity.physical_sensitivity` adds seeded Morris, Sobol
 and Latin-hypercube Spearman designs. `analyze_global` accepts arbitrary scalar
-responses; tests use linear effects and the Ishigami interaction benchmark.
+responses. Tests use linear effects and the Ishigami interaction benchmark.
 `experiments.adaptive.prequential_evaluate` predicts complete routes before
 each new target is ingested. Fit/adaptation commit state only after all steps
-succeed. Adaptation invalidates conformal/error pools; point-only inference
+succeed. Adaptation invalidates conformal/error pools. Point-only inference
 remains available until fresh independent interval calibration.
-Source-mode hashes cover package .py files; the Windows build embeds the same
+Source-mode hashes cover package .py files. The Windows build embeds the same
 source identity, since bytecode archives cannot be hashed as source files.
 
 Actual settings/profiles override defaults in the same order in API/CLI/GUI.
@@ -113,8 +113,8 @@ GUI checks use Tk's real event loop and fail on callback/unraisable errors.
 They also exercise the packaged examples dropdown and the eight-step tutorial,
 including ES/EN progress preservation, uncertain-wind practice and figure export.
 SVG and PDF Matplotlib backends are explicitly included in the frozen build.
-Obsolete Tk/Matplotlib cycles are collected on the UI thread, including shutdown;
-the scientific worker receives configurations/routes/models rather than widgets.
+Obsolete Tk/Matplotlib cycles are collected on the UI thread, including shutdown.
+The scientific worker receives configurations/routes/models rather than widgets.
 `scripts/validate_release.ps1` executes unit checks, GUI, examples, EXP-01–15,
 the three-seed predictive protocol, all sensitivity methods, causal drift and
 package builds. `scripts/package_windows.py` includes documentation, examples,
@@ -130,10 +130,10 @@ PyInstaller uses onedir to reduce startup unpacking and preserve dependency file
 The folder includes numerical DLLs, Tk and Matplotlib resources, dependency
 metadata and a source manifest. `build_windows.ps1` checks version, a numerical
 simulation and a Tk simulation/ES–EN smoke test. No code signing or installer is
-provided. A generated .spec is transient inside build/; the committed script is
+provided. A generated .spec is transient inside build/. The committed script is
 the reproducible build description. The console-enabled executable supports
 both CLI logging and GUI startup. Scientific dependency versions are pinned
-by lock_environment.py; bit-identical executable reproducibility is not claimed.
+by lock_environment.py. Bit-identical executable reproducibility is not claimed.
 
 The `.venv` and build caches are development resources excluded from source
 distribution. Source archives include examples/configs/docs/tests and clearly

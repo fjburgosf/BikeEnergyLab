@@ -54,23 +54,16 @@ for relative in records:
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(path, destination)
 
-publication = ROOT / "results/github_publication.json"
-if publication.is_file():
-    shutil.copyfile(publication, TARGET / "PUBLICACION_GITHUB.json")
-    github_status = json.loads(publication.read_text(encoding="utf-8"))["status"]
-else:
-    github_status = "pending_repository_creation_approval"
 (TARGET / "LEEME_ENTREGA.txt").write_text(
     f"BikeEnergyLab {VERSION}\nContacto: fjburgosf@gmail.com\n\n"
-    "Abrir BikeEnergyLab.exe; conservar _internal y la carpeta completa.\n"
+    "Abrir BikeEnergyLab.exe. Conservar _internal y la carpeta completa.\n"
     "Los cinco documentos Word están en esta carpeta y en docs/docx.\n"
     f"Código fuente: {source_zip.name}. Descomprimir e instalar según README.md.\n"
     f"Paquete portátil para compartir: {portable_zip.name}.\n"
-    "Cargar ejemplo prepara el caso; Simular ejecuta el ejemplo activo.\n"
+    "Cargar ejemplo prepara el caso. Simular ejecuta el ejemplo activo.\n"
     "El flujo de ejemplos tiene dos acciones: Cargar ejemplo y Simular.\n"
     "Verificacion contiene los registros de pruebas y documentos.\n"
-    f"Estado de GitHub: {github_status}; consultar PUBLICACION_GITHUB.json.\n"
-    "Las pruebas usan datos sintéticos; no certifican precisión de campo.\n",
+    "Las pruebas usan datos sintéticos. No certifican precisión de campo.\n",
     encoding="utf-8",
 )
 manifest = {
