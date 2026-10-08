@@ -6,35 +6,31 @@
   "version": "1.0.0",
   "source_uploaded": true,
   "branch": "main",
-  "source_commit": "68b4297418cc0b81950b8b228f6998e3c0616ff4",
-  "documentation_revision": "delivery-2026-10-08",
-  "documentation_commit": "68b4297418cc0b81950b8b228f6998e3c0616ff4",
+  "source_commit": "82e44e0a985447811968072b76078bde6dedc9cc",
+  "documentation_revision": "integration-2026-10-08",
+  "documentation_commit": "82e44e0a985447811968072b76078bde6dedc9cc",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
   "final_documents_uploaded": true,
   "remote_commit_verified": true,
-  "completed_utc": "2026-10-08T13:25:43.893901+00:00",
+  "completed_utc": "2026-10-08T14:00:04.4155079Z",
   "documents": [
     {
       "path": "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx",
-      "sha256": "55e3a3a1436f55843c5b7fb59aee48c5e6b70e2e310b7fd1dfcad792c2aa6db5"
+      "sha256": "b68e0a52daae17c895f43224be03ad5efe47525ef25d57159535563b6ad22926"
     },
     {
       "path": "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx",
-      "sha256": "225e9bc1c1d77662401d5c3160ba124a5e2d06d6cbf3982c070adb9c074aa52c"
-    },
-    {
-      "path": "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx",
-      "sha256": "59d5e94451746adb123740ae24dd93eff54fb20c911e1dbf1b0e604e6a06dd1b"
+      "sha256": "83dd630eda0712ee573d76b96a092d4f9ad13f69fcc54f0b28f52fcb525d2aa8"
     },
     {
       "path": "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx",
-      "sha256": "9d0bee1cb01c9049e9bae25b148e3d90ca991f905098a6d6de6914b6537b2924"
+      "sha256": "9231309915cd19323ac5c8f77562925e35f886d30e91dcf2b390aca5e19289ce"
     },
     {
       "path": "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx",
-      "sha256": "6d53110e9683b743538a115814eca0628a81bcf900317b1205776d308b11e98c"
+      "sha256": "c68702854fbc07fa3eb93d4db4003c13375a5b715634190a301ae8583ecd1d49"
     }
   ],
   "delivery_omits_code_location": true,
-  "delivery_file_count": 7
+  "delivery_file_count": 6
 }
