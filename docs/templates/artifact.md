@@ -12,8 +12,8 @@ nativa de 100 dpi, sin reducir sus imágenes.
 Los cuatro documentos usan papel carta de 8.5 por 11 pulgadas, orientación vertical.
 Los manuales usan márgenes de una pulgada y distancias de encabezado/pie de media
 pulgada. El manual de usuario tiene siete secciones: portada, contenido y cinco
-capítulos. El técnico tiene once: portada, contenido y nueve capítulos. La
-metodología reutiliza el sistema del técnico con nueve capítulos científicos.
+capítulos. El técnico tiene once: portada, contenido y nueve capítulos. La metodología se integra en las secciones del manual técnico, conservando
+sus nueve capítulos y las once secciones originales de la plantilla.
 Descripción y título/funciones mantienen una sección. Las medidas exactas de cada
 sección permanecen en los sectPr originales de los maestros.
 
@@ -56,8 +56,9 @@ el tutorial y nueve ejemplos con condiciones, pasos y resultados propios.
 El técnico conserva introducción, arquitectura, componentes, adquisición/datos,
 operación, algoritmos, restricciones, despliegue y glosario. La descripción
 conserva sus catorce capítulos y referencias, con contenido de BikeEnergyLab.
-La metodología conserva sus ecuaciones editables y evidencia histórica al
-reorganizarlas en nueve capítulos con el diseño del manual técnico.
+El manual técnico integra la metodología con sus ecuaciones editables y
+evidencia histórica en introducción, componentes, algoritmos, restricciones
+y referencias. La descripción incluye un resumen de su fundamento científico.
 
 Se permite sustituir títulos específicos del producto anterior, corregir la
 numeración de apartados y ampliar las ranuras para cubrir el programa actual.
@@ -79,3 +80,9 @@ Los estilos, las secciones, las capturas y las ecuaciones se conservan.
 Se actualizan las instrucciones de distribución y la revisión de los cinco
 Word. Entregables conserva únicamente cinco DOCX y dos ZIP. Las plantillas,
 las capturas y las ecuaciones mantienen su sistema de diseño.
+
+## Integración documental solicitada el 8 de octubre de 2026
+
+Se entregan cuatro Word. La metodología completa se integra en el manual técnico
+y su resumen en la descripción. No se genera un documento independiente.
+Se conservan las 26 ecuaciones y toda la evidencia científica histórica.

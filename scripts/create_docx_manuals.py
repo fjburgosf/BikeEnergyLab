@@ -1,4 +1,4 @@
-"""Build five template-based Spanish documents with editable Word math.
+"""Build four template-based Spanish documents with editable Word math.
 
 Run with the Python returned by load_workspace_dependencies, then render every page.
 """
@@ -499,6 +499,15 @@ def new_document(title, short, introduction):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    reference = (ROOT / "docs/docx_sources/metodologia_es.md").read_text(encoding="utf-8")
+    integrated = (ROOT / "docs/docx_sources/manual_tecnico_es.md").read_text(encoding="utf-8")
+    for section in re.finditer(
+        r"^### [^\n]+\n(.*?)(?=^##(?:#)? |\Z)", reference, re.MULTILINE | re.DOTALL
+    ):
+        if section[1].strip() not in integrated:
+            raise ValueError("A retained scientific section is missing from the technical manual")
+    if re.findall(r"\{\{EQ:[^}]+\}\}", reference) != re.findall(r"\{\{EQ:[^}]+\}\}", integrated):
+        raise ValueError("Scientific equations must remain complete and in their original order")
     specifications = [
         (
             f"Manual_de_usuario_BikeEnergyLab_{VERSION}.docx",
@@ -512,16 +521,8 @@ def main():
             f"Manual_tecnico_BikeEnergyLab_{VERSION}.docx",
             "Manual técnico de BikeEnergyLab",
             "Manual técnico",
-            "Este manual describe la arquitectura, las clases públicas, la configuración, los algoritmos y la reproducción de BikeEnergyLab. Está dirigido a desarrolladores e investigadores que necesitan utilizar la API, revisar decisiones de implementación y repetir las verificaciones de la distribución.",
+            "Este manual describe la arquitectura, la API, la configuración y la metodología científica de BikeEnergyLab. Integra las ecuaciones editables, los supuestos, la calibración, la incertidumbre y los resultados sintéticos conservados. Está dirigido a desarrolladores e investigadores que necesitan utilizar la API, revisar decisiones de implementación y repetir las verificaciones de la distribución.",
             ROOT / "docs/docx_sources/manual_tecnico_es.md",
-            False,
-        ),
-        (
-            f"Metodologia_cientifica_BikeEnergyLab_{VERSION}.docx",
-            "Metodología científica de BikeEnergyLab",
-            "Metodología científica",
-            "Este documento formula el modelo físico y el método híbrido, explica calibración e incertidumbre y presenta los resultados sintéticos conservados. Las ecuaciones son objetos editables de Word. Los hallazgos incluyen fallos OOD y comparaciones desfavorables, porque la evidencia disponible no demuestra superioridad universal de CGPRA.",
-            ROOT / "docs/docx_sources/metodologia_es.md",
             False,
         ),
         (

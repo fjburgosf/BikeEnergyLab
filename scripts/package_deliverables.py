@@ -17,8 +17,8 @@ TARGET.mkdir(exist_ok=True)
 if not (PORTABLE / "BikeEnergyLab.exe").is_file():
     raise FileNotFoundError("Build and verify the executable first")
 documents = sorted((ROOT / "docs/docx").glob(f"*_{VERSION}.docx"))
-if len(documents) != 5:
-    raise ValueError("Exactly five final Word documents are required")
+if len(documents) != 4:
+    raise ValueError("Exactly four final Word documents are required")
 portable_zip = ROOT / f"dist/BikeEnergyLab-{VERSION}-windows-x64.zip"
 source_name = f"BikeEnergyLab-{VERSION}-codigo-fuente.zip"
 allowed = {document.name for document in documents} | {portable_zip.name, source_name}
@@ -73,7 +73,7 @@ for relative in records:
     f"BikeEnergyLab {VERSION}\nContacto: fjburgosf@gmail.com\n\n"
     f"Extraer {portable_zip.name} fuera de Entregables y abrir BikeEnergyLab/BikeEnergyLab.exe.\n"
     "Conservar _internal y la carpeta extraída completa.\n"
-    "Entregables contiene únicamente cinco documentos Word y dos archivos ZIP.\n"
+    "Entregables contiene únicamente cuatro documentos Word y dos archivos ZIP.\n"
     f"Código fuente: {source_zip.name}. Descomprimir e instalar según README.md.\n"
     f"Paquete portátil para compartir: {portable_zip.name}.\n"
     "Cargar ejemplo prepara el caso. Simular ejecuta el ejemplo activo.\n"
@@ -87,8 +87,8 @@ manifest = {
     for path in sorted(TARGET.rglob("*"))
     if path.is_file() and path.name != "SHA256SUMS.json"
 }
-if set(manifest) != allowed or len(list(TARGET.iterdir())) != 7:
-    raise ValueError("Entregables must contain only five DOCX and two ZIP archives")
+if set(manifest) != allowed or len(list(TARGET.iterdir())) != 6:
+    raise ValueError("Entregables must contain only four DOCX and two ZIP archives")
 (verification.parent / "SHA256SUMS.json").write_text(
     json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
 )

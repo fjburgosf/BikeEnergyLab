@@ -4,7 +4,7 @@
 
 ### 1.1 Propósito del software
 
-BikeEnergyLab 1.0.0 permite configurar una bicicleta eléctrica, simular rutas y estudiar energía, autonomía, calibración e incertidumbre. Este manual explica su operación con capturas de la interfaz real y nueve ejercicios sintéticos. La metodología desarrolla las ecuaciones y el manual técnico explica la implementación.
+BikeEnergyLab 1.0.0 permite configurar una bicicleta eléctrica, simular rutas y estudiar energía, autonomía, calibración e incertidumbre. Este manual explica su operación con capturas de la interfaz real y nueve ejercicios sintéticos. El manual técnico desarrolla las ecuaciones, la metodología científica y la implementación.
 
 ### 1.2 Contexto general
 
@@ -12,7 +12,7 @@ El programa calcula la demanda necesaria para seguir una velocidad prescrita y c
 
 ### 1.3 Alcance del documento
 
-La revisión editorial del 7 de octubre de 2026 cubre los quince paneles, los botones, el tutorial y los ejemplos. El flujo utiliza **Cargar ejemplo** y después **Simular**. La selección del desplegable describe un caso. Cargarlo lo convierte en el ejemplo activo. Las capturas corresponden al mismo código de interfaz que el EXE.
+La revisión de integración documental del 8 de octubre de 2026 cubre los quince paneles, los botones, el tutorial y los ejemplos. El flujo utiliza **Cargar ejemplo** y después **Simular**. La selección del desplegable describe un caso. Cargarlo lo convierte en el ejemplo activo. Las capturas corresponden al mismo código de interfaz que el EXE.
 
 ## 2. Descripción general del sistema
 
@@ -39,7 +39,7 @@ Combina física longitudinal, aporte humano, pérdidas y batería. Produce energ
 
 ### 3.1 Ejecución del paquete portátil
 
-En Entregables encontrará cinco documentos Word y dos ZIP. Extraiga BikeEnergyLab-1.0.0-windows-x64.zip fuera de Entregables y abra BikeEnergyLab.exe en la carpeta BikeEnergyLab extraída. Conserve la carpeta completa con _internal. Inicio presenta ejemplos y tutorial. El selector superior derecho permite elegir es o en.
+En Entregables encontrará cuatro documentos Word y dos ZIP. Extraiga BikeEnergyLab-1.0.0-windows-x64.zip fuera de Entregables y abra BikeEnergyLab.exe en la carpeta BikeEnergyLab extraída. Conserve la carpeta completa con _internal. Inicio presenta ejemplos y tutorial. El selector superior derecho permite elegir es o en.
 
 ### 3.2 Ejecución desde fuentes
 
@@ -226,4 +226,4 @@ Extraiga el ZIP completo y compruebe _internal. La entrega Windows x64 no tiene 
 
 ### 5.7 Soporte y límites
 
-Contacto: fjburgosf@gmail.com. Indique versión, revisión, YAML, entradas y error. La versión pasó 80 pruebas de regresión y 114 comprobaciones GUI en fuentes y 114 en el EXE con respuestas controladas de diálogos. No se certifican todos los estados ni precisión física real. La metodología conserva resultados desfavorables y límites históricos. Derechos: LICENSE.
+Contacto: fjburgosf@gmail.com. Indique versión, revisión, YAML, entradas y error. La versión pasó 80 pruebas de regresión y 114 comprobaciones GUI en fuentes y 114 en el EXE con respuestas controladas de diálogos. No se certifican todos los estados ni precisión física real. El manual técnico conserva resultados desfavorables y límites históricos. Derechos: LICENSE.

@@ -15,7 +15,7 @@ from docx.text.paragraph import Paragraph
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "docs/templates/catalog.json"
 AUTHORS = "Francisco Javier Burgos Flórez\nJuan Guillermo Popayán Hernández"
-REVISION = "Revisión de entrega del 8 de octubre de 2026"
+REVISION = "Integración documental del 8 de octubre de 2026"
 
 
 def replace_text(paragraph, text):
@@ -139,7 +139,7 @@ def template_document(title, short, introduction, version):
     metadata = [
         ["Autores", AUTHORS],
         ["Versión", version],
-        ["Fecha", "7 de octubre de 2026"],
+        ["Fecha", "8 de octubre de 2026"],
         ["Revisión", REVISION],
         ["Contacto", "fjburgosf@gmail.com"],
     ]

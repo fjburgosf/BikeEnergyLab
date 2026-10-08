@@ -9,13 +9,14 @@ Se incluyen manuales, configuración, ejemplos, datasets sintéticos, licencia,
 citación, versiones y avisos de dependencias. `SHA256SUMS.json` permite verificar
 integridad de todos los archivos del paquete. No es una firma digital del editor.
 
-La carpeta `docs/docx` contiene los tres documentos Word en español:
+La carpeta `docs/docx` contiene los cuatro documentos Word en español:
 [manual de usuario](docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
-[manual técnico](docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx) y
-[metodología científica](docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx).
-Incluyen ejemplos y tutorial, API y distribución, ecuaciones editables,
-referencias y resultados de validación sintética. Se revisaron las 21 páginas
-renderizadas por Microsoft Word antes de incorporarlos al paquete.
+[manual técnico con metodología científica](docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx),
+[descripción del software](docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx) y
+[título y funciones](docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx).
+El manual técnico integra ecuaciones editables, supuestos, referencias y resultados
+sintéticos. La descripción resume el fundamento científico y sus límites.
+Todas las páginas finales se renderizan y revisan antes de incluirlas en los paquetes.
 
 Desde PowerShell dentro de la carpeta extraída:
 
@@ -48,7 +49,7 @@ No incluye instalador ni firma de código. La verificación en otro equipo Windo
 y la validación de precisión con bicicletas reales son evidencias adicionales
 que no se sustituyen por estas pruebas de distribución.
 
-La carpeta **Entregables** contiene únicamente cinco DOCX y dos ZIP, uno portátil
+La carpeta **Entregables** contiene únicamente cuatro DOCX y dos ZIP, uno portátil
 y otro de código fuente. Extraiga el ZIP portátil fuera de Entregables y abra
 `BikeEnergyLab/BikeEnergyLab.exe`. Conserve su carpeta completa con las dependencias.
 Los registros de revisión y los hashes de entrega se conservan por separado

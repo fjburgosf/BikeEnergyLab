@@ -37,6 +37,11 @@ additional evidence. Automated GUI checks do not establish these.
 Expanded GUI acceptance passed 114 checks in source and 114 in the Windows executable. It checks the nine Cargar ejemplo → Simular workflows, file/model buttons, all four sensitivity methods, benchmark, EXP 01–15, guide and PNG/SVG/PDF exports through actual Tk widget invocation with controlled dialog responses. Native Windows dialog rendering is not certified. Reports: results/gui-button-verification-1.0.0. Contact: fjburgosf@gmail.com.
 
 The editorial revision of 7 October 2026 preserves the verified application
-and scientific baseline. All five DOCX were rendered and reviewed again. Their
-80 pages retain 25 captures, button explanations, nine examples and 26 editable
+and scientific baseline. All four DOCX were rendered and reviewed again. Their
+The final reviewed pages retain 25 captures, button explanations, nine examples and 26 editable
 equations. The final editable prose contains no semicolons or code-host links.
+
+The scientific methodology is integrated in the technical manual. The software
+description summarizes its foundations and limits. The independent methodology
+Word document is no longer part of the delivery. Numerical sources and the
+verified Windows executable remain unchanged.

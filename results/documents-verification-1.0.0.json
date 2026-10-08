@@ -1,18 +1,18 @@
 {
   "version": "1.0.0",
-  "revision": "delivery-2026-10-08",
+  "revision": "integration-2026-10-08",
   "release_date": "2026-10-06",
   "document_revision_date": "2026-10-08",
   "contact": "fjburgosf@gmail.com",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
-  "completed_utc": "2026-10-08T13:17:33.379628+00:00",
+  "completed_utc": "2026-10-08T13:51:40.923889+00:00",
   "render_backend": "Microsoft Word native COM ExportAsFixedFormat with refreshed TOC and fields",
   "rasterizer": "documents skill render_docx.py with Word PDF adapter and Poppler",
   "raster_dpi": 150,
   "documents": [
     {
       "path": "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx",
-      "sha256": "55e3a3a1436f55843c5b7fb59aee48c5e6b70e2e310b7fd1dfcad792c2aa6db5",
+      "sha256": "b68e0a52daae17c895f43224be03ad5efe47525ef25d57159535563b6ad22926",
       "pages": 33,
       "editable_equations": 0,
       "embedded_application_captures": 25,
@@ -51,14 +51,14 @@
         32,
         33
       ],
-      "qa_pdf_sha256": "fac69bea60675b9ee741d1085d39cd21c114cff3453992115a754d6372895613",
+      "qa_pdf_sha256": "d59664a57ec5f2208d09860232eb1dc98c28bc7f691514c28797308f7f08b753",
       "page_png_sha256": {
-        "1": "ba0a6497754f6943e2ebb4193c71dd79eb819d6a1f2a2990d6eeaa8ac8cd2922",
+        "1": "d3f0872daa00f6e4f3a83d71a6314ba4f1943f95a85d2bffb638e5f4cd99176c",
         "2": "9e1d203d5c43db58210b8f9a808d925687d4a05b011564fa1f27c7b89950258e",
         "3": "94e2ca2d16e5143868adb970a6004ea565a84d8d09ec0c79cf6d54b708ce7f60",
-        "4": "2f38895f40766c8b950801c26625f902cff0a90ce99eb97c3dc2a79804da1420",
+        "4": "0795be12607551f5b6224d93ba78956976e75df131bdb1cf5b555bcbb7fe5211",
         "5": "e03326fa136e06d9b1db268597164b362e8da5c02ebf002a3db3b696a7453e4b",
-        "6": "e7e640ef778191b09562d5d0157b8a12c77ce19572da236d6a79bbcf3c2a8835",
+        "6": "beb76f86a61faae1fa1aea1c8e16bcf708a377c4ac97d3a19c9b750b559bc9f7",
         "7": "d3984416960d956374bea062f744f168ea0d3480539786ef8536bea01d1e1e00",
         "8": "8e095562d555e96646c1da4524236b6cb8ac33b056c68fac550e52a149692c0e",
         "9": "e1075b0ed4f760cc6bcc07d719afa1be2cbb27fcfa143c1ca55e620578b2aec7",
@@ -85,7 +85,7 @@
         "30": "03aa316b3dafe6ad78b5a909e8916f265f1a6ecb2fcab0d90154728410d51e97",
         "31": "16fd83a22eec1dde051ab0ee100dd451cb5ad7412b376358a0d7cb92e9df03a0",
         "32": "b2b74f30cc49b7026b47503397255a21dac1c41748e062434932933d8c478def",
-        "33": "756031b19419cb6dcd39d97e9cc9101d8b171a3a6a9de03a124115651fb2c98c"
+        "33": "5f435f594d9df0583824d1c4bd332af6536d5df14f016e1972e19bf82830fbd2"
       },
       "qa_iteration": 1,
       "template": "docs/templates/user.template",
@@ -121,79 +121,8 @@
     },
     {
       "path": "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx",
-      "sha256": "225e9bc1c1d77662401d5c3160ba124a5e2d06d6cbf3982c070adb9c074aa52c",
-      "pages": 14,
-      "editable_equations": 0,
-      "embedded_application_captures": 0,
-      "visually_reviewed_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "qa_pdf_sha256": "1e127cd253d5bba596c48c68208098f1e22d6857d9199c890a76b04ba9adeb28",
-      "page_png_sha256": {
-        "1": "db048025a4fb5cf35b7de0f85ad043df5ee0f94e352e3232f7099567125b8444",
-        "2": "97ec0258e93ce53f4ce7d5ba85b96fd8bbe18f2b8f883c9b11c3c0aee3752e33",
-        "3": "c00d4178e122e2cc6ae911beb84c36a532c8407428b059c684709b2533bf87fc",
-        "4": "6f79e3a1f5f7ac7c2d6723461de6e056eb3dac5120c8eeaaf6264ffe98af1e40",
-        "5": "9b0e81bc49b4f74edc8248329c514fc909c43efe7fde9768f974cfd2e52e2fce",
-        "6": "d79758995e1869db34fa6dbea265b61310e5c92de46260899675d34fd17aa37b",
-        "7": "d53e327ab01d25b1d339b6dbc3f606047b301065dfee61e38807c7b457963c6a",
-        "8": "0dc471c4b4fc86aec3d71ca13ea5e8a26579495f4eea1f4fbc3c51ba264a738f",
-        "9": "f9d590781fb620e9c8dcb88fbfaebb800d8738b390fe6c4e6a3789bcad5d3c2b",
-        "10": "5b1113e8a401cafdf16a9819f8537ca3e0b5eef414be739eef708489d8ccfe27",
-        "11": "7996aec941f6153a42f4010dd96a6c92323d2bddf71df5ef7e8fc60ea8bbcabe",
-        "12": "7ea51a024c2dad2151e65fb3e3d42183ee3a20adb1021063f0a3533618054cba",
-        "13": "1bf9e2d35aba17bcc12e8aacc7d276e6ad889417808de87a81ecc284095b4d29",
-        "14": "683b5d3ceb2c8b7fae04dc38d114090cd92fa244ef1a68cc6c3061ff91d65438"
-      },
-      "qa_iteration": 1,
-      "template": "docs/templates/technical.template",
-      "template_sha256": "655f3061f6dcc7c90b687e6d51d8c24f399a9ca640d9201761bd9fa688b19963",
-      "template_sections": 11,
-      "existing_styles_compared": 49,
-      "style_property_differences": 0,
-      "section_geometry_preserved": true,
-      "preserved_parts": {
-        "word/theme/theme1.xml": {
-          "byte_identical": true,
-          "sha256": "2760e6e84d4bf365af6570192dbe9cb57bb32653388d0ea041d116b25b1ca0a2",
-          "semantic_identical": true
-        },
-        "word/numbering.xml": {
-          "byte_identical": false,
-          "sha256": "5bd7bac6b904852fb4d30039e959070d0cb754c3e003c0a25b20ef20ea547213",
-          "semantic_identical": true
-        },
-        "word/fontTable.xml": {
-          "byte_identical": false,
-          "sha256": "29e6c37eab89bb96b22d7934b53ca69823069fa566f5ce36abbbad06aa135573",
-          "shared_font_definitions_preserved": true,
-          "added_fonts": [
-            "Consolas"
-          ],
-          "removed_unused_fonts": [
-            "Cambria Math"
-          ],
-          "note": "Word normalizes the font inventory to fonts used by the final document; Consolas is the permitted code style."
-        }
-      }
-    },
-    {
-      "path": "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx",
-      "sha256": "59d5e94451746adb123740ae24dd93eff54fb20c911e1dbf1b0e604e6a06dd1b",
-      "pages": 15,
+      "sha256": "83dd630eda0712ee573d76b96a092d4f9ad13f69fcc54f0b28f52fcb525d2aa8",
+      "pages": 21,
       "editable_equations": 26,
       "embedded_application_captures": 0,
       "visually_reviewed_pages": [
@@ -211,25 +140,37 @@
         12,
         13,
         14,
-        15
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
       ],
-      "qa_pdf_sha256": "510d84324fae0cad2aff72e539cc5308658d48abee39647f292c5c21f459ce0a",
+      "qa_pdf_sha256": "dd12187d008ad2cfb84c94758aca995428cfc404241a2311e3acb48ff12c9249",
       "page_png_sha256": {
-        "1": "4a5d38a368d948023c67edf92d3aee155e82598fd9a256c8fca8139a10299b33",
-        "2": "5514738c2a2ade24ed424b690569e90afe151d149967244bb8c5bf6796e910fa",
-        "3": "00049137c6b4cef6830ccaa5075cb77730021b26388267e19b5286605445b477",
-        "4": "d3d3ce5ccbe8c354aee799da30d9f0c87a975fc0e70aaea1baaafc669e24a018",
-        "5": "26a26e45113a3a8cf361b94e7db4319327a5f7b7e15f60b8d58a68fcc5efb178",
-        "6": "c351b84120ddbd3b2a93adeceef6e706d11abdc9dda10f8515a11508e3f54316",
-        "7": "4b3af74da262f0b9d384a28478b839eb62a8d4ff3a488771cea9f34c634df9cc",
-        "8": "33759b4879fc2a04a18233e0c15297c5d7ca79efdf669bc99f37e0ad9aa6be2d",
-        "9": "027f7920407691f7e952b581314113b2cd1296db8b1dae441670d604e0b48654",
-        "10": "d331d345937680b30e20e971c4ecd5f64df7f92f5563702a3723e67314020158",
-        "11": "ae497231c70227b16669dd0025d0d1ca38768cad043dc4b8912135f895479c89",
-        "12": "1eb429f2d01abc25e81563edb4eadcdf4e3d8502a1bfbb02e783aebe529ca480",
-        "13": "7dda766a86e7c980a42c57183924898f5b5cb53f523623f316ec31ecdceb1384",
-        "14": "a3999746676b5f5a105f96df5b57d7dbfdacf6f852eaf8648a791f8da05b8ce8",
-        "15": "e99ad3e35c3e3edb919aa3fda3b28b680c74a36a57c78e7d4ca6445ca0a963bd"
+        "1": "87c9af8ec7917c60831398298c417a143720b5efccfb68380604cb1a87213b4b",
+        "2": "7ca4d704a4e7e5ea0f37305bbeca6864c607e81250fa74ee80c6dabfea4f4015",
+        "3": "2abfc83c5e24e41eaacc01c4b2b2f3a4fd0b7bf5f87e4cc6905bac39e93c6afc",
+        "4": "aa6e6425f3ea533633f8a7a83e243317b213a85d4b0462a63e0cf97785a82a06",
+        "5": "4c966f119f6d5ec1fb1874deec72df2616210f8ca97fe35a2151586b3cd9222e",
+        "6": "9b0e81bc49b4f74edc8248329c514fc909c43efe7fde9768f974cfd2e52e2fce",
+        "7": "d79758995e1869db34fa6dbea265b61310e5c92de46260899675d34fd17aa37b",
+        "8": "c4b12c6de0418a832e2f5945020b26e4a80faec4b0de895791ca6eb387115009",
+        "9": "375657f5a4999021891e668da8aa5857d0612d8d4a2743e8206a0fc2c4084213",
+        "10": "0dc471c4b4fc86aec3d71ca13ea5e8a26579495f4eea1f4fbc3c51ba264a738f",
+        "11": "f9d590781fb620e9c8dcb88fbfaebb800d8738b390fe6c4e6a3789bcad5d3c2b",
+        "12": "8eed5448cf702e139ebb7024d490914024e894dd852e45bee043bfa5e27fd623",
+        "13": "d270f6188ea23bdd1f8d5b239fa276c6e3239c77a9f626fb94f2db432057241c",
+        "14": "18fa675c33f6d977413e899f34d9229c76d01d5e5c0ea86cdc5af1c26c26ca7a",
+        "15": "f6c6c8a0a17e4cd76ec79f10ec00fa8e0782d3b8c4ebb08dbf223b05a1f28890",
+        "16": "700104bde8b39623c6358b60b7c63b779b51c768eab9e489de83a1d25c11be6a",
+        "17": "22cccb69c2bd0cf5b6e2450bcaef3e3e39a8e8dbbd4e374578b3e80faedb279e",
+        "18": "dd60eed9ef3d4940a32e767736c0ff8fcfaca97e9ee14396f279c6a433740e15",
+        "19": "ca507f1d004c3dc82b0d6d13d719ede1397b2b156ce7fa2e289474d4a30524f6",
+        "20": "e01285e727f0cda96f8c8f9e01751f5a852b3ba85c2e6f9522f36d66a6fcd041",
+        "21": "e8c4dbfe6638b15d82372985e2d1bd89e890ba5ac554969ab3b1a120839dd8e9"
       },
       "qa_iteration": 1,
       "template": "docs/templates/technical.template",
@@ -263,7 +204,7 @@
     },
     {
       "path": "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx",
-      "sha256": "9d0bee1cb01c9049e9bae25b148e3d90ca991f905098a6d6de6914b6537b2924",
+      "sha256": "9231309915cd19323ac5c8f77562925e35f886d30e91dcf2b390aca5e19289ce",
       "pages": 17,
       "editable_equations": 0,
       "embedded_application_captures": 0,
@@ -286,25 +227,25 @@
         16,
         17
       ],
-      "qa_pdf_sha256": "08f29eee4b400fcb3c748eb5dde420f63024943c29fa1686c0240847f2573da0",
+      "qa_pdf_sha256": "36dffc6e6a42d2fca31f4f19cc6d7d73b1df1a5cc8e4102de6f203c4689393c1",
       "page_png_sha256": {
-        "1": "6862ece2f93bd17abcc182661226cf08fea7707534e887532343384e01683e22",
-        "2": "6af9d5930f4c170817955ae6d4999de20bd0ff95be1b88ea514c20c7e6e9d2b3",
-        "3": "14a1959e44eccbeb6bb2e5253708686d1cee1991e735ce76beaaa3a2790bf5a0",
+        "1": "9fe39942e20747e36d0c5fb1f476382c29347ff1069dc7d85fe108551d93b4f0",
+        "2": "6823b9a893f5108481d1de4bf12b303f14673f22afcdd2a1f0a9331ea5249141",
+        "3": "774aeafa5e4176bdec7dbde8f3bb7782daca5985f7d657bd222cc7061154a09a",
         "4": "71ab480da3e98897039a5e20a22a4900a1bcd7bd9dc17311d965cd6af83a7ff1",
         "5": "4f571ca92cc2d99de7f3ee3d755fbef8507c56912af482eb40e89d45afd6f3f4",
-        "6": "8b8d567e82943506389d424d80d2fe53d686e2a865ebdcd12ce266fca094683e",
+        "6": "eccad54f4bdc2344f3748c66e6cc7460e2c95b384cb26326a750778c99eb3175",
         "7": "2391f4fa350afdb81a98cf8553b5a501a4d31b26a119d647cbd904ab720883e5",
         "8": "2ce89e5c9f68448d350d7a94f9592191826f299a0135a1814b8d3012f66ae425",
         "9": "2ba7a84b54ad0a45e85d2665ddbd1c820d9b9007518a91b3aaa9797dce6160bf",
         "10": "6b50ec36e38909b9235d2ddde1113ac82a41de5d5b9e37b19b3ae880fe26df99",
         "11": "04633fff8a731197f223e555d4273eb252081cda3312697cd6508db547fcfbcd",
-        "12": "05bac69ca2dcbf0d6023a236538683244b3f2907a9c12751303ac7975c511d44",
-        "13": "6c95c7e550c50d568c7024aae377ce837da86418606ca96548dd598dd2f1ed9c",
+        "12": "def4d007b5bb06c13711e946aa6ff0e98216b9f9070945e58a2d3d2e0f6ba9aa",
+        "13": "3d95dae00f2bf945ce15fe8b52131cda72190561891df8ae869b002727e83f17",
         "14": "1046c1f4419768617d5d61e6d288c548d04282de270e748be71af84e7223ffb8",
         "15": "50d191af4075808038c9635ede1adb28a23ae07e35987e0697bfdc3d9211659d",
         "16": "54084fee749d46b15795dc99b68199e746b2a153e613549910c32847f2921c01",
-        "17": "39c145fc81fa93e9094871772bdca61f289ad24b793f7432b4bc7d8ef4028a39"
+        "17": "125e8b1a6ec12034b4091b8ab3af7370490cee184cb6e6c24f665867c18a3d9c"
       },
       "qa_iteration": 1,
       "template": "docs/templates/description.template",
@@ -338,14 +279,14 @@
     },
     {
       "path": "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx",
-      "sha256": "6d53110e9683b743538a115814eca0628a81bcf900317b1205776d308b11e98c",
+      "sha256": "c68702854fbc07fa3eb93d4db4003c13375a5b715634190a301ae8583ecd1d49",
       "pages": 1,
       "editable_equations": 0,
       "embedded_application_captures": 0,
       "visually_reviewed_pages": [
         1
       ],
-      "qa_pdf_sha256": "7f9761c7f6613512188f6593ba1a5a1e7c44bf9a935a56b2bf0a9a3fdcfeef88",
+      "qa_pdf_sha256": "ded64fc7079e47e97624d90c57775b66fce5525fe72c8d2b77c5a5f09acf6747",
       "page_png_sha256": {
         "1": "52d9501ac41b8889433c61278098c9e6e454a93cc84dae1d12bed1c181f49086"
       },
@@ -377,7 +318,7 @@
       }
     }
   ],
-  "total_pages": 80,
+  "total_pages": 72,
   "all_pages_visually_reviewed": true,
   "structural_checks_passed": true,
   "visual_review": "Every final page viewed at original pixel dimensions; no clipping, overlap, broken tables or missing glyphs observed. Chapter page breaks and styling follow the supplied references.",
@@ -391,7 +332,9 @@
   },
   "templates_catalog_sha256": "afd9162bdb60ce8adeee4cfb81e891022ce528a8c2f668d08a5639eb29fa6a62",
   "original_templates_unchanged": true,
-  "scope": "Delivery organization revision of five template-based DOCX. Updated archive extraction and delivery inventory instructions. Captures, button coverage, examples, editable equations and scientific baseline retained.",
+  "methodology_in_technical_manual": true,
+  "scientific_equations_semantically_preserved": true,
+  "scope": "Four final template-based DOCX. Scientific methodology integrated in the technical manual with its complete editable equations and historical evidence. Scientific overview added to software description. Captures, button coverage, examples, editable equations and scientific baseline retained.",
   "editorial_checks": {
     "semicolon_count_in_editable_document_text": 0,
     "code_host_references_in_document_text_and_relationships": 0

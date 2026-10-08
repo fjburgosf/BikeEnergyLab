@@ -78,9 +78,8 @@ El paquete portátil `dist/BikeEnergyLab-1.0.0-windows-x64.zip` incluye el progr
 dependencias, manuales, configuraciones y ejemplos. Extraer la carpeta completa y
 abrir `BikeEnergyLab.exe`. La CLI del ejecutable acepta los mismos comandos.
 Véase [distribución Windows](docs/windows_distribution.md).
-Incluye cinco documentos Word en español: [manual de usuario](docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
+Incluye cuatro documentos Word en español: [manual de usuario](docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
 [manual técnico](docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx),
-[metodología científica](docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx),
 [descripción del software](docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx) y
 [título y funciones](docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx).
 Conservan capturas, ecuaciones editables, referencias y resultados sintéticos documentados.
@@ -160,7 +159,7 @@ Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 
 ## Ejecutable Windows
 
-La carpeta **Entregables** contiene únicamente los cinco DOCX, el ZIP portátil
+La carpeta **Entregables** contiene únicamente los cuatro DOCX, el ZIP portátil
 y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. Extraiga el ZIP portátil fuera de
 Entregables y abra `BikeEnergyLab/BikeEnergyLab.exe`. Conserve la carpeta extraída
 completa con `_internal`. Los registros de revisión y hashes de entrega están

@@ -7,7 +7,7 @@
 | Nombre y versión | BikeEnergyLab 1.0.0 |
 | Tipo de producto | Framework científico de modelado energético de bicicletas eléctricas |
 | Autores | Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández |
-| Año y revisión | 2026, revisión editorial del 7 de octubre |
+| Año y revisión | 2026, revisión de integración documental del 8 de octubre |
 | Contacto | fjburgosf@gmail.com |
 | Lenguaje y distribución | Python 3.11 o superior. Aplicación portátil Windows x64 |
 | Estado | Funcional y verificado mediante pruebas de software y datos sintéticos |
@@ -42,6 +42,12 @@ Se dirige a investigación, docencia y análisis de movilidad eléctrica. Permit
 La simulación física produce series de potencia, energía y SOC, balances e indicadores de factibilidad. La calibración ajusta parámetros acotados y ofrece diagnósticos de identificabilidad. El aprendizaje compara M1 físico, M2 basado en datos, M3 residual fijo y M4 CGPRA, con rutas independientes para entrenamiento, intervalos y prueba.
 
 Se ofrecen importación CSV/GPX, conversión de telemetría, adaptación causal, recalibración de intervalos, Monte Carlo de misión y autonomía, sensibilidad OAT/Spearman/Morris/Sobol, benchmark ID/OOD y suite EXP 01 a 15. Los nueve ejemplos y la guía de ocho pasos permiten practicar sin archivos externos. Los resultados se exportan con configuración, datos y procedencia.
+
+### 4.1 Fundamento científico y alcance del método
+
+El modelo utiliza dinámica inversa con velocidad longitudinal prescrita. Integra rodadura, gravedad, fuerza aerodinámica con signo y aceleración, transforma la potencia según aporte humano y eficiencias, y calcula energía terminal y estado de carga con límites de batería. La batería admite representación energética y circuito equivalente Thevenin de una rama RC. Los mapas de motor y las curvas térmicas requieren caracterización propia.
+
+CGPRA combina física calibrada y regresión de residuos por ruta. Su compuerta pondera la corrección según soporte de datos y dispersión, sin representar una probabilidad de acierto. Los intervalos conformales usan rutas independientes para calibración. Monte Carlo propaga los supuestos configurados y la sensibilidad estudia su influencia. El capítulo 6 del manual técnico desarrolla las 26 ecuaciones editables, y el capítulo 7 conserva protocolos, resultados desfavorables y límites. Los datos sintéticos y las comprobaciones de implementación no demuestran precisión con bicicletas reales.
 
 ## 5. Adaptabilidad extensibilidad y mantenibilidad
 
@@ -89,7 +95,7 @@ CSV, YAML, JSON y figuras permiten analizar resultados sin depender de la sesió
 
 ## 10. Documentación y soporte técnico
 
-La entrega incluye manual de usuario ilustrado, manual técnico, metodología científica, descripción del software y título/funciones en Word. Entregables contiene únicamente estos cinco DOCX, el ZIP de fuentes y el ZIP portátil. El ZIP portátil incluye el EXE con sus dependencias. Se extrae fuera de Entregables para ejecutar el programa.
+La entrega incluye manual de usuario ilustrado, manual técnico con metodología científica, descripción del software y título/funciones en Word. Entregables contiene únicamente estos cuatro DOCX, el ZIP de fuentes y el ZIP portátil. El ZIP portátil incluye el EXE con sus dependencias. Se extrae fuera de Entregables para ejecutar el programa.
 
 El contacto del proyecto es fjburgosf@gmail.com. Al informar un problema, conservar la versión, YAML, datos, mensaje de error y carpeta de exportación. Revisar antes la sección de solución de problemas del manual.
 
@@ -97,7 +103,7 @@ El contacto del proyecto es fjburgosf@gmail.com. Al informar un problema, conser
 
 La evidencia de software comprueba los botones mediante widgets reales de Tk y respuestas controladas de diálogos. Cubre archivos, ejemplos, modelos, tutorial, sensibilidad, benchmark, EXP 01 a 15 y exportaciones. No certifica el aspecto de todos los diálogos nativos ni todos los estados posibles. Los hashes de los documentos finales y los paquetes se registran en results.
 
-La evidencia científica histórica conserva su identidad y resultados: M3 tuvo menor CRPS que M4 en el protocolo ID y M4 perdió cobertura en escenarios térmicos/combinados OOD. En deriva sintética, M1 adaptativo obtuvo el menor MAE. Estos hallazgos se explican en la metodología. No se sustituyen por resultados favorables ni por las pruebas de GUI.
+La evidencia científica histórica conserva su identidad y resultados: M3 tuvo menor CRPS que M4 en el protocolo ID y M4 perdió cobertura en escenarios térmicos/combinados OOD. En deriva sintética, M1 adaptativo obtuvo el menor MAE. Estos hallazgos se explican en el manual técnico. No se sustituyen por resultados favorables ni por las pruebas de GUI.
 
 ## 12. Impacto y utilización
 
@@ -133,6 +139,6 @@ Los autores identificados del software son Francisco Javier Burgos Flórez y Jua
 
 ## Referencias
 
-Las referencias bibliográficas verificadas del proyecto se mantienen en docs/references.md y se desarrollan en Metodología científica de BikeEnergyLab. Las fuentes de evidencia conservan los protocolos del 4 de octubre de 2026 y su identidad histórica. La revisión editorial del 7 de octubre no constituye una nueva validación física.
+Las referencias bibliográficas verificadas del proyecto se mantienen en docs/references.md y se desarrollan en el manual técnico de BikeEnergyLab. Las fuentes de evidencia conservan los protocolos del 4 de octubre de 2026 y su identidad histórica. La revisión editorial del 7 de octubre no constituye una nueva validación física.
 
 {{SOURCE}}

@@ -28,8 +28,8 @@ release = read_json(ROOT / "results/release_verification.json")
 sourcezip = TARGET / "BikeEnergyLab-1.0.0-codigo-fuente.zip"
 portablezip = ROOT / "dist/BikeEnergyLab-1.0.0-windows-x64.zip"
 wheel = ROOT / "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl"
-assert review["total_pages"] == 80 and len(review["documents"]) == 5
-assert len(list(TARGET.glob("*.docx"))) == 5
+assert len(review["documents"]) == 4
+assert len(list(TARGET.glob("*.docx"))) == 4
 assert (
     sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe")
     == release["artifact_sha256"]["dist/BikeEnergyLab/BikeEnergyLab.exe"]
@@ -54,13 +54,17 @@ actual = {
 }
 assert actual == manifest, "Delivery manifest differs from actual inventory"
 expected = {Path(d["path"]).name for d in review["documents"]} | {sourcezip.name, portablezip.name}
-assert set(actual) == expected and len(list(TARGET.iterdir())) == 7, (
+assert set(actual) == expected and len(list(TARGET.iterdir())) == 6, (
     "Unexpected files or folders in Entregables"
 )
 with ZipFile(sourcezip) as source, ZipFile(portablezip) as portable, ZipFile(wheel) as binary:
     assert source.testzip() is None
     assert portable.testzip() is None
     assert binary.testzip() is None
+    assert not any(
+        "Metodologia_cientifica_BikeEnergyLab_1.0.0.docx" in name
+        for name in source.namelist() + portable.namelist()
+    )
     assert not any(
         "visual-qa/" in n or "docx-qa/" in n or "/~$" in n
         for n in portable.namelist() + source.namelist()
@@ -124,8 +128,8 @@ portable_report = {
     "archive": portablezip.relative_to(ROOT).as_posix(),
     "archive_sha256": sha(portablezip),
     "manifest_files_verified": len(portable_manifest),
-    "reviewed_docx_included": 5,
-    "document_pages": 80,
+    "reviewed_docx_included": 4,
+    "document_pages": review["total_pages"],
     "document_hashes_match_reviewed_files": True,
     "source_archive_docx_match": True,
     "wheel_sources_match": True,
@@ -141,17 +145,17 @@ delivery_report = {
     "passed": True,
     "files_verified": len(manifest),
     "checks": [
-        "Only five Word documents and two ZIP archives in Entregables",
+        "Only four Word documents and two ZIP archives in Entregables",
         "All delivery and portable manifest SHA256 values and complete file inventories",
         "Source ZIP and wheel Python sources match verified release",
         "Source ZIP scripts, metadata, retained templates, screenshots and document sources match current files",
-        "Five reviewed DOCX hashes match folder, source ZIP and portable ZIP",
+        "Four reviewed DOCX hashes match folder, source ZIP and portable ZIP",
         "ZIP CRC integrity",
         "Delivered executable SHA256 matches tested executable",
         "Frozen SciPy Sobol data and source identity present",
     ],
-    "reviewed_docx": 5,
-    "document_pages": 80,
+    "reviewed_docx": 4,
+    "document_pages": review["total_pages"],
     "user_guide_captures": 25,
     "exe_sha256": sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe"),
     "source_zip_sha256": sha(sourcezip),
@@ -182,8 +186,8 @@ print(
             "passed": True,
             "delivery_files": len(manifest),
             "portable_files": len(portable_manifest),
-            "reviewed_docx": 5,
-            "pages": 80,
+            "reviewed_docx": 4,
+            "pages": review["total_pages"],
             "source_zip_sha256": sha(sourcezip),
         }
     )
