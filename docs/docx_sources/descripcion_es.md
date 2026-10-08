@@ -89,7 +89,7 @@ CSV, YAML, JSON y figuras permiten analizar resultados sin depender de la sesió
 
 ## 10. Documentación y soporte técnico
 
-La entrega incluye manual de usuario ilustrado, manual técnico, metodología científica, descripción del software y título/funciones en Word. Entregables reúne estos cinco DOCX, las fuentes ZIP, el EXE con sus dependencias y el paquete portátil.
+La entrega incluye manual de usuario ilustrado, manual técnico, metodología científica, descripción del software y título/funciones en Word. Entregables contiene únicamente estos cinco DOCX, el ZIP de fuentes y el ZIP portátil. El ZIP portátil incluye el EXE con sus dependencias. Se extrae fuera de Entregables para ejecutar el programa.
 
 El contacto del proyecto es fjburgosf@gmail.com. Al informar un problema, conservar la versión, YAML, datos, mensaje de error y carpeta de exportación. Revisar antes la sección de solución de problemas del manual.
 

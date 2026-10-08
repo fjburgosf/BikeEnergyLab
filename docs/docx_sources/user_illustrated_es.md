@@ -39,7 +39,7 @@ Combina física longitudinal, aporte humano, pérdidas y batería. Produce energ
 
 ### 3.1 Ejecución del paquete portátil
 
-Extraiga el ZIP completo y abra BikeEnergyLab.exe. En Entregables, abra el EXE desde esa carpeta. No lo copie solo: necesita _internal. Inicio presenta ejemplos y tutorial. El selector superior derecho permite elegir es o en.
+En Entregables encontrará cinco documentos Word y dos ZIP. Extraiga BikeEnergyLab-1.0.0-windows-x64.zip fuera de Entregables y abra BikeEnergyLab.exe en la carpeta BikeEnergyLab extraída. Conserve la carpeta completa con _internal. Inicio presenta ejemplos y tutorial. El selector superior derecho permite elegir es o en.
 
 ### 3.2 Ejecución desde fuentes
 

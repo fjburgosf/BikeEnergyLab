@@ -48,7 +48,9 @@ No incluye instalador ni firma de código. La verificación en otro equipo Windo
 y la validación de precisión con bicicletas reales son evidencias adicionales
 que no se sustituyen por estas pruebas de distribución.
 
-La entrega final se encuentra en **Entregables**, con el ejecutable y sus
-dependencias, los cinco DOCX, el ZIP portátil, el ZIP de código fuente y los
-registros de verificación. El ZIP de fuentes contiene el código, los documentos
+La carpeta **Entregables** contiene únicamente cinco DOCX y dos ZIP, uno portátil
+y otro de código fuente. Extraiga el ZIP portátil fuera de Entregables y abra
+`BikeEnergyLab/BikeEnergyLab.exe`. Conserve su carpeta completa con las dependencias.
+Los registros de revisión y los hashes de entrega se conservan por separado
+en `results/delivery-1.0.0`. El ZIP de fuentes contiene el código, los documentos
 y los scripts necesarios para reproducir la distribución.

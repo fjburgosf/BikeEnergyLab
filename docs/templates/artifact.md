@@ -73,3 +73,9 @@ finales y se guardan sus hashes. Cada corrección exige render y revisión nuevo
 La instrucción del usuario autoriza retirar la fila de ubicación del código
 de las portadas y la tabla descriptiva, además de simplificar la puntuación.
 Los estilos, las secciones, las capturas y las ecuaciones se conservan.
+
+## Revisión de entrega del 8 de octubre de 2026
+
+Se actualizan las instrucciones de distribución y la revisión de los cinco
+Word. Entregables conserva únicamente cinco DOCX y dos ZIP. Las plantillas,
+las capturas y las ecuaciones mantienen su sistema de diseño.

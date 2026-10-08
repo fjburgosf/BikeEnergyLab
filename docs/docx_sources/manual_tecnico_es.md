@@ -171,7 +171,7 @@ PyInstaller genera una carpeta onedir. El ejecutable necesita conservar _interna
 
 Las fuentes, el lock y los scripts permiten repetir el proceso. No se promete igualdad binaria entre builds. La revisión ampliada invoca los botones reales de Tk con respuestas controladas de diálogos, incluyendo archivos, ejemplos, tutorial, modelos, sensibilidad, benchmark, EXP 01 a 15 y exportación. Otra máquina Windows y una revisión de todos los diálogos nativos aportarían evidencia adicional.
 
-La carpeta Entregables reúne BikeEnergyLab.exe con _internal, los cinco DOCX, el ZIP portátil, un ZIP de código fuente y los registros de verificación.
+La carpeta Entregables contiene únicamente los cinco DOCX, el ZIP portátil y el ZIP de código fuente. El EXE y sus dependencias están dentro del ZIP portátil. Extraiga el paquete fuera de Entregables y conserve la carpeta BikeEnergyLab completa. Los registros de revisión y hashes de la entrega se guardan por separado en results/delivery-1.0.0.
 
 ## 9. Glosario de términos
 

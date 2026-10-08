@@ -160,9 +160,11 @@ Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 
 ## Ejecutable Windows
 
-La carpeta **Entregables** reúne el ejecutable con `_internal`, los cinco DOCX,
-el ZIP portátil y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. `Verificacion` contiene
-los registros de pruebas.
+La carpeta **Entregables** contiene únicamente los cinco DOCX, el ZIP portátil
+y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. Extraiga el ZIP portátil fuera de
+Entregables y abra `BikeEnergyLab/BikeEnergyLab.exe`. Conserve la carpeta extraída
+completa con `_internal`. Los registros de revisión y hashes de entrega están
+en `results/delivery-1.0.0`.
 
 ```powershell
 .\scripts\build_windows.ps1

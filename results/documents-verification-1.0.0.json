@@ -1,18 +1,18 @@
 {
   "version": "1.0.0",
-  "revision": "editorial-2026-10-07",
+  "revision": "delivery-2026-10-08",
   "release_date": "2026-10-06",
-  "document_revision_date": "2026-10-07",
+  "document_revision_date": "2026-10-08",
   "contact": "fjburgosf@gmail.com",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
-  "completed_utc": "2026-10-07T23:34:37.078840+00:00",
+  "completed_utc": "2026-10-08T13:17:33.379628+00:00",
   "render_backend": "Microsoft Word native COM ExportAsFixedFormat with refreshed TOC and fields",
   "rasterizer": "documents skill render_docx.py with Word PDF adapter and Poppler",
   "raster_dpi": 150,
   "documents": [
     {
       "path": "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx",
-      "sha256": "7e9cd7bc6e6081854d240a1ca06b3265555e60df30ca8b685043b483cf4d102e",
+      "sha256": "55e3a3a1436f55843c5b7fb59aee48c5e6b70e2e310b7fd1dfcad792c2aa6db5",
       "pages": 33,
       "editable_equations": 0,
       "embedded_application_captures": 25,
@@ -51,14 +51,14 @@
         32,
         33
       ],
-      "qa_pdf_sha256": "cef9b290aec80ae0a455c637a19cee09fe8db0982ca782b63853bcaeac438f11",
+      "qa_pdf_sha256": "fac69bea60675b9ee741d1085d39cd21c114cff3453992115a754d6372895613",
       "page_png_sha256": {
-        "1": "25817f7bbe3d195a7cb394eb0e85c5cecf2286c646f18914bd8d5249bf82f28a",
+        "1": "ba0a6497754f6943e2ebb4193c71dd79eb819d6a1f2a2990d6eeaa8ac8cd2922",
         "2": "9e1d203d5c43db58210b8f9a808d925687d4a05b011564fa1f27c7b89950258e",
         "3": "94e2ca2d16e5143868adb970a6004ea565a84d8d09ec0c79cf6d54b708ce7f60",
         "4": "2f38895f40766c8b950801c26625f902cff0a90ce99eb97c3dc2a79804da1420",
         "5": "e03326fa136e06d9b1db268597164b362e8da5c02ebf002a3db3b696a7453e4b",
-        "6": "d7d045a81b8f3c548567c15df071d5f4b522346af5d030b43747451c32e7a590",
+        "6": "e7e640ef778191b09562d5d0157b8a12c77ce19572da236d6a79bbcf3c2a8835",
         "7": "d3984416960d956374bea062f744f168ea0d3480539786ef8536bea01d1e1e00",
         "8": "8e095562d555e96646c1da4524236b6cb8ac33b056c68fac550e52a149692c0e",
         "9": "e1075b0ed4f760cc6bcc07d719afa1be2cbb27fcfa143c1ca55e620578b2aec7",
@@ -121,7 +121,7 @@
     },
     {
       "path": "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx",
-      "sha256": "ebcbceff97747954fe418886e9d0bd41adeb2133c327c197cb3bf82261eca263",
+      "sha256": "225e9bc1c1d77662401d5c3160ba124a5e2d06d6cbf3982c070adb9c074aa52c",
       "pages": 14,
       "editable_equations": 0,
       "embedded_application_captures": 0,
@@ -141,9 +141,9 @@
         13,
         14
       ],
-      "qa_pdf_sha256": "2133136618394e0022de99157c613bd8f25c612be8faf305a42947d4f13cb6ba",
+      "qa_pdf_sha256": "1e127cd253d5bba596c48c68208098f1e22d6857d9199c890a76b04ba9adeb28",
       "page_png_sha256": {
-        "1": "44a89b8991a1918a4af659fe6a76c00010bd790cc95e20329d1e8173cc078f56",
+        "1": "db048025a4fb5cf35b7de0f85ad043df5ee0f94e352e3232f7099567125b8444",
         "2": "97ec0258e93ce53f4ce7d5ba85b96fd8bbe18f2b8f883c9b11c3c0aee3752e33",
         "3": "c00d4178e122e2cc6ae911beb84c36a532c8407428b059c684709b2533bf87fc",
         "4": "6f79e3a1f5f7ac7c2d6723461de6e056eb3dac5120c8eeaaf6264ffe98af1e40",
@@ -155,7 +155,7 @@
         "10": "5b1113e8a401cafdf16a9819f8537ca3e0b5eef414be739eef708489d8ccfe27",
         "11": "7996aec941f6153a42f4010dd96a6c92323d2bddf71df5ef7e8fc60ea8bbcabe",
         "12": "7ea51a024c2dad2151e65fb3e3d42183ee3a20adb1021063f0a3533618054cba",
-        "13": "c8aa8ab1d6d2d17e0c3d5b4d22a99fbf03566f11ac4cc190e6ee3516e7ed328f",
+        "13": "1bf9e2d35aba17bcc12e8aacc7d276e6ad889417808de87a81ecc284095b4d29",
         "14": "683b5d3ceb2c8b7fae04dc38d114090cd92fa244ef1a68cc6c3061ff91d65438"
       },
       "qa_iteration": 1,
@@ -192,7 +192,7 @@
     },
     {
       "path": "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx",
-      "sha256": "81f8c59cbcc142ad2698a733af743c4f657fe011286cdbbee14f9c8c5010ea02",
+      "sha256": "59d5e94451746adb123740ae24dd93eff54fb20c911e1dbf1b0e604e6a06dd1b",
       "pages": 15,
       "editable_equations": 26,
       "embedded_application_captures": 0,
@@ -213,9 +213,9 @@
         14,
         15
       ],
-      "qa_pdf_sha256": "f342ca7b54a17e742446a1c6ebac08bfb64424f4e92d150e16f684fdc45b126f",
+      "qa_pdf_sha256": "510d84324fae0cad2aff72e539cc5308658d48abee39647f292c5c21f459ce0a",
       "page_png_sha256": {
-        "1": "9fe9d49baa76e22b4c3691415b04796d4af0a6b3bf546cd86a3fc5ac0d699dce",
+        "1": "4a5d38a368d948023c67edf92d3aee155e82598fd9a256c8fca8139a10299b33",
         "2": "5514738c2a2ade24ed424b690569e90afe151d149967244bb8c5bf6796e910fa",
         "3": "00049137c6b4cef6830ccaa5075cb77730021b26388267e19b5286605445b477",
         "4": "d3d3ce5ccbe8c354aee799da30d9f0c87a975fc0e70aaea1baaafc669e24a018",
@@ -263,7 +263,7 @@
     },
     {
       "path": "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx",
-      "sha256": "a4f7621b9bbb7c79a0f3c4909237c0b26a4a53d4045e5f4bc0904b076160e2d7",
+      "sha256": "9d0bee1cb01c9049e9bae25b148e3d90ca991f905098a6d6de6914b6537b2924",
       "pages": 17,
       "editable_equations": 0,
       "embedded_application_captures": 0,
@@ -286,9 +286,9 @@
         16,
         17
       ],
-      "qa_pdf_sha256": "fcc8ac98cc9a457fc71b2fb9616a91f1e0c3b71818a627ffecc06ce1112aff00",
+      "qa_pdf_sha256": "08f29eee4b400fcb3c748eb5dde420f63024943c29fa1686c0240847f2573da0",
       "page_png_sha256": {
-        "1": "408673939dba8fa348ef79702d52e1c319d6ecf090bc61d0f193bb218bc310e6",
+        "1": "6862ece2f93bd17abcc182661226cf08fea7707534e887532343384e01683e22",
         "2": "6af9d5930f4c170817955ae6d4999de20bd0ff95be1b88ea514c20c7e6e9d2b3",
         "3": "14a1959e44eccbeb6bb2e5253708686d1cee1991e735ce76beaaa3a2790bf5a0",
         "4": "71ab480da3e98897039a5e20a22a4900a1bcd7bd9dc17311d965cd6af83a7ff1",
@@ -299,14 +299,14 @@
         "9": "2ba7a84b54ad0a45e85d2665ddbd1c820d9b9007518a91b3aaa9797dce6160bf",
         "10": "6b50ec36e38909b9235d2ddde1113ac82a41de5d5b9e37b19b3ae880fe26df99",
         "11": "04633fff8a731197f223e555d4273eb252081cda3312697cd6508db547fcfbcd",
-        "12": "169754bcb3bdaba7ab7af61647a971727a46161b92516ee94a4990d20304e65b",
+        "12": "05bac69ca2dcbf0d6023a236538683244b3f2907a9c12751303ac7975c511d44",
         "13": "6c95c7e550c50d568c7024aae377ce837da86418606ca96548dd598dd2f1ed9c",
         "14": "1046c1f4419768617d5d61e6d288c548d04282de270e748be71af84e7223ffb8",
         "15": "50d191af4075808038c9635ede1adb28a23ae07e35987e0697bfdc3d9211659d",
         "16": "54084fee749d46b15795dc99b68199e746b2a153e613549910c32847f2921c01",
         "17": "39c145fc81fa93e9094871772bdca61f289ad24b793f7432b4bc7d8ef4028a39"
       },
-      "qa_iteration": 2,
+      "qa_iteration": 1,
       "template": "docs/templates/description.template",
       "template_sha256": "1ff724093d2b44f38f5115d11df0d3a6f1e9c9e1174eb2584a7bc471d10077fc",
       "template_sections": 1,
@@ -338,16 +338,16 @@
     },
     {
       "path": "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx",
-      "sha256": "17ae350d0e291c74b9fd62f80c107e87bc43fb8ce43f0c1d5633088271dfdd39",
+      "sha256": "6d53110e9683b743538a115814eca0628a81bcf900317b1205776d308b11e98c",
       "pages": 1,
       "editable_equations": 0,
       "embedded_application_captures": 0,
       "visually_reviewed_pages": [
         1
       ],
-      "qa_pdf_sha256": "4900bacdf73673961334f98168a467503d25b4ef729352fa596ccc835b2c534f",
+      "qa_pdf_sha256": "7f9761c7f6613512188f6593ba1a5a1e7c44bf9a935a56b2bf0a9a3fdcfeef88",
       "page_png_sha256": {
-        "1": "eadefe3426d0a0d44dd09f9f27028581704c99243588bf5421779c367924c3ba"
+        "1": "52d9501ac41b8889433c61278098c9e6e454a93cc84dae1d12bed1c181f49086"
       },
       "qa_iteration": 1,
       "template": "docs/templates/functions.template",
@@ -391,11 +391,10 @@
   },
   "templates_catalog_sha256": "afd9162bdb60ce8adeee4cfb81e891022ce528a8c2f668d08a5639eb29fa6a62",
   "original_templates_unchanged": true,
-  "scope": "Editorial revision of five template-based DOCX. Explanatory punctuation simplified and code-host references removed. Captures, button coverage, examples, editable equations and scientific baseline retained.",
+  "scope": "Delivery organization revision of five template-based DOCX. Updated archive extraction and delivery inventory instructions. Captures, button coverage, examples, editable equations and scientific baseline retained.",
   "editorial_checks": {
     "semicolon_count_in_editable_document_text": 0,
     "code_host_references_in_document_text_and_relationships": 0
   },
-  "authorized_template_deviation": "User requested removal of code-location metadata from covers and explanatory text.",
-  "equations_identical_to_previous_review": true
+  "authorized_template_deviation": "User requested removal of the repository metadata row and references from deliverables."
 }

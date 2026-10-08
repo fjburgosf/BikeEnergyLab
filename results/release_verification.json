@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "completed_utc": "2026-10-07T23:37:06.857407+00:00",
+  "completed_utc": "2026-10-08T13:22:08.496892+00:00",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
   "tests_passed": 80,
   "acceptance": {
@@ -78,14 +78,14 @@
   },
   "artifact_sha256": {
     "dist/BikeEnergyLab/BikeEnergyLab.exe": "2dedbac7d864d253ef41f6914a83adbb048c172bd69588b17909ab6b40b0e754",
-    "dist/BikeEnergyLab-1.0.0-windows-x64.zip": "a79a3a5f012d3b08df608bc75bd0b2ecfdfe9c80e9d132ac8986935dc72ca8d2",
-    "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl": "4869a816936a1d9efade2459c0491b440d0a358e53352dbe0a6475882d878693",
-    "dist/packages/bikeenergylab-1.0.0.tar.gz": "97c99a90c1ceaa88528144cd84eaa8890be5aa4cd17f86786aae061524b036f3",
-    "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx": "7e9cd7bc6e6081854d240a1ca06b3265555e60df30ca8b685043b483cf4d102e",
-    "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx": "ebcbceff97747954fe418886e9d0bd41adeb2133c327c197cb3bf82261eca263",
-    "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx": "81f8c59cbcc142ad2698a733af743c4f657fe011286cdbbee14f9c8c5010ea02",
-    "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx": "a4f7621b9bbb7c79a0f3c4909237c0b26a4a53d4045e5f4bc0904b076160e2d7",
-    "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx": "17ae350d0e291c74b9fd62f80c107e87bc43fb8ce43f0c1d5633088271dfdd39"
+    "dist/BikeEnergyLab-1.0.0-windows-x64.zip": "8865f6ccfd10d0981f24331ecdb477f7abac0fa47585e11e77d69a6367a990ff",
+    "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl": "4e2598fd67c340dbde0d295e362a9bca52aa38410fc1d9983ccbfd301f92956e",
+    "dist/packages/bikeenergylab-1.0.0.tar.gz": "b906a90023d5b07b28612454f90bae90429ec0f41f9d862af9139b1a0131fe39",
+    "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx": "55e3a3a1436f55843c5b7fb59aee48c5e6b70e2e310b7fd1dfcad792c2aa6db5",
+    "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx": "225e9bc1c1d77662401d5c3160ba124a5e2d06d6cbf3982c070adb9c074aa52c",
+    "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx": "59d5e94451746adb123740ae24dd93eff54fb20c911e1dbf1b0e604e6a06dd1b",
+    "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx": "9d0bee1cb01c9049e9bae25b148e3d90ca991f905098a6d6de6914b6537b2924",
+    "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx": "6d53110e9683b743538a115814eca0628a81bcf900317b1205776d308b11e98c"
   },
   "limitations": [
     "No real telemetry validation",

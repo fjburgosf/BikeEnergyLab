@@ -25,5 +25,6 @@ depurados y su contrato de fidelidad se conservan en docs/templates.
 Los datos de práctica son sintéticos. Las pruebas de software y los resultados
 presentados no sustituyen la validación con mediciones de bicicletas reales.
 
-Revisión editorial del 7 de octubre de 2026. Se simplificó la puntuación de los
-textos y se conservó la identificación local del software y sus archivos de entrega.
+Revisión de entrega del 8 de octubre de 2026. Entregables contiene únicamente
+los cinco Word y dos ZIP. El ejecutable y sus dependencias están en el ZIP
+portátil. Las instrucciones de apertura reflejan esta organización.
