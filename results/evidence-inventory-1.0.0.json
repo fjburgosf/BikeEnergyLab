@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "revision": "auditoria-2026-10-08",
-  "completed_utc": "2026-10-08T15:20:50.468452+00:00",
+  "completed_utc": "2026-10-08T16:07:04.838248+00:00",
   "scope": "Original selected evidence and primary logs; full raw protocols remain in the development workspace",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
   "executable_sha256": "2dedbac7d864d253ef41f6914a83adbb048c172bd69588b17909ab6b40b0e754",
@@ -10,7 +10,7 @@
     "results/release_verification_1.0.0.json": "0a8deb4ba4f8daca18437443df5b8b79fa924057eda71c07e5f812b58c2483a3",
     "results/release-1.0.0/acceptance.json": "b8e58dfce8ec876a7efa9816e57766aa412b1cb1e4b9a9a140bfbb7bd1f2483c",
     "results/distribution-verification-1.0.0/verification.json": "a71a0b714cf38039ca202c9c8d60c79f6d74b05548a9091e81695a46cb38f211",
-    "results/documents-verification-1.0.0.json": "6670c7ca469e9a00ecbe26a80f30eb1d537895479190cf60487edbaf6b744b31",
+    "results/documents-verification-1.0.0.json": "4244ea33847bd826de78895993af8159c28ef43073f119a78c2fb5e31b491c99",
     "results/gui-button-verification-1.0.0/source/verification.json": "c0a8761f6205f79c5ce16eeb655ebf566d52b65e6b1fceae55f1374b9106a01e",
     "results/gui-button-verification-1.0.0/windows/verification.json": "7f73ad9211c689b3468a5d3657ada5de6f75c27c8101fb8c5bebd69739f635f6",
     "results/build_logs/lint-v1.0.0.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",

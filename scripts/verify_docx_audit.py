@@ -140,6 +140,27 @@ for prefix, role, count in [
                 assert sha(ROOT / capture["file"]) == capture["sha256"]
         if prefix == "Manual_tecnico":
             assert equations == 32
+            assert (
+                len(
+                    body.xpath(
+                        "//m:d[m:dPr/m:begChr[@m:val='|'] and m:dPr/m:endChr[@m:val='|']]",
+                        namespaces=NS,
+                    )
+                )
+                == 1
+            )
+            assert (
+                len(
+                    body.xpath(
+                        "//m:limLow[m:e/m:r/m:t='argmin' and m:lim/m:r/m:t='θ']", namespaces=NS
+                    )
+                )
+                == 1
+            )
+            assert (
+                len(body.xpath("//m:sSup[m:e/m:r/m:t='θ' and m:sup/m:r/m:t='*']", namespaces=NS))
+                == 1
+            )
         documents.append(
             {
                 "path": path.relative_to(ROOT).as_posix(),
@@ -150,7 +171,11 @@ for prefix, role, count in [
                 "visually_reviewed_pages": list(range(1, count + 1)),
                 "qa_pdf_sha256": sha(pdf),
                 "page_png_sha256": pages,
-                "qa_iteration": "auditoria-2026-10-08",
+                "qa_iteration": (
+                    "segunda-auditoria-2026-10-08"
+                    if prefix == "Manual_tecnico"
+                    else "auditoria-2026-10-08"
+                ),
                 "template": catalog[role]["master"],
                 "template_sha256": catalog[role]["master_sha256"],
                 "template_sections": len(sections),
@@ -162,7 +187,7 @@ for prefix, role, count in [
         )
 record = {
     "version": "1.0.0",
-    "revision": "auditoria-2026-10-08",
+    "revision": "segunda-auditoria-2026-10-08",
     "release_date": "2026-10-06",
     "document_revision_date": "2026-10-08",
     "contact": "fjburgosf@gmail.com",
@@ -188,6 +213,11 @@ record = {
     "original_templates_unchanged": True,
     "methodology_in_technical_manual": True,
     "scientific_equations_semantically_preserved": True,
+    "second_audit_equations": {
+        "aerodynamic_absolute_value_as_editable_delimiter": True,
+        "signed_relative_speed_retained": True,
+        "optimal_theta_superscript_and_argmin_limit": True,
+    },
     "scope": "Four final template-based DOCX. Scientific methodology integrated in the technical manual with its complete editable equations and historical evidence. Scientific overview added to software description. Captures, button coverage, examples, editable equations and scientific baseline retained.",
     "editorial_checks": {
         "semicolon_count_in_editable_document_text": 0,

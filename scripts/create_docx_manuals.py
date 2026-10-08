@@ -44,6 +44,14 @@ def frac(top, bottom):
     return ("frac", top, bottom)
 
 
+def absolute(value):
+    return ("abs", value, None)
+
+
+def argmin(index):
+    return ("limlow", "argmin", index)
+
+
 def math_node(token):
     if isinstance(token, str):
         run = OxmlElement("m:r")
@@ -52,6 +60,36 @@ def math_node(token):
         run.append(text)
         return run
     kind, a, b = token
+    if kind == "abs":
+        node = OxmlElement("m:d")
+        properties = OxmlElement("m:dPr")
+        for name in ("begChr", "endChr"):
+            mark = OxmlElement(f"m:{name}")
+            mark.set(qn("m:val"), "|")
+            properties.append(mark)
+        node.append(properties)
+        expression = OxmlElement("m:e")
+        expression.append(math_node(a))
+        node.append(expression)
+        return node
+    if kind == "limlow":
+        node = OxmlElement("m:limLow")
+        expression = OxmlElement("m:e")
+        upright = OxmlElement("m:r")
+        properties = OxmlElement("m:rPr")
+        style = OxmlElement("m:sty")
+        style.set(qn("m:val"), "p")
+        properties.append(style)
+        upright.append(properties)
+        name = OxmlElement("m:t")
+        name.text = a
+        upright.append(name)
+        expression.append(upright)
+        node.append(expression)
+        limit = OxmlElement("m:lim")
+        limit.append(math_node(b))
+        node.append(limit)
+        return node
     if kind in {"sub", "sup"}:
         node = OxmlElement("m:sSub" if kind == "sub" else "m:sSup")
         first, second = "m:e", "m:sub" if kind == "sub" else "m:sup"
@@ -95,9 +133,8 @@ EQUATIONS = {
             sub("C", "d"),
             "A · ",
             sub("v", "rel"),
-            " · |",
-            sub("v", "rel"),
-            "|",
+            " · ",
+            absolute(sub("v", "rel")),
         ],
         [sub("F", "acc"), " = m · a"],
     ],
@@ -179,7 +216,7 @@ EQUATIONS = {
             " · ",
             sup(["(", sub("E", "pred,i"), "(θ) − ", sub("E", "obs,i"), ")"], "2"),
         ],
-        ["θ* = ", sub("argmin", "θ"), " J(θ)"],
+        [sup("θ", "*"), " = ", argmin("θ"), " J(θ)"],
     ],
     "residual": [
         [

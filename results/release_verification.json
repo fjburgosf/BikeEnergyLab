@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "completed_utc": "2026-10-08T15:21:27.327153+00:00",
+  "completed_utc": "2026-10-08T16:07:26.404781+00:00",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
   "tests_passed": 80,
   "acceptance": {
@@ -78,11 +78,11 @@
   },
   "artifact_sha256": {
     "dist/BikeEnergyLab/BikeEnergyLab.exe": "2dedbac7d864d253ef41f6914a83adbb048c172bd69588b17909ab6b40b0e754",
-    "dist/BikeEnergyLab-1.0.0-windows-x64.zip": "dcd2cc941e50eb52af6a040c96a501305cc2233d99b92af2e423bbd921a53587",
-    "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl": "0d3062d7c59d5df45de725df2a50c98b3b07d2811c0bec3f2cf71c03cadbbec1",
-    "dist/packages/bikeenergylab-1.0.0.tar.gz": "76e703a8cde81a68ff0d343a6e42a8ed3cefa6e9319e6c45835c1dde3e902c45",
+    "dist/BikeEnergyLab-1.0.0-windows-x64.zip": "e40419ae9e950ca3dfe0e48ffc89f620693c3a65312ffd18c89a57c1fa1bc253",
+    "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl": "17d909736d44c071311f0e4dea0a41dd00e93f9c3dd7928dc9220c17127d5c97",
+    "dist/packages/bikeenergylab-1.0.0.tar.gz": "94a867fec28653973d8013ceacde2f625a9a15a72e6b911156cda52698b451f2",
     "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx": "9a3de3343719a0dd085216710da32eb175d906f7ddb98712a3431eea976c59ab",
-    "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx": "a37708d99a1773c3f888e5a541141dd14bd453ea62589fe11f4388b861436e69",
+    "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx": "17010feefa29bb3ae7e822a00411238cacfaac5d89ef08677a37e124b400e8ee",
     "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx": "a4b3caf423a90a4bf22847b7d8f0f431aaeb9c5cd66bc6350c4c6bad1d0aae73",
     "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx": "bf7df1b057f41835e14ef5eeb9bc37c036571f4f8dc428626dd0798bcd7c378c"
   },
