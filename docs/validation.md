@@ -22,26 +22,17 @@ are retained in [the 1.0.0 record](validation_1.0.0.md) and
 `results/release_verification_1.0.0.json`. All practice data are synthetic.
 Field accuracy, probability calibration and academic novelty remain unverified.
 
-Five Spanish DOCX documents accompany this revision. The user manual contains
-25 actual GUI captures and nine executed examples. The technical manual and
-scientific methodology retain API, equations and historical evidence. Software
-description and title/functions follow the supplied document organization.
-Microsoft Word updated their contents fields and rendered 33, 14, 15, 17 and 1
-pages respectively. All 80 final pages were visually reviewed at native 150 dpi.
-The methodology retains 26 editable Word equations. Identities, source-template
-style fidelity and review are recorded in documents-verification-1.0.0.json.
-These documentation checks do not add physical validation results.
-Manual acceptance of every native window state and another Windows machine are
-additional evidence. Automated GUI checks do not establish these.
+Four Spanish DOCX documents accompany the 8 October 2026 audit correction.
+The 31-page user manual contains 25 actual GUI captures, nine distinct executed
+examples and an eight-step tutorial. The 17-page technical manual integrates
+the complete scientific methodology, including 32 editable Word equation
+objects, API, tests, historical evidence and limitations. The 17-page software
+description and one-page title/functions document follow the supplied templates.
+All 66 pages were rendered and reviewed after the final edits. Their exact
+hashes, template checks, page images and source/executable capture provenance
+are recorded in results/documents-verification-1.0.0.json.
 
-Expanded GUI acceptance passed 114 checks in source and 114 in the Windows executable. It checks the nine Cargar ejemplo → Simular workflows, file/model buttons, all four sensitivity methods, benchmark, EXP 01–15, guide and PNG/SVG/PDF exports through actual Tk widget invocation with controlled dialog responses. Native Windows dialog rendering is not certified. Reports: results/gui-button-verification-1.0.0. Contact: fjburgosf@gmail.com.
-
-The editorial revision of 7 October 2026 preserves the verified application
-and scientific baseline. All four DOCX were rendered and reviewed again. Their
-The final reviewed pages retain 25 captures, button explanations, nine examples and 26 editable
-equations. The final editable prose contains no semicolons or code-host links.
-
-The scientific methodology is integrated in the technical manual. The software
-description summarizes its foundations and limits. The independent methodology
-Word document is no longer part of the delivery. Numerical sources and the
-verified Windows executable remain unchanged.
+The original 80-test suite passed again on 8 October 2026. The delivered
+results/evidence-inventory-1.0.0.json identifies original summary tables,
+protocol metadata, GUI acceptance reports and primary test logs by SHA256.
+This is software and documentation evidence, not field accuracy validation.

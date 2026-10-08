@@ -77,12 +77,12 @@ Los estilos, las secciones, las capturas y las ecuaciones se conservan.
 
 ## Revisión de entrega del 8 de octubre de 2026
 
-Se actualizan las instrucciones de distribución y la revisión de los cinco
-Word. Entregables conserva únicamente cinco DOCX y dos ZIP. Las plantillas,
-las capturas y las ecuaciones mantienen su sistema de diseño.
+Se actualizan las instrucciones de distribución. Entregables conserva
+únicamente cuatro DOCX y dos ZIP. Las plantillas, capturas y ecuaciones
+mantienen su sistema de diseño.
 
 ## Integración documental solicitada el 8 de octubre de 2026
 
 Se entregan cuatro Word. La metodología completa se integra en el manual técnico
 y su resumen en la descripción. No se genera un documento independiente.
-Se conservan las 26 ecuaciones y toda la evidencia científica histórica.
+Se conservan las 32 ecuaciones editables y toda la evidencia científica histórica.

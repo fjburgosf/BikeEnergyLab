@@ -1,208 +1,238 @@
 {
   "version": "1.0.0",
-  "revision": "plantillas-ilustradas-2026-10-06",
-  "completed_utc": "2026-10-06T20:35:46.331598+00:00",
+  "revision": "auditoria-2026-10-08",
+  "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "gui_sha256": "9c1b99a3357d87c3a68a8a9a9f9eb79bb373883f7bdfbb6913bd1ed723e1fd5f",
+  "executable_sha256": "2dedbac7d864d253ef41f6914a83adbb048c172bd69588b17909ab6b40b0e754",
+  "executable_source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
+  "source_matches_executable": true,
+  "completed_utc": "2026-10-08T14:50:36.598746+00:00",
   "backend": "PrintWindow of this process's own live Tk Application window",
   "screenshots": [
     {
       "file": "docs/images/gui-1.0.0/01-inicio.png",
-      "sha256": "85351cc7178d65a6782ae46583edcba07e282a19103a73dad8edbfbd3c5aae22",
+      "sha256": "9de821e4ef134a4c2077a4028e0451e2e850a660294f05e13809d7600fe9b1d9",
       "width": 1176,
       "height": 839,
       "section": "home",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-home.png",
-      "sha256": "85351cc7178d65a6782ae46583edcba07e282a19103a73dad8edbfbd3c5aae22",
+      "sha256": "9de821e4ef134a4c2077a4028e0451e2e850a660294f05e13809d7600fe9b1d9",
       "width": 1176,
       "height": 839,
       "section": "home",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-bike.png",
-      "sha256": "2fbd8ec733aa3114f22b6582952c15fd48aa66ed1b7e6889f50cd16fdce7a4a9",
+      "sha256": "02bb196270a4bcec3e67618a6a599314af13a337610fd38c42b9ee4bfcdacc81",
       "width": 1176,
       "height": 839,
       "section": "bike",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-rider.png",
-      "sha256": "377cbcc951b422f03571603e6fc6865f3bb5f252f05261de471c24c64aa9d1d3",
+      "sha256": "090c4f63b10ad93fb7138641bff7b064ed7e4e3dd4316e555289fd6e03e1a477",
       "width": 1176,
       "height": 839,
       "section": "rider",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-motor.png",
-      "sha256": "622d49a47e9fb3fb3b2cd14c7a39969a661362568ba47430992d5638a950afc9",
+      "sha256": "b0550a6d721d393f1554da14d47902266f73dc4813b67133f1e16cb6d0afaf8f",
       "width": 1176,
       "height": 839,
       "section": "motor",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-battery.png",
-      "sha256": "fa5d709a06c42e3ab8b7916c99d610e09ea919e6f9ebc9eefc80b1c02fd3c8e2",
+      "sha256": "048020c3daa8f41707197d94166be170ee0f20c4f1455aba83271e922e9ff88d",
       "width": 1176,
       "height": 839,
       "section": "battery",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-route.png",
-      "sha256": "47835aea40c9516419011db515b3d8c34bcada1e0a472e5c37ad4f90fb5ca54d",
+      "sha256": "d7c0617fac4099625e1cf64604b03e36f0f97edc67831a47a6b63a4d3cadcded",
       "width": 1176,
       "height": 839,
       "section": "route",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-environment.png",
-      "sha256": "8f47f25a39cce1883f27d01863ed34c9c1ddcc35d2229c4062e1f56505339c51",
+      "sha256": "c63a2398ce5a8610cb8e39e8859674615469e5b817a6d09493250f58f0aa9673",
       "width": 1176,
       "height": 839,
       "section": "environment",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-physics.png",
-      "sha256": "096a164cfcc45946ce027a8290459243034946bf4acc63c632d71fc1d19434ad",
+      "sha256": "11afa5fddebb791fca50d522bf65308bc235c3dd0674a47815c55a7def28a126",
       "width": 1176,
       "height": 839,
       "section": "physics",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-calibration.png",
-      "sha256": "b69ee3d8b308a391e780f2c44b4516600edf9cd0a8825c2830b81f0201f2886b",
+      "sha256": "ac1d856f27a67b33c2ede02c0d1e0b8891d61353914119c84d707441cf679426",
       "width": 1176,
       "height": 839,
       "section": "calibration",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-hybrid.png",
-      "sha256": "12671ed4122ac6d39a6f02f9844fdab582769264ecab0a86402359b92de0e510",
+      "sha256": "d2912468f7e59edc2b8379c98c9f3f47022a553a895f6f4b314ca4d8acb13ed4",
       "width": 1176,
       "height": 839,
       "section": "hybrid",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-uncertainty.png",
-      "sha256": "a507d2089aeb101a25f9f7bb1c3a11a03cdfdd9c102cc95202d2d994c86bac04",
+      "sha256": "62d406dff18a1d24b94574256cddff79ba06fb493d32580aef82d1bded217297",
       "width": 1176,
       "height": 839,
       "section": "uncertainty",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-simulation.png",
-      "sha256": "361a4ee75840ac922f712ea5928b25598a3ca6dbe4526fc38c21c0f83d6ffdc1",
+      "sha256": "ce276ab4595670a286eb9aef386783b3c688d32f8beba09aeef24c872b00b504",
       "width": 1176,
       "height": 839,
       "section": "simulation",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-experiments.png",
-      "sha256": "e73773cfc1ad10786f6e104be4026896765b1b7a1a5c3ed093a66b511f0cdcfa",
+      "sha256": "33225f2d5142028f1637c35ace1c74ddff84e3fb5741729006f9af49b9f3d236",
       "width": 1176,
       "height": 839,
       "section": "experiments",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/panel-results.png",
-      "sha256": "c96bfc2ae3d9e8ac3d92a6b6ab7d3370ab7a8bfec30186eddba50592abac2005",
+      "sha256": "332f94282f464a1a34d691a383d021c32f37e6c904c66ed211bcdd9de8ab2467",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/panel-export.png",
-      "sha256": "b9d623fd80653c30016ad1475acae162a19eaab6eb15e58c272015b2c584f510",
+      "sha256": "0adcfcc7b9232ada92846aa803f1fe0f220784f09078906e439bfe73997dc84a",
       "width": 1176,
       "height": 839,
       "section": "export",
-      "loaded_example": null
+      "loaded_example": null,
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-01-flat.png",
-      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "sha256": "0c56b89435fa0a3936146af634ac8b3a7372dabff6f80bc959e9392027a3fc1c",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "flat"
+      "loaded_example": "flat",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-02-hill.png",
-      "sha256": "0fae625b5983fe037cdc21bd2f78c3ca33d0f7b6272f7d2706ffaa259fbb01c2",
+      "sha256": "d9918aed9e2f692a9adcc81197f3e05232c0a3da2787fe486e58ecfc371d513d",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "hill"
+      "loaded_example": "hill",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-03-headwind.png",
-      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "sha256": "2580c5a61af259db0d55f80fbadcc28c247773b4f33df0c0d520fbb89a96952a",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "headwind"
+      "loaded_example": "headwind",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-04-rider.png",
-      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "sha256": "75b71e75ab3228b8a479610779b9b54edb279a8d86cef528439f0b90f141a954",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "rider"
+      "loaded_example": "rider",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-05-cold.png",
-      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "sha256": "806ebd74da40a29405139b8e6e55d971a205797bd42ab6bcfb1f81fb3e00c28b",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "cold"
+      "loaded_example": "cold",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-06-calibration.png",
-      "sha256": "d600e63875f97206130bbfd1cea10fb1383924cc33d9881f4c70e88ea4c99708",
+      "sha256": "58145289c11dda7c8d4881a7874923d3d16c4dbffe5394b2af930f8e0ec65ff8",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "calibration"
+      "loaded_example": "calibration",
+      "selected_result_tab": "Calibración"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-07-uncertainty.png",
-      "sha256": "6fdff8a8afe357983a2e50b183f366842e255e7b5711e0a4811e1524cfc90b6c",
+      "sha256": "a8fe2cee6540d4878599fce5052ede819206f6634e1bcc8f46265abd5dbada13",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "uncertainty"
+      "loaded_example": "uncertainty",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-08-hybrid.png",
-      "sha256": "d0e6f56cddfa264b81211ed80e260ec7f1fcbec27d6a81ca5ff3340b6d620ea3",
+      "sha256": "81f7fe114bcf7e8fbc8f71fedb0d4a047b5cccfdceedb6aa85314dcc87801ea9",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "hybrid"
+      "loaded_example": "hybrid",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/ejemplo-09-mission.png",
-      "sha256": "4faa903a13c8baac3b97afa25903830edbbf3535a07f126420df62964ef1c700",
+      "sha256": "328d094a5275627b0ddfcdd0a6e55cf69f96c1b48e4680ecd900fdfd4f15572d",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "mission"
+      "loaded_example": "mission",
+      "selected_result_tab": "Detalles"
     },
     {
       "file": "docs/images/gui-1.0.0/tutorial-inicio.png",
@@ -210,15 +240,17 @@
       "width": 1176,
       "height": 839,
       "section": "home",
-      "loaded_example": "flat"
+      "loaded_example": "flat",
+      "selected_result_tab": null
     },
     {
       "file": "docs/images/gui-1.0.0/resultado-plano.png",
-      "sha256": "6aebc49cdcfe0d39d8e3794a9dda4e58c7c4676741e457fb74dd26bc1dfade19",
+      "sha256": "dee5749890d3a1ad9d43da516198d0c5bb18b7686e0c84b72419e407cd413e67",
       "width": 1176,
       "height": 839,
       "section": "results",
-      "loaded_example": "flat"
+      "loaded_example": "flat",
+      "selected_result_tab": "Potencias"
     }
   ],
   "buttons": [
@@ -707,58 +739,6 @@
       "trajectory_bands_scope": "Physical endpoint interpolation on normalized route progress, conditional on samples reaching each point; n_reached reports attrition, no extrapolation after depletion"
     }
   },
-  "errors": [],
-  "limits": "Documentation fixtures are synthetic; capture is source GUI, not native dialog certification",
-  "tutorial": [
-    {
-      "title": "Su primera simulación",
-      "description": "Empezaremos con una ruta plana sintética de 3 km. Pulse Cargar ruta plana. Reemplazará la configuración en pantalla; los archivos guardados se conservan. Los ejemplos permiten practicar sin importar datos.",
-      "button": "Cargar ruta plana",
-      "action": "load"
-    },
-    {
-      "title": "Entender los parámetros",
-      "description": "Revise masa, Crr y CdA en Bicicleta. Pase el cursor sobre un campo para consultar su ayuda y unidades. En Ciclista, 50 W es potencia en pedales. Puede editar valores; Simular toma la configuración actual.",
-      "button": "Ver aporte del ciclista",
-      "action": "rider"
-    },
-    {
-      "title": "Comprobar la ruta",
-      "description": "Visualice elevación, velocidad, pendiente y superficie. 6 m/s equivale a 21.6 km/h; 0.03 significa pendiente del 3%. Si edita los campos de ruta, pulse Crear ruta manual para aplicarlos antes de simular.",
-      "button": "Visualizar ruta",
-      "action": "preview"
-    },
-    {
-      "title": "Ejecutar el cálculo",
-      "description": "Pulse Simular y espere a que termine. Durante el cálculo los controles se bloquean y la barra inferior indica Calculando. Al finalizar se abrirán los resultados automáticamente.",
-      "button": "Simular",
-      "action": "simulate"
-    },
-    {
-      "title": "Leer los resultados",
-      "description": "Explore las pestañas de potencias, batería y balance. Wh es energía; Wh/km es consumo por distancia; SOC es la fracción de carga. En Detalles, completed_route indica recorrido completo y feasible indica potencia suficiente. Revise ambos.",
-      "button": "Abrir gráficas",
-      "action": "results"
-    },
-    {
-      "title": "Practicar con incertidumbre",
-      "description": "Esta acción carga y ejecuta el ejemplo 07: 30 muestras de viento incierto. Observe distribución de energía y bandas de SOC. Las probabilidades dependen de los supuestos; estas muestras sintéticas no verifican precisión real.",
-      "button": "Ejecutar ejemplo 07",
-      "action": "uncertainty"
-    },
-    {
-      "title": "Guardar el trabajo",
-      "description": "Exporte el último resultado y elija una carpeta. Se crea una carpeta EXP nueva con configuración, tablas, metadatos y figuras. Guardar YAML en la barra superior conserva una configuración para abrirla después.",
-      "button": "Exportar resultado",
-      "action": "export"
-    },
-    {
-      "title": "Seguir explorando",
-      "description": "Ya conoce el flujo principal. Compare los ejemplos 01–05, pruebe la calibración 06, el híbrido 08 y la misión 09. Puede reiniciar este tutorial cuando quiera desde la barra superior; funciona sin conexión.",
-      "button": "Finalizar tutorial",
-      "action": "finish"
-    }
-  ],
   "examples": [
     {
       "key": "flat",
@@ -814,5 +794,57 @@
       "description": "Ruta de 26 km, SOC inicial del 38%, reserva del 15% y viento incierto. Ejecute 30 muestras y revise mission_probability: exige completar la ruta con potencia suficiente y conservar la reserva.",
       "operation": "uncertainty"
     }
-  ]
+  ],
+  "tutorial": [
+    {
+      "title": "Su primera simulación",
+      "description": "Empezaremos con una ruta plana sintética de 3 km. Pulse Cargar ruta plana. Reemplazará la configuración en pantalla; los archivos guardados se conservan. Los ejemplos permiten practicar sin importar datos.",
+      "button": "Cargar ruta plana",
+      "action": "load"
+    },
+    {
+      "title": "Entender los parámetros",
+      "description": "Revise masa, Crr y CdA en Bicicleta. Pase el cursor sobre un campo para consultar su ayuda y unidades. En Ciclista, 50 W es potencia en pedales. Puede editar valores; Simular toma la configuración actual.",
+      "button": "Ver aporte del ciclista",
+      "action": "rider"
+    },
+    {
+      "title": "Comprobar la ruta",
+      "description": "Visualice elevación, velocidad, pendiente y superficie. 6 m/s equivale a 21.6 km/h; 0.03 significa pendiente del 3%. Si edita los campos de ruta, pulse Crear ruta manual para aplicarlos antes de simular.",
+      "button": "Visualizar ruta",
+      "action": "preview"
+    },
+    {
+      "title": "Ejecutar el cálculo",
+      "description": "Pulse Simular y espere a que termine. Durante el cálculo los controles se bloquean y la barra inferior indica Calculando. Al finalizar se abrirán los resultados automáticamente.",
+      "button": "Simular",
+      "action": "simulate"
+    },
+    {
+      "title": "Leer los resultados",
+      "description": "Explore las pestañas de potencias, batería y balance. Wh es energía; Wh/km es consumo por distancia; SOC es la fracción de carga. En Detalles, completed_route indica recorrido completo y feasible indica potencia suficiente. Revise ambos.",
+      "button": "Abrir gráficas",
+      "action": "results"
+    },
+    {
+      "title": "Practicar con incertidumbre",
+      "description": "Esta acción carga y ejecuta el ejemplo 07: 30 muestras de viento incierto. Observe distribución de energía y bandas de SOC. Las probabilidades dependen de los supuestos; estas muestras sintéticas no verifican precisión real.",
+      "button": "Ejecutar ejemplo 07",
+      "action": "uncertainty"
+    },
+    {
+      "title": "Guardar el trabajo",
+      "description": "Exporte el último resultado y elija una carpeta. Se crea una carpeta EXP nueva con configuración, tablas, metadatos y figuras. Guardar YAML en la barra superior conserva una configuración para abrirla después.",
+      "button": "Exportar resultado",
+      "action": "export"
+    },
+    {
+      "title": "Seguir explorando",
+      "description": "Ya conoce el flujo principal. Compare los ejemplos 01–05, pruebe la calibración 06, el híbrido 08 y la misión 09. Puede reiniciar este tutorial cuando quiera desde la barra superior; funciona sin conexión.",
+      "button": "Finalizar tutorial",
+      "action": "finish"
+    }
+  ],
+  "errors": [],
+  "limits": "Documentation fixtures are synthetic; capture is source GUI, not native dialog certification"
 }

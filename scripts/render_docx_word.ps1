@@ -22,6 +22,11 @@ try {
             $taskDocument.Repaginate()
             foreach ($taskTOC in $taskDocument.TablesOfContents) {
                 $taskTOC.Update()
+                if ($taskFile.BaseName -like 'Manual_*') {
+                    $taskTOC.Range.ParagraphFormat.SpaceBefore = 0
+                    $taskTOC.Range.ParagraphFormat.SpaceAfter = 0
+                    $taskTOC.Range.ParagraphFormat.LineSpacingRule = 0
+                }
                 $taskTOC.UpdatePageNumbers()
             }
             $taskDocument.Repaginate()

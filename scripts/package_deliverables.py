@@ -9,6 +9,8 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 
+from release_evidence import evidence_paths
+
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
 TARGET = ROOT / "Entregables"
@@ -44,6 +46,8 @@ with (
     for member in sources.getmembers():
         if member.isfile():
             archive.writestr(member.name, sources.extractfile(member).read())
+    for relative, path in evidence_paths(ROOT):
+        archive.write(path, f"bikeenergylab-{VERSION}/{relative}")
 
 verification = ROOT / f"results/delivery-{VERSION}/verification"
 verification.mkdir(parents=True, exist_ok=True)

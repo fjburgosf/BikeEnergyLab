@@ -123,6 +123,11 @@ def main():
                 "height": height,
                 "section": app.section,
                 "loaded_example": app.loaded_example_key,
+                "selected_result_tab": (
+                    app.plot_frame.tab(app.plot_frame.select(), "text")
+                    if app.section == "results" and app.plot_frame.select()
+                    else None
+                ),
             }
         )
         print("Captured:", name, flush=True)
@@ -150,6 +155,14 @@ def main():
                 app.run_simulation()
                 wait()
                 app.show("results")
+                if example.key != "calibration":
+                    app.plot_frame.select(app.details_frame)
+                    if example.key == "hybrid":
+                        location = app.result_text.search('"CGPRA"', "1.0")
+                        if location:
+                            app.result_text.see(location)
+                    else:
+                        app.result_text.see("1.0")
                 shot(f"ejemplo-{index:02d}-{example.key}")
                 results[example.key] = json_safe(app.last_result.summary)
             app.load_example("flat")
@@ -159,12 +172,35 @@ def main():
             app.run_simulation()
             wait()
             app.show("results")
+            app.plot_frame.select(2)
             shot("resultado-plano")
     finally:
         app.close()
+    source = hashlib.sha256()
+    for path in sorted((ROOT / "src/bikeenergylab").rglob("*.py")):
+        source.update(path.relative_to(ROOT / "src/bikeenergylab").as_posix().encode())
+        source.update(path.read_bytes())
+    gui = hashlib.sha256()
+    for path in sorted((ROOT / "src/bikeenergylab/gui").rglob("*.py")):
+        gui.update(path.relative_to(ROOT / "src/bikeenergylab/gui").as_posix().encode())
+        gui.update(path.read_bytes())
+    executable = ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe"
+    executable_manifest = ROOT / "dist/BikeEnergyLab/_internal/bikeenergylab/source_manifest.json"
+    distributed_source = (
+        json.loads(executable_manifest.read_text(encoding="utf-8"))["source_sha256"]
+        if executable_manifest.is_file()
+        else None
+    )
     report = {
         "version": __version__,
-        "revision": "plantillas-ilustradas-2026-10-06",
+        "revision": "auditoria-2026-10-08",
+        "source_sha256": source.hexdigest(),
+        "gui_sha256": gui.hexdigest(),
+        "executable_sha256": (
+            hashlib.sha256(executable.read_bytes()).hexdigest() if executable.is_file() else None
+        ),
+        "executable_source_sha256": distributed_source,
+        "source_matches_executable": distributed_source == source.hexdigest(),
         "completed_utc": datetime.now(timezone.utc).isoformat(),
         "backend": "PrintWindow of this process's own live Tk Application window",
         "screenshots": screenshots,

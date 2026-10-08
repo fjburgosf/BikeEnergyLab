@@ -1,0 +1,17 @@
+{
+  "source": "synthetic",
+  "seed": 42,
+  "training_seed": 42,
+  "stream_seed": 43,
+  "noise_seed": 44,
+  "noise_std_wh_per_km": 0.06,
+  "truth": {
+    "crr_start": 0.008,
+    "crr_end": 0.011,
+    "cda_m2": 0.48
+  },
+  "order": "file group order; all predictions precede ingestion of that route target",
+  "comparators": "identical initial model; frozen versus bounded RLS and residual retraining",
+  "intervals": "point evaluation; fresh independent interval calibration needed after adaptation",
+  "limitations": "controlled synthetic drift; no measured adaptation accuracy or superiority claim"
+}

@@ -1,0 +1,134 @@
+GUI button passed: navigation_es_home
+GUI button passed: navigation_es_bike
+GUI button passed: navigation_es_rider
+GUI button passed: navigation_es_motor
+GUI button passed: navigation_es_battery
+GUI button passed: navigation_es_route
+GUI button passed: navigation_es_environment
+GUI button passed: navigation_es_physics
+GUI button passed: navigation_es_calibration
+GUI button passed: navigation_es_hybrid
+GUI button passed: navigation_es_uncertainty
+GUI button passed: navigation_es_simulation
+GUI button passed: navigation_es_experiments
+GUI button passed: navigation_es_results
+GUI button passed: navigation_es_export
+GUI button passed: navigation_en_home
+GUI button passed: navigation_en_bike
+GUI button passed: navigation_en_rider
+GUI button passed: navigation_en_motor
+GUI button passed: navigation_en_battery
+GUI button passed: navigation_en_route
+GUI button passed: navigation_en_environment
+GUI button passed: navigation_en_physics
+GUI button passed: navigation_en_calibration
+GUI button passed: navigation_en_hybrid
+GUI button passed: navigation_en_uncertainty
+GUI button passed: navigation_en_simulation
+GUI button passed: navigation_en_experiments
+GUI button passed: navigation_en_results
+GUI button passed: navigation_en_export
+GUI button passed: open_yaml
+GUI button passed: save_yaml
+GUI button passed: cancel_load
+GUI button passed: cancel_save
+GUI button passed: cancel_csv
+GUI button passed: cancel_gpx
+GUI button passed: cancel_calibrate
+GUI button passed: cancel_learn
+GUI button passed: cancel_telemetry
+GUI button passed: cancel_load_model
+GUI button passed: invalid_yaml_file
+GUI button passed: import_route_csv
+GUI button passed: import_route_gpx
+GUI button passed: create_manual_route
+GUI button passed: preview_route
+GUI button passed: simulate
+GUI button passed: plot_toolbar_Home_46
+GUI button passed: plot_toolbar_Pan_47
+GUI button passed: plot_toolbar_Pan_48
+GUI button passed: plot_toolbar_Zoom_49
+GUI button passed: plot_toolbar_Zoom_50
+GUI button passed: plot_toolbar_save_png
+GUI button passed: plot_toolbar_save_svg
+GUI button passed: plot_toolbar_save_pdf
+GUI button passed: export_result
+GUI button passed: cancel_export_result
+GUI button passed: apply_yaml
+GUI button passed: invalid_yaml_editor
+GUI button passed: calibrate_csv
+D:\Programs\Python312\Lib\tkinter\__init__.py:862: UserWarning: constrained_layout not applied because axes sizes collapsed to zero.  Try making figure larger or Axes decorations smaller.
+  func(*args)
+GUI button passed: convert_telemetry
+GUI button passed: train_model_csv
+GUI button passed: save_model
+GUI button passed: open_model
+GUI button passed: adapt_model_csv
+GUI button passed: fresh_interval_calibration
+GUI button passed: cancel_save_model
+GUI button passed: cancel_adapt
+GUI button passed: cancel_intervals
+GUI button passed: mission_probability
+GUI button passed: train_synthetic_demo
+GUI button passed: sensitivity_oat
+GUI button passed: sensitivity_spearman
+GUI button passed: sensitivity_morris
+GUI button passed: sensitivity_sobol
+GUI button passed: id_ood_benchmark
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+GUI button passed: exp_01_to_15
+GUI button passed: show_examples
+GUI button passed: load_example_flat
+GUI button passed: simulate_loaded_example_flat
+GUI button passed: load_example_hill
+GUI button passed: simulate_loaded_example_hill
+GUI button passed: load_example_headwind
+GUI button passed: simulate_loaded_example_headwind
+GUI button passed: load_example_rider
+GUI button passed: simulate_loaded_example_rider
+GUI button passed: load_example_cold
+GUI button passed: simulate_loaded_example_cold
+GUI button passed: load_example_calibration
+GUI button passed: simulate_loaded_example_calibration
+D:\Programs\Python312\Lib\tkinter\__init__.py:862: UserWarning: constrained_layout not applied because axes sizes collapsed to zero.  Try making figure larger or Axes decorations smaller.
+  func(*args)
+GUI button passed: load_example_uncertainty
+GUI button passed: simulate_loaded_example_uncertainty
+GUI button passed: load_example_hybrid
+GUI button passed: simulate_loaded_example_hybrid
+GUI button passed: load_example_mission
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+WARNING bikeenergylab.model: Prescribed route is incomplete or has insufficient drive power
+GUI button passed: simulate_loaded_example_mission
+GUI button passed: tutorial_toolbar
+GUI button passed: loaded_example_energy_comparisons
+GUI button passed: close_tutorial
+GUI button passed: start_tutorial_home
+GUI button passed: tutorial_action_1
+GUI button passed: tutorial_next_1
+GUI button passed: tutorial_action_2
+GUI button passed: tutorial_next_2
+GUI button passed: tutorial_action_3
+GUI button passed: tutorial_next_3
+GUI button passed: tutorial_action_4
+GUI button passed: tutorial_next_4
+GUI button passed: tutorial_action_5
+GUI button passed: tutorial_next_5
+GUI button passed: tutorial_action_6
+GUI button passed: tutorial_next_6
+GUI button passed: tutorial_action_7
+GUI button passed: tutorial_next_7
+GUI button passed: tutorial_action_8
+GUI button acceptance passed: 114 checks; report E:\software\BikeEnergyLab\results\gui-button-verification-1.0.0\source\verification.json
+GUI smoke passed: examples selector, eight-step tutorial/export, physical/hybrid simulation, plots, scrollable forms, ES/EN, Tk cleanup

@@ -1,0 +1,13 @@
+{
+  "example_01_flat_route": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_01_flat_route\\EXP-20261004-111507-d0e0d0bf",
+  "example_02_hilly_route": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_02_hilly_route\\EXP-20261004-111511-126c8b8e",
+  "example_03_headwind": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_03_headwind\\EXP-20261004-111513-0bfb977d",
+  "example_04_rider_power": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_04_rider_power\\EXP-20261004-111516-effc4f5c",
+  "example_05_temperature": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_05_temperature\\EXP-20261004-111519-1cab575f",
+  "example_06_parameter_calibration": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_06_parameter_calibration\\EXP-20261004-111528-6133fedc",
+  "example_07_uncertainty": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_07_uncertainty\\EXP-20261004-111530-645d566c",
+  "example_08_physics_vs_data": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_08_physics_vs_data\\EXP-20261004-111613-4bfb718f",
+  "example_09_cgpra": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_09_cgpra\\EXP-20261004-111624-27d2a0dd",
+  "example_10_unseen_route": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_10_unseen_route\\EXP-20261004-111625-8b404017",
+  "example_11_mission_probability": "E:\\software\\BikeEnergyLab\\results\\release-1.0.0\\examples\\example_11_mission_probability\\EXP-20261004-111626-636f835f"
+}

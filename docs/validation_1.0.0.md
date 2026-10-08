@@ -1,5 +1,9 @@
 # Validation record — BikeEnergyLab 1.0.0 — 2026-10-04
 
+Paths below identify complete raw runs in the development workspace. The distributed
+ZIPs contain the original aggregate/metrics CSVs, selected protocol metadata and
+primary acceptance logs listed in results/README.md, rather than every raw route.
+
 The functional software release passed 73 tests, Ruff lint/format, and GUI
 workflows in ES/EN. The retained protocol executes eleven examples, EXP-01–15,
 three-seed predictive ID/OOD validation, causal drift, telemetry conversion and

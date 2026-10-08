@@ -162,8 +162,9 @@ Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 La carpeta **Entregables** contiene únicamente los cuatro DOCX, el ZIP portátil
 y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. Extraiga el ZIP portátil fuera de
 Entregables y abra `BikeEnergyLab/BikeEnergyLab.exe`. Conserve la carpeta extraída
-completa con `_internal`. Los registros de revisión y hashes de entrega están
-en `results/delivery-1.0.0`.
+completa con `_internal`. Los dos ZIP incluyen evidencia seleccionada en results, con inventario SHA256.
+Los expedientes crudos completos y los hashes finales de Entregables están en
+results del espacio de desarrollo, fuera de los ZIP.
 
 ```powershell
 .\scripts\build_windows.ps1

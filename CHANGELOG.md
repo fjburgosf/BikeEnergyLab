@@ -8,11 +8,11 @@
 - Corrected contact email to fjburgosf@gmail.com and added expanded widget/action
   acceptance plus a complete Entregables folder with a source-code ZIP.
 
-- Unified software, citation, executable, packages and all three Word manuals as version 1.0.0.
+- Unified software, citation, executable, packages and the four final Word documents as version 1.0.0.
 
-- Added Spanish Word user/technical manuals and scientific methodology with editable
+- Added Spanish Word user and technical manuals with editable scientific
   equations, updated contents, references and preserved synthetic validation results.
-  Reviewed all 21 rendered pages and included the three DOCX in the portable/source packages.
+  The final delivery integrates methodology in the technical manual and includes four DOCX.
 - Added a packaged dropdown with nine offline ES/EN examples, including physical
   comparisons, parameter recovery, uncertainty, CGPRA training and mission probability.
 - Added an eight-step contextual tutorial with runnable actions, Back/Next controls,
@@ -58,14 +58,25 @@
 
 ## Revisión documental del 6 de octubre de 2026
 
-Cinco DOCX recreados con las plantillas suministradas, manual de usuario con 25
-capturas reales, explicación de controles y resultados de los nueve ejemplos.
+Los documentos se recrearon con las plantillas suministradas. El manual de
+usuario conserva capturas reales, controles y nueve ejemplos.
 Maestros de estilo depurados, generación reproducible y Entregables
 sincronizados. El código numérico y el ejecutable verificado conservan su identidad.
 
 ## Revisión editorial del 7 de octubre de 2026
 
 Se simplificó la puntuación de los documentos y los textos de entrega.
-Los cinco Word conservan las plantillas, las capturas, los ejemplos y las
-ecuaciones editables. La distribución utiliza el ZIP de fuentes como
+Los cuatro Word finales conservan las plantillas, las capturas, los ejemplos
+y las ecuaciones editables. La distribución utiliza el ZIP de fuentes como
 referencia para acceder al código. El núcleo científico permanece intacto.
+
+## Revisión de auditoría del 8 de octubre de 2026
+
+Se incorporaron registros primarios de pruebas y resultados científicos resumidos
+a ambos ZIP, con inventario SHA256 y límites explícitos sobre expedientes crudos.
+Se retiraron instrucciones internas de la distribución. El manual técnico separa
+las expresiones matemáticas y muestra identificadores bibliográficos completos.
+El manual de usuario emplea capturas distintas de los resultados de los nueve
+ejemplos y tablas con condiciones y magnitudes verificadas. Los cuatro DOCX,
+sus índices, hashes y paquetes se regeneraron y revisaron. El núcleo numérico
+y el EXE conservan su identidad.

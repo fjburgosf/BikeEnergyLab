@@ -1,17 +1,35 @@
-# Results index — BikeEnergyLab 1.0.0
+# Evidencia incluida con BikeEnergyLab 1.0.0
 
-Current release dated 6 October 2026: `release-1.0.0/acceptance.json`, `release_verification.json`, `distribution-verification-1.0.0/verification.json` and `documents-verification-1.0.0.json`.
-Source SHA256 `25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f`; 80 regression tests and complete examples/tutorial/export checks. Five template-based Word documents comprise 80 reviewed pages; the user manual includes 25 actual GUI captures and nine executed examples.
+Los ZIP de fuentes y Windows incluyen una selección verificable de resultados
+bajo este directorio. evidence-inventory-1.0.0.json enumera rutas y SHA256.
+La versión y los cuatro DOCX definitivos se revisaron el 8 de octubre de 2026.
 
-## Historical scientific evidence
+- build_logs/tests-v1.0.0.log conserva la ejecución histórica de 80 pruebas.
+  build_logs/tests-audit-v1.0.0.log conserva la repetición completa del 8 de
+  octubre, sin la caché anterior y con una carpeta temporal aislada.
+- build_logs/gui-buttons-source-v1.0.0.log y
+  build_logs/gui-buttons-windows-v1.0.0.log respaldan 114 controles por entorno.
+  Los reportes individuales están en gui-button-verification-1.0.0.
+  build_logs/windows-audit-v1.0.0.log registra el arranque y smoke test del
+  ejecutable repetidos el 8 de octubre.
+- release-1.0.0/acceptance.json y
+  distribution-verification-1.0.0/verification.json registran el alcance de las
+  pruebas, la identidad de fuentes y la comparación wheel/EXE.
+- Los CSV predictive/.../aggregate.csv y prequential/.../metrics.csv
+  conservan los resultados sintéticos resumidos. Sus protocolos, metadatos,
+  índices de suite y ejemplos se incluyen. docs/validation_data conserva
+  copias trazadas de las dos tablas numéricas usadas en el manual técnico.
+- documents-verification-1.0.0.json registra los cuatro DOCX, sus hashes y
+  cada página revisada. Las imágenes de las capturas y su manifiesto están
+  bajo docs/images/gui-1.0.0.
 
-The original 4 October 2026 scientific revision has source SHA256 `673a01840921e82c8904babd11a4a3f9cda7174edbbd6f5c198076d6e0088344`, preserved in `release_verification_1.0.0.json`. Previous acceptance/distribution records, packages and manuals are archived under `history/before-version-normalization-2026-10-06`. Core modules outside the GUI match the archived baseline wheel except the version declaration.
+Los expedientes crudos completos de protocolos, predicciones por ruta, imágenes
+de QA y el historial de builds permanecen en el espacio de desarrollo, bajo
+results/release-1.0.0 y results/history. No forman parte de estos ZIP.
+results/release_verification.json y results/delivery-1.0.0 del espacio de
+desarrollo registran los hashes finales de paquetes; se excluyen para evitar
+que un ZIP contenga su propio hash. El inventario de este directorio y los
+SHA256 de los seis archivos de Entregables permiten verificar ambas capas.
 
-- Predictive ID/seven OOD scenarios: `release-1.0.0/predictive/EXP-20261004-111801-cadfae83`.
-- Causal frozen/adaptive drift: `release-1.0.0/prequential/EXP-20261004-111931-387d9cfc`.
-- EXP 01–15: `release-1.0.0/suite/EXP-20261004-111632-2db2d0bc`.
-- Eleven API examples: `release-1.0.0/examples/index.json`.
-
-Historical experiment metadata and results remain unchanged. Version unification does not establish new research results or field accuracy.
-
-Expanded GUI acceptance passed 114 checks in source and 114 in the Windows executable. It checks the nine Cargar ejemplo → Simular workflows, file/model buttons, all four sensitivity methods, benchmark, EXP 01–15, guide and PNG/SVG/PDF exports through actual Tk widget invocation with controlled dialog responses. Native Windows dialog rendering is not certified. Reports: results/gui-button-verification-1.0.0. Contact: fjburgosf@gmail.com.
+Las prácticas y protocolos son sintéticos. Las pruebas de software comprueban
+implementación y distribución, no precisión física en bicicletas reales.

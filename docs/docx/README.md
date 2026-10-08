@@ -3,10 +3,10 @@
 Los cuatro documentos están en español y se incluyen en el ZIP portátil y en el
 paquete de fuentes:
 
-- [Manual de usuario](Manual_de_usuario_BikeEnergyLab_1.0.0.docx): 33 páginas con
+- [Manual de usuario](Manual_de_usuario_BikeEnergyLab_1.0.0.docx): 31 páginas con
   25 capturas reales, todos los botones, nueve ejemplos ejecutados y tutorial integrado.
-- [Manual técnico](Manual_tecnico_BikeEnergyLab_1.0.0.docx): 21 páginas con
-  arquitectura, API, formatos, metodología científica, 26 ecuaciones editables,
+- [Manual técnico](Manual_tecnico_BikeEnergyLab_1.0.0.docx): 17 páginas con
+  arquitectura, API, formatos, metodología científica, 32 ecuaciones editables,
   modelos, protocolos, resultados sintéticos, pruebas y distribución Windows.
 - [Descripción del software](Descripcion_del_Software_BikeEnergyLab_1.0.0.docx):
   17 páginas con organización, capacidades, requisitos y límites del producto.
@@ -14,7 +14,7 @@ paquete de fuentes:
   una página con la descripción compacta para identificación del software.
 
 Los índices y números de página se actualizaron en Microsoft Word. Se revisaron
-visualmente las 72 páginas finales renderizadas. El registro de integridad está en
+visualmente las 66 páginas finales renderizadas. El registro de integridad está en
 `results/documents-verification-1.0.0.json` dentro del proyecto de desarrollo.
 Las imágenes y PDF usados para esta revisión son archivos internos de QA.
 Los estilos y secciones proceden de las plantillas entregadas. Los maestros

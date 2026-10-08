@@ -1,0 +1,12 @@
+{
+  "EXP-01–07": "sweeps.csv",
+  "EXP-07-scope": "air density only unless empirical battery/motor temperature coefficients are supplied",
+  "EXP-08": "EXP-08-calibration.json",
+  "EXP-09": "model_comparisons\\EXP-20261004-111749-abf5ae9b/metrics.csv (M1/M2)",
+  "EXP-10": "model_comparisons\\EXP-20261004-111749-abf5ae9b/metrics.csv (M1/M3)",
+  "EXP-11": "model_comparisons\\EXP-20261004-111749-abf5ae9b/metrics.csv (M4)",
+  "EXP-12": "model_comparisons\\EXP-20261004-111749-abf5ae9b/metrics.csv (OOD-Route)",
+  "EXP-13": "model_comparisons\\EXP-20261004-111749-abf5ae9b/metrics.csv (OOD-Combined)",
+  "EXP-14": "probabilistic\\EXP-20261004-111754-8eb870e6/distributions.csv",
+  "EXP-15": "probabilistic\\EXP-20261004-111754-8eb870e6/summary.json"
+}

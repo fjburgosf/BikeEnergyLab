@@ -7,7 +7,7 @@
 | Nombre y versión | BikeEnergyLab 1.0.0 |
 | Tipo de producto | Framework científico de modelado energético de bicicletas eléctricas |
 | Autores | Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández |
-| Año y revisión | 2026, revisión de integración documental del 8 de octubre |
+| Año y revisión | 2026, corrección de auditoría del 8 de octubre |
 | Contacto | fjburgosf@gmail.com |
 | Lenguaje y distribución | Python 3.11 o superior. Aplicación portátil Windows x64 |
 | Estado | Funcional y verificado mediante pruebas de software y datos sintéticos |
@@ -47,7 +47,7 @@ Se ofrecen importación CSV/GPX, conversión de telemetría, adaptación causal,
 
 El modelo utiliza dinámica inversa con velocidad longitudinal prescrita. Integra rodadura, gravedad, fuerza aerodinámica con signo y aceleración, transforma la potencia según aporte humano y eficiencias, y calcula energía terminal y estado de carga con límites de batería. La batería admite representación energética y circuito equivalente Thevenin de una rama RC. Los mapas de motor y las curvas térmicas requieren caracterización propia.
 
-CGPRA combina física calibrada y regresión de residuos por ruta. Su compuerta pondera la corrección según soporte de datos y dispersión, sin representar una probabilidad de acierto. Los intervalos conformales usan rutas independientes para calibración. Monte Carlo propaga los supuestos configurados y la sensibilidad estudia su influencia. El capítulo 6 del manual técnico desarrolla las 26 ecuaciones editables, y el capítulo 7 conserva protocolos, resultados desfavorables y límites. Los datos sintéticos y las comprobaciones de implementación no demuestran precisión con bicicletas reales.
+CGPRA combina física calibrada y regresión de residuos por ruta. Su compuerta pondera la corrección según soporte de datos y dispersión, sin representar una probabilidad de acierto. Los intervalos conformales usan rutas independientes para calibración. Monte Carlo propaga los supuestos configurados y la sensibilidad estudia su influencia. El capítulo 6 del manual técnico desarrolla las 32 ecuaciones editables, y el capítulo 7 conserva protocolos, resultados desfavorables y límites. Los datos sintéticos y las comprobaciones de implementación no demuestran precisión con bicicletas reales.
 
 ## 5. Adaptabilidad extensibilidad y mantenibilidad
 
@@ -63,7 +63,7 @@ La configuración rechaza secciones y campos desconocidos, verifica límites y c
 
 ### 6.2 Desempeño
 
-La versión pasó 80 pruebas de regresión y 114 comprobaciones ampliadas de interfaz tanto en fuentes como en el ejecutable. El wheel aislado y el EXE coincidieron en predicciones con tolerancia de 1e-8. Estas comprobaciones verifican implementación y empaquetado, y no establecen tiempos de respuesta ni exactitud física universal.
+La revisión histórica registra 80 pruebas de regresión y 114 comprobaciones de interfaz en fuentes y 114 en el ejecutable. El 8 de octubre se volvió a completar la suite de 80 pruebas. Los logs, reportes y hashes pertinentes están dentro de ambos ZIP en results. El wheel aislado y el EXE coincidieron en predicciones con tolerancia de 1e-8. Estas comprobaciones verifican implementación y empaquetado, y no establecen tiempos de respuesta ni exactitud física universal.
 
 ### 6.3 Consistencia y reproducibilidad
 

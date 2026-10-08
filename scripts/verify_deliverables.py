@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zipfile import ZipFile
 
+from release_evidence import evidence_paths
+
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "Entregables"
 
@@ -97,7 +99,6 @@ with ZipFile(sourcezip) as source, ZipFile(portablezip) as portable, ZipFile(whe
     for name in [
         "README.md",
         "MANIFEST.in",
-        "AGENTS.md",
         "pyproject.toml",
         "requirements-lock.txt",
         "LICENSE",
@@ -105,6 +106,21 @@ with ZipFile(sourcezip) as source, ZipFile(portablezip) as portable, ZipFile(whe
         "CHANGELOG.md",
     ]:
         assert source.read("bikeenergylab-1.0.0/" + name) == (ROOT / name).read_bytes()
+    assert not any(name.endswith("/AGENTS.md") for name in source.namelist())
+    for relative, path in evidence_paths(ROOT):
+        expected_hash = sha(path)
+        assert data_sha(source.read("bikeenergylab-1.0.0/" + relative)) == expected_hash
+        assert data_sha(portable.read("BikeEnergyLab/" + relative)) == expected_hash
+    captures = read_json(ROOT / "docs/images/gui-1.0.0/captures.json")
+    assert captures["source_matches_executable"]
+    assert captures["source_sha256"] == review["source_sha256"]
+    assert captures["executable_sha256"] == sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe")
+    example_captures = [
+        item["sha256"]
+        for item in captures["screenshots"]
+        if Path(item["file"]).name.startswith("ejemplo-")
+    ]
+    assert len(example_captures) == 9 and len(set(example_captures)) == 9
     for document in review["documents"]:
         name = Path(document["path"]).name
         for path in [TARGET / name, ROOT / document["path"]]:
@@ -149,6 +165,9 @@ delivery_report = {
         "All delivery and portable manifest SHA256 values and complete file inventories",
         "Source ZIP and wheel Python sources match verified release",
         "Source ZIP scripts, metadata, retained templates, screenshots and document sources match current files",
+        "Curated historical protocol records and primary acceptance logs match both ZIPs",
+        "Capture-source and packaged executable source fingerprints agree",
+        "Internal working instructions are absent from source ZIP",
         "Four reviewed DOCX hashes match folder, source ZIP and portable ZIP",
         "ZIP CRC integrity",
         "Delivered executable SHA256 matches tested executable",

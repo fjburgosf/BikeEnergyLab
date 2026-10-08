@@ -12,7 +12,7 @@ El programa calcula la demanda necesaria para seguir una velocidad prescrita y c
 
 ### 1.3 Alcance del documento
 
-La revisión de integración documental del 8 de octubre de 2026 cubre los quince paneles, los botones, el tutorial y los ejemplos. El flujo utiliza **Cargar ejemplo** y después **Simular**. La selección del desplegable describe un caso. Cargarlo lo convierte en el ejemplo activo. Las capturas corresponden al mismo código de interfaz que el EXE.
+La revisión de auditoría del 8 de octubre de 2026 cubre los quince paneles, los botones, el tutorial y los ejemplos. El flujo utiliza **Cargar ejemplo** y después **Simular**. La selección del desplegable describe un caso. Cargarlo lo convierte en el ejemplo activo. El manifiesto docs/images/gui-1.0.0/captures.json registra la huella de las fuentes capturadas y la huella incorporada al EXE. Ambas coinciden en esta revisión. Las imágenes se tomaron de la GUI ejecutada desde fuentes y no muestran diálogos nativos del EXE.
 
 ## 2. Descripción general del sistema
 
@@ -109,7 +109,7 @@ Configure Wh nominales, fracción utilizable y SOC inicial/mínimo. Por ejemplo,
 
 Los perfiles temporales tienen prioridad sobre escalares. Prepare las uniones de segmentos y revise el suavizado registrado. Después de crear/importar, pulse Simular.
 
-### 4.6 Ambiente física y simulación
+### 4.6 Ambiente físico y simulación
 
 {{IMAGE:docs/images/gui-1.0.0/panel-environment.png|Panel Ambiente con viento y condiciones del aire.}}
 
@@ -162,9 +162,9 @@ Con un CGPRA calibrado se añade demanda predictiva. energy_budget_probability e
 
 ### 4.11 Resultados y controles de gráficos
 
-{{IMAGE:docs/images/gui-1.0.0/resultado-plano.png|Resultado ejecutado del ejemplo plano con resumen y gráficos.}}
+{{IMAGE:docs/images/gui-1.0.0/resultado-plano.png|Potencias del ejemplo plano en la pestaña Resultados.}}
 
-Revise energy_wh, wh_per_km, final_soc, completed_route, feasible y demanda no satisfecha. Demanda de la ruta completa, consumo hasta agotamiento, autonomía estacionaria y misión tienen significados diferentes.
+La figura muestra la pestaña Potencias. Cambie a Detalles para leer energy_wh, wh_per_km, final_soc, completed_route, feasible y demanda no satisfecha. Demanda de la ruta completa, consumo hasta agotamiento, autonomía estacionaria y misión tienen significados diferentes.
 
 | Botón de Matplotlib | Función |
 | --- | --- |
@@ -226,4 +226,4 @@ Extraiga el ZIP completo y compruebe _internal. La entrega Windows x64 no tiene 
 
 ### 5.7 Soporte y límites
 
-Contacto: fjburgosf@gmail.com. Indique versión, revisión, YAML, entradas y error. La versión pasó 80 pruebas de regresión y 114 comprobaciones GUI en fuentes y 114 en el EXE con respuestas controladas de diálogos. No se certifican todos los estados ni precisión física real. El manual técnico conserva resultados desfavorables y límites históricos. Derechos: LICENSE.
+Contacto: fjburgosf@gmail.com. Indique versión, revisión, YAML, entradas y error. La revisión histórica registra 80 pruebas y 114 comprobaciones GUI en fuentes y 114 en el EXE con respuestas controladas de diálogos. La suite completa se volvió a ejecutar el 8 de octubre. Los logs y reportes primarios se incluyen en results/build_logs y results/gui-button-verification-1.0.0 dentro de ambos ZIP. No se certifican todos los estados ni precisión física real. El manual técnico conserva resultados desfavorables y límites históricos. Derechos: LICENSE.

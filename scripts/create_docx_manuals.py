@@ -77,41 +77,29 @@ def add_equation(doc, tokens):
     for token in tokens:
         math.append(math_node(token))
     p._p.append(math)
+    return p
 
 
 EQUATIONS = {
     "forces": [
+        ["θ = atan(grade)"],
+        ["m = ", sub("m", "bike"), " + ", sub("m", "rider"), " + ", sub("m", "cargo")],
+        [sub("F", "roll"), " = m · g · ", sub("C", "rr"), " · cos(θ)"],
+        [sub("F", "grade"), " = m · g · sin(θ)"],
+        [sub("v", "rel"), " = v − w"],
         [
-            "θ = atan(grade)     m = ",
-            sub("m", "bike"),
-            " + ",
-            sub("m", "rider"),
-            " + ",
-            sub("m", "cargo"),
-        ],
-        [
-            sub("F", "roll"),
-            " = mg",
-            sub("C", "rr"),
-            "cos(θ)     ",
-            sub("F", "grade"),
-            " = mg sin(θ)",
-        ],
-        [
-            sub("v", "rel"),
-            " = v − w     ",
             sub("F", "aero"),
             " = ",
             frac("1", "2"),
-            "ρ",
+            " · ρ · ",
             sub("C", "d"),
-            "A",
+            "A · ",
             sub("v", "rel"),
-            "|",
+            " · |",
             sub("v", "rel"),
             "|",
         ],
-        [sub("F", "acc"), " = ma"],
+        [sub("F", "acc"), " = m · a"],
     ],
     "wheel": [
         [
@@ -124,35 +112,30 @@ EQUATIONS = {
             sub("F", "aero"),
             " + ",
             sub("F", "acc"),
-            ")v",
+            ") · v",
         ]
     ],
-    "density": [["ρ = ", frac("p", "287.05(T + 273.15)"), "     T en °C"]],
+    "density": [["ρ = ", frac("p", "287.05 · (T + 273.15)")]],
     "power": [
-        [
-            sub("P", "human wheel"),
-            " = ",
-            sub("η", "drive"),
-            sub("P", "pedal"),
-            "     limitado a demanda positiva",
-        ],
-        [
-            sub("P", "shaft"),
-            " = ",
-            frac(sub("P", "motor wheel"), sub("η", "drive")),
-            "     ",
-            sub("P", "electric motor"),
-            " = ",
-            frac(sub("P", "shaft"), sub("η", "motor")),
-        ],
+        [sub("P", "human,wheel"), " = ", sub("η", "drive"), " · ", sub("P", "pedal")],
+        [sub("P", "shaft"), " = ", frac(sub("P", "motor,wheel"), sub("η", "drive"))],
+        [sub("P", "electric,motor"), " = ", frac(sub("P", "shaft"), sub("η", "motor"))],
     ],
     "capacity": [
-        [sub("E", "full"), " = ", sub("E", "nominal"), sub("f", "usable"), sub("f", "temperature")],
+        [
+            sub("E", "full"),
+            " = ",
+            sub("E", "nominal"),
+            " · ",
+            sub("f", "usable"),
+            " · ",
+            sub("f", "temperature"),
+        ],
         [
             sub("E", "available"),
             " = ",
             sub("E", "full"),
-            "(",
+            " · (",
             sub("SOC", "initial"),
             " − ",
             sub("SOC", "min"),
@@ -162,26 +145,25 @@ EQUATIONS = {
     "soc": [
         [
             "ΔSOC = −",
-            frac([sub("P", "terminal"), "Δt"], ["3600", sub("E", "full")]),
-            "     Δt en s y E en Wh",
+            frac([sub("P", "terminal"), " · Δt"], ["3600 · ", sub("E", "full")]),
         ]
     ],
     "ecm": [
-        ["V = OCV(SOC) − ", sub("R", "0"), "I − ", sub("V", "RC")],
+        ["V = OCV(SOC) − ", sub("R", "0"), " · I − ", sub("V", "RC")],
         [
             frac(["d", sub("V", "RC")], "dt"),
             " = −",
-            frac(sub("V", "RC"), [sub("R", "1"), sub("C", "1")]),
+            frac(sub("V", "RC"), [sub("R", "1"), " · ", sub("C", "1")]),
             " + ",
             frac("I", sub("C", "1")),
         ],
-        ["ΔSOC = −", frac("IΔt", ["3600", sub("Q", "effective")]), "     Q en Ah"],
+        ["ΔSOC = −", frac("I · Δt", ["3600 · ", sub("Q", "effective")])],
     ],
     "terminal": [
         [
             sub("P", "terminal"),
             " = ",
-            sub("P", "electric motor"),
+            sub("P", "electric,motor"),
             " + ",
             sub("P", "aux"),
             " − ",
@@ -190,38 +172,41 @@ EQUATIONS = {
     ],
     "fit": [
         [
-            "θ* = ",
-            sub("arg min", "θ"),
-            sub("Σ", "i"),
+            "J(θ) = ",
+            sub("∑", "i"),
+            " ",
             sub("w", "i"),
-            sup(["(", sub("E", "pred i"), "(θ) − ", sub("E", "obs i"), ")"], "2"),
-        ]
+            " · ",
+            sup(["(", sub("E", "pred,i"), "(θ) − ", sub("E", "obs,i"), ")"], "2"),
+        ],
+        ["θ* = ", sub("argmin", "θ"), " J(θ)"],
     ],
     "residual": [
         [
             sub("r", "i"),
             " = ",
-            frac([sub("E", "obs i"), " − ", sub("E", "phys i")], sub("L", "i")),
-            "     r en Wh/km",
+            frac([sub("E", "obs,i"), " − ", sub("E", "phys,i")], sub("L", "i")),
         ]
     ],
     "models": [
-        ["M1     Ê = ", sub("E", "phys"), "        M2     Ê = ", sub("E", "data")],
-        ["M3     Ê = ", sub("E", "phys"), " + r̂L"],
-        ["M4     Ê = ", sub("E", "phys"), " + α(x)r̂L"],
+        ["M1: Ê = ", sub("E", "phys")],
+        ["M2: Ê = ", sub("E", "data")],
+        ["M3: Ê = ", sub("E", "phys"), " + r̂ · L"],
+        ["M4: Ê = ", sub("E", "phys"), " + α(x) · r̂ · L"],
     ],
     "gate": [
         [
             "α(x) = ",
             frac("n", "n + 20"),
+            " · ",
             frac(["exp(−", sup("max(d − 1, 0)", "2"), ")"], ["1 + ", sup("u", "2")]),
         ]
     ],
     "conformal": [
-        ["k = ⌈(n + 1)c⌉"],
-        [sub("I", "c"), " = [Ê − ", sub("q", "c"), "L, Ê + ", sub("q", "c"), "L]"],
+        ["k = ceil((n + 1) · c)"],
+        [sub("I", "c"), " = [Ê − ", sub("q", "c"), " · L, Ê + ", sub("q", "c"), " · L]"],
     ],
-    "mission": [["p̂ = ", frac([sub("N", "successful")], "N")]],
+    "mission": [["p̂ = ", frac(sub("N", "successful"), "N")]],
     "sobol": [
         [
             sub("S", "i"),
@@ -231,7 +216,7 @@ EQUATIONS = {
         [
             sub("ST", "i"),
             " = ",
-            frac(["mean[", sup(["(f(A) − f(", sub("AB", "i"), "))"], "2"), "]"], "2 Var(f)"),
+            frac(["mean[", sup(["(f(A) − f(", sub("AB", "i"), "))"], "2"), "]"], "2 · Var(f)"),
         ],
     ],
 }
@@ -337,17 +322,104 @@ def special(doc, text):
                 else:
                     values += " SOC inicial 0.38 y reserva 0.15. Se exige completar los 26 km con potencia y reserva. El consumo hasta agotamiento y la demanda completa pueden diferir."
             doc.add_paragraph("Resultado observado: " + values)
-            figure(
-                doc,
-                f"docs/images/gui-1.0.0/ejemplo-{i:02d}-{key}.png",
-                f"Ejecución del ejemplo {i:02d} {example['title'].split('·')[-1].strip()}.",
+            name = example["title"].split("·")[-1].strip()
+            captions = {
+                "calibration": f"Ejemplo {i:02d} {name}: ajuste observado y predicho.",
+                "uncertainty": f"Ejemplo {i:02d} {name}: muestras, misión y autonomía en Detalles.",
+                "hybrid": f"Ejemplo {i:02d} {name}: predicción CGPRA y soporte OOD en Detalles.",
+                "mission": f"Ejemplo {i:02d} {name}: probabilidad de misión y energía en Detalles.",
+            }
+            caption = captions.get(
+                key, f"Ejemplo {i:02d} {name}: energía, consumo y SOC en Detalles."
             )
+            figure(doc, f"docs/images/gui-1.0.0/ejemplo-{i:02d}-{key}.png", caption)
+            if i <= 5:
+                conditions = {
+                    "flat": "3 km, 6 m/s, 0 %, viento 0 m/s, humano 50 W, 20 °C",
+                    "hill": "3 km, 5 m/s, 3 %, viento 0 m/s, humano 50 W, 20 °C",
+                    "headwind": "3 km, 6 m/s, 0 %, viento −3 m/s, humano 50 W, 20 °C",
+                    "rider": "3 km, 6 m/s, 0 %, viento 0 m/s, humano 120 W, 20 °C",
+                    "cold": "3 km, 6 m/s, 0 %, viento 0 m/s, humano 50 W, 0 °C",
+                }
+                decomposition = result["decomposition"]
+                temperature = 0 if key == "cold" else 20
+                density = 101325 / (287.05 * (temperature + 273.15))
+                table(
+                    doc,
+                    [
+                        ["Magnitud del ejemplo", "Valor verificado"],
+                        ["Condiciones", conditions[key]],
+                        [
+                            "Energía, consumo y SOC final",
+                            f"{result['energy_wh']:.3f} Wh | "
+                            f"{result['wh_per_km']:.3f} Wh/km | {result['final_soc']:.5f}",
+                        ],
+                        [
+                            "Aerodinámica, aporte humano y densidad",
+                            f"{decomposition['aero_wh']:.3f} Wh | "
+                            f"{decomposition['human_wh']:.3f} Wh | {density:.3f} kg/m³",
+                        ],
+                    ],
+                    [2.4, 4.1],
+                )
+            elif key == "uncertainty":
+                table(
+                    doc,
+                    [
+                        ["Indicador", "Resultado"],
+                        [
+                            "Muestras y misión",
+                            f"{result['n_samples']} | {100 * result['mission_probability']:.2f} %",
+                        ],
+                        [
+                            "Autonomía censurada",
+                            f"{100 * result['range_censoring_fraction']:.2f} % "
+                            "al horizonte de 80 km",
+                        ],
+                    ],
+                    [2.4, 4.1],
+                )
+            elif key == "hybrid":
+                prediction = result["CGPRA"]
+                table(
+                    doc,
+                    [
+                        ["Indicador", "Resultado"],
+                        ["Predicción CGPRA", f"{prediction['full_route_energy_wh']:.3f} Wh"],
+                        [
+                            "Alpha y soporte OOD",
+                            f"{prediction['alpha']:.3f} | {prediction['ood_score']:.3f}",
+                        ],
+                        [
+                            "Intervalo calibrado",
+                            f"{prediction['prediction_interval_wh'][0]:.3f} a "
+                            f"{prediction['prediction_interval_wh'][1]:.3f} Wh",
+                        ],
+                    ],
+                    [2.4, 4.1],
+                )
+            elif key == "mission":
+                table(
+                    doc,
+                    [
+                        ["Indicador", "Resultado"],
+                        ["Probabilidad de misión", f"{100 * result['mission_probability']:.2f} %"],
+                        [
+                            "Demanda de ruta completa",
+                            f"{result['full_route_demand_wh']['mean']:.3f} Wh",
+                        ],
+                        ["Energía realizada", f"{result['energy_wh']['mean']:.3f} Wh"],
+                    ],
+                    [2.4, 4.1],
+                )
     elif text.startswith("{{IMAGE:"):
         relative, caption = text[8:-2].split("|", 1)
         figure(doc, relative, caption)
     elif text.startswith("{{EQ:"):
-        for tokens in EQUATIONS[text[5:-2]]:
-            add_equation(doc, tokens)
+        equations = EQUATIONS[text[5:-2]]
+        for index, tokens in enumerate(equations):
+            paragraph = add_equation(doc, tokens)
+            paragraph.paragraph_format.keep_with_next = index + 1 < len(equations)
     elif text == "{{SOURCE}}":
         source = hashlib.sha256()
         package = ROOT / "src/bikeenergylab"

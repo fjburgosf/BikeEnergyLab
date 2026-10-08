@@ -9,6 +9,8 @@ import tomllib
 import zipfile
 from pathlib import Path
 
+from release_evidence import evidence_paths
+
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "dist/BikeEnergyLab"
 version = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
@@ -23,6 +25,10 @@ for name in ["configs", "docs", "examples", "datasets"]:
     )
 for name in ["README.md", "CHANGELOG.md", "CITATION.cff", "LICENSE", "requirements-lock.txt"]:
     shutil.copyfile(ROOT / name, TARGET / name)
+for relative, source in evidence_paths(ROOT):
+    destination = TARGET / relative
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source, destination)
 license_directory = TARGET / "THIRD_PARTY_LICENSES"
 license_directory.mkdir(exist_ok=True)
 notices = []

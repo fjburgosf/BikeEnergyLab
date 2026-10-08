@@ -5,19 +5,18 @@ only task-owned DOCX files with a hidden Word instance; other documents are unto
 """
 
 import importlib.util
+import os
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-skill_root = Path.home() / ".codex/plugins/cache/openai-primary-runtime/documents"
-renderers = sorted(
-    skill_root.glob("*/skills/documents/render_docx.py"),
-    key=lambda p: tuple(int(part) for part in p.parents[2].name.split(".")),
-)
-if not renderers:
-    raise FileNotFoundError("Install the documents skill before rendering")
-SKILL = renderers[-1].parent
-spec = importlib.util.spec_from_file_location("packaged_render_docx", SKILL / "render_docx.py")
+renderer_setting = os.environ.get("BIKEENERGYLAB_DOCX_RENDERER")
+if not renderer_setting:
+    raise RuntimeError("Set BIKEENERGYLAB_DOCX_RENDERER to an installed render_docx.py")
+renderer_path = Path(renderer_setting).expanduser().resolve()
+if not renderer_path.is_file():
+    raise FileNotFoundError(renderer_path)
+spec = importlib.util.spec_from_file_location("external_render_docx", renderer_path)
 renderer = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(renderer)
 

@@ -1,0 +1,11 @@
+........................................................................ [ 90%]
+........                                                                 [100%]
+============================== warnings summary ===============================
+tests/test_completion_workflows.py::test_fit_failure_is_atomic
+  D:\Programs\Python312\Lib\site-packages\joblib\externals\loky\backend\context.py:131: UserWarning: Could not find the number of physical cores for the following reason:
+  found 0 physical cores < 1
+  Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+80 passed, 1 warning in 248.82s (0:04:08)

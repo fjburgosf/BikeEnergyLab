@@ -15,7 +15,7 @@ from docx.text.paragraph import Paragraph
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "docs/templates/catalog.json"
 AUTHORS = "Francisco Javier Burgos Flórez\nJuan Guillermo Popayán Hernández"
-REVISION = "Integración documental del 8 de octubre de 2026"
+REVISION = "Corrección de auditoría del 8 de octubre de 2026"
 
 
 def replace_text(paragraph, text):
@@ -34,9 +34,16 @@ def append_role(doc, prototype, text):
     return p
 
 
-def section_break(doc, index):
+def section_break(doc, index, *, continuous=False):
     p = doc.add_paragraph()
-    p._p.get_or_add_pPr().append(deepcopy(doc._template_sections[index]))
+    section = deepcopy(doc._template_sections[index])
+    if continuous:
+        kind = section.find(qn("w:type"))
+        if kind is None:
+            kind = OxmlElement("w:type")
+            section.insert(0, kind)
+        kind.set(qn("w:val"), "continuous")
+    p._p.get_or_add_pPr().append(section)
 
 
 def data_table(doc, rows, widths=None, *, metadata=False):
@@ -176,7 +183,7 @@ def chapter(doc, heading, level):
     if level == 1:
         if doc._chapter_count and doc._template_kind != "description":
             index = min(doc._chapter_count + 1, len(doc._template_sections) - 2)
-            section_break(doc, index)
+            section_break(doc, index, continuous=True)
         doc._chapter_count += 1
     p = doc.add_heading(heading, level)
     if level == 1 and doc._template_kind == "description" and doc._chapter_count > 1:

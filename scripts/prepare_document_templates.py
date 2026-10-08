@@ -1,5 +1,6 @@
 """Retain the supplied Word design without redistributing its previous content."""
 
+import argparse
 import hashlib
 import json
 import zipfile
@@ -8,7 +9,6 @@ from pathlib import Path
 from lxml import etree
 
 ROOT = Path(__file__).resolve().parents[1]
-REFERENCE = Path("D:/Primbiolab/Registro de software/IPFramework")
 OUT = ROOT / "docs/templates"
 NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
 FILES = {
@@ -35,10 +35,15 @@ def sanitized_xml(raw):
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Prepare sanitized design masters from supplied Word templates"
+    )
+    parser.add_argument("--reference-dir", type=Path, required=True)
+    reference = parser.parse_args().reference_dir
     OUT.mkdir(exist_ok=True)
     catalog = {}
     for key, filename in FILES.items():
-        source = REFERENCE / filename
+        source = reference / filename
         with zipfile.ZipFile(source) as original:
             body = etree.fromstring(original.read("word/document.xml"))
             preserved = [

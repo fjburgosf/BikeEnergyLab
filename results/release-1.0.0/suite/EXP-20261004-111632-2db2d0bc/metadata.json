@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP-20261004-111632-2db2d0bc",
+  "timestamp": "2026-10-04T11:16:32.062931-05:00",
+  "software_version": "1.0.0",
+  "seed": 42,
+  "python": "3.12.10",
+  "platform": "Windows",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "PyYAML": "6.0.3"
+  },
+  "input_sha256": {
+    "route": "7c7058ef7ab66e02ba76851136d230cd66913b6dbb57afb0215d437b4a988cd8"
+  },
+  "source_sha256": "673a01840921e82c8904babd11a4a3f9cda7174edbbd6f5c198076d6e0088344"
+}
