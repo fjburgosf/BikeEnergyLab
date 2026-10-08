@@ -15,7 +15,7 @@ from docx.text.paragraph import Paragraph
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "docs/templates/catalog.json"
 AUTHORS = "Francisco Javier Burgos Flórez\nJuan Guillermo Popayán Hernández"
-REVISION = "Corrección de auditoría del 8 de octubre de 2026"
+REVISION = "Edición 1.0.0 del 8 de octubre de 2026"
 
 
 def replace_text(paragraph, text):

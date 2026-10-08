@@ -22,17 +22,17 @@ are retained in [the 1.0.0 record](validation_1.0.0.md) and
 `results/release_verification_1.0.0.json`. All practice data are synthetic.
 Field accuracy, probability calibration and academic novelty remain unverified.
 
-Four Spanish DOCX documents accompany the 8 October 2026 audit correction.
+Four Spanish DOCX documents form the 8 October 2026 delivery.
 The 31-page user manual contains 25 actual GUI captures, nine distinct executed
-examples and an eight-step tutorial. The 17-page technical manual integrates
+examples and an eight-step tutorial. The 18-page technical manual integrates
 the complete scientific methodology, including 32 editable Word equation
 objects, API, tests, historical evidence and limitations. The 17-page software
 description and one-page title/functions document follow the supplied templates.
-All 66 pages were rendered and reviewed after the final edits. Their exact
+All 67 pages were rendered and reviewed after the final edits. Their exact
 hashes, template checks, page images and source/executable capture provenance
 are recorded in results/documents-verification-1.0.0.json.
 
-The original 80-test suite passed again on 8 October 2026. The delivered
+The original 80-test suite passed again on 8 October 2026. The internal
 results/evidence-inventory-1.0.0.json identifies original summary tables,
 protocol metadata, GUI acceptance reports and primary test logs by SHA256.
 This is software and documentation evidence, not field accuracy validation.

@@ -1,57 +1,9 @@
 # Distribución portátil Windows
 
-La entrega de Windows x64 es `BikeEnergyLab-1.0.0-windows-x64.zip`. Extraerla
-completa y abrir `BikeEnergyLab/BikeEnergyLab.exe`. No necesita una instalación
-de Python ni conexión a Internet. Conservar la carpeta `_internal` junto al
-ejecutable: contiene las bibliotecas, DLL, recursos Tk/Matplotlib y metadatos.
+BikeEnergyLab 1.0.0 se entrega para Windows x64 en BikeEnergyLab-1.0.0-windows-x64.zip. Al extraerlo, conserve juntos BikeEnergyLab.exe y la carpeta _internal. El programa no requiere una instalación separada de Python ni conexión a Internet para los ejemplos integrados.
 
-Se incluyen manuales, configuración, ejemplos, datasets sintéticos, licencia,
-citación, versiones y avisos de dependencias. `SHA256SUMS.json` permite verificar
-integridad de todos los archivos del paquete. No es una firma digital del editor.
+Abra BikeEnergyLab.exe para iniciar la interfaz. En Inicio, seleccione uno de los nueve ejemplos, pulse Cargar ejemplo y después Simular. El tutorial integrado tiene ocho pasos. Estos ejemplos y el tutorial forman parte del ejecutable, por lo que el ZIP Windows no necesita configuraciones, manuales ni archivos de generación de documentos.
 
-La carpeta `docs/docx` contiene los cuatro documentos Word en español:
-[manual de usuario](docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
-[manual técnico con metodología científica](docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx),
-[descripción del software](docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx) y
-[título y funciones](docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx).
-El manual técnico integra ecuaciones editables, supuestos, referencias y resultados
-sintéticos. La descripción resume el fundamento científico y sus límites.
-Todas las páginas finales se renderizan y revisan antes de incluirlas en los paquetes.
+El ZIP de código fuente se entrega por separado como Codigo_Fuente.zip. Contiene los módulos de la aplicación, las configuraciones y los datos sintéticos necesarios para ejecutarla desde Python, además de un script de ejemplos. Los documentos Word se entregan como archivos independientes. El proyecto de desarrollo conserva los registros de pruebas y los hashes de los paquetes fuera de ambos ZIP.
 
-Desde PowerShell dentro de la carpeta extraída:
-
-```powershell
-.\BikeEnergyLab.exe --version
-.\BikeEnergyLab.exe simulate configs/flat.yaml --output results
-.\BikeEnergyLab.exe uncertainty configs/flat.yaml --output results
-.\BikeEnergyLab.exe sensitivity configs/flat.yaml --method sobol --samples 256
-.\BikeEnergyLab.exe telemetry datasets/telemetry_example.csv --output results
-.\BikeEnergyLab.exe train datasets/synthetic_calibration.csv --output results
-.\BikeEnergyLab.exe benchmark configs/benchmark.yaml --output results
-.\BikeEnergyLab.exe prequential configs/adaptive_validation.yaml --output results
-```
-
-`docs/user_manual.md` explica los quince módulos, unidades, datos y exportación.
-En Inicio, el menú **Ejemplos** ofrece nueve ejercicios ejecutables. El botón
-**Tutorial** abre la guía integrada de ocho pasos. Ambos están disponibles en
-ES/EN y no requieren los archivos Python externos ni conexión.
-Después de **Cargar ejemplo**, **Simular** ejecuta su flujo completo. Estas son
-las dos acciones del flujo de ejemplos.
-Los archivos `.py` de `examples` son ejemplos de la API para una instalación Python.
-Sus configuraciones también pueden ejecutarse con el programa portátil.
-
-El ejecutable se verifica en este equipo con simulación, inferencia M1–M4,
-incertidumbre aprendida y GUI ES/EN. El wheel se comprueba en un entorno Python
-aislado, sin bibliotecas heredadas del sistema. El código fuente, lock y scripts
-permiten repetir el proceso de build. No se promete igualdad binaria entre builds.
-
-No incluye instalador ni firma de código. La verificación en otro equipo Windows
-y la validación de precisión con bicicletas reales son evidencias adicionales
-que no se sustituyen por estas pruebas de distribución.
-
-La carpeta **Entregables** contiene únicamente cuatro DOCX y dos ZIP, uno portátil
-y otro de código fuente. Extraiga el ZIP portátil fuera de Entregables y abra
-`BikeEnergyLab/BikeEnergyLab.exe`. Conserve su carpeta completa con las dependencias.
-Los registros de revisión y los hashes de entrega se conservan por separado
-en `results/delivery-1.0.0`. El ZIP de fuentes contiene el código, los documentos
-y los scripts necesarios para reproducir la distribución.
+La distribución no incluye instalador ni firma digital. Las pruebas de software y los ejemplos sintéticos no establecen precisión con bicicletas reales.

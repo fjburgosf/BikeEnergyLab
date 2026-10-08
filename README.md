@@ -74,11 +74,8 @@ destino. `--no-figures` desactiva figuras en simulate/uncertainty/benchmark/vali
 `train` anuncia una carpeta de modelo. Utilizar esa carpeta con `--model` en
 `predict`, `simulate` o `uncertainty` para reutilizar el ajuste.
 
-El paquete portátil `dist/BikeEnergyLab-1.0.0-windows-x64.zip` incluye el programa,
-dependencias, manuales, configuraciones y ejemplos. Extraer la carpeta completa y
-abrir `BikeEnergyLab.exe`. La CLI del ejecutable acepta los mismos comandos.
-Véase [distribución Windows](docs/windows_distribution.md).
-Incluye cuatro documentos Word en español: [manual de usuario](docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
+El paquete portátil de Windows contiene BikeEnergyLab.exe y _internal. Los nueve ejemplos y el tutorial están integrados en la aplicación. Los cuatro documentos Word se entregan fuera de los ZIP. Consulte [distribución Windows](docs/windows_distribution.md).
+Los documentos son: [manual de usuario](docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx),
 [manual técnico](docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx),
 [descripción del software](docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx) y
 [título y funciones](docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx).
@@ -159,12 +156,7 @@ Consulte [formatos](datasets/README.md), [metodología](docs/methodology.md),
 
 ## Ejecutable Windows
 
-La carpeta **Entregables** contiene únicamente los cuatro DOCX, el ZIP portátil
-y `BikeEnergyLab-1.0.0-codigo-fuente.zip`. Extraiga el ZIP portátil fuera de
-Entregables y abra `BikeEnergyLab/BikeEnergyLab.exe`. Conserve la carpeta extraída
-completa con `_internal`. Los dos ZIP incluyen evidencia seleccionada en results, con inventario SHA256.
-Los expedientes crudos completos y los hashes finales de Entregables están en
-results del espacio de desarrollo, fuera de los ZIP.
+La carpeta Entregables conserva los documentos Word y dos ZIP. La subcarpeta DNDA es la referencia de registro y no se modifica durante el empaquetado. Codigo_Fuente.zip reproduce el paquete de código compacto de esa subcarpeta. El ZIP Windows contiene solamente BikeEnergyLab.exe y _internal. Extraiga ese ZIP y conserve ambos elementos juntos. Los hashes finales se guardan en results del proyecto de desarrollo, fuera de los ZIP.
 
 ```powershell
 .\scripts\build_windows.ps1

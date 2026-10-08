@@ -648,7 +648,7 @@ def main():
         markdown(doc, source.read_text(encoding="utf-8"), user_manual=user)
         doc.add_heading("Autoría y condiciones de uso", 2)
         doc.add_paragraph(
-            "Autores: Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Contacto: fjburgosf@gmail.com. Conserve CITATION.cff para citar el software. Los derechos y condiciones de uso son los indicados en LICENSE. No se presume una licencia abierta."
+            "Autores: Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Contacto: fjburgosf@gmail.com. Los derechos de uso y distribución pertenecen a los autores. No se presume una licencia abierta."
         )
         path = OUT / filename
         doc.save(path)

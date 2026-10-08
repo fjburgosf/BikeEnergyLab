@@ -1,212 +1,177 @@
-"""Verify final delivery inventory, archives, reviewed manuals and executable identity."""
+"""Verify the seven final deliverables and the untouched DNDA reference."""
+
+from __future__ import annotations
 
 import hashlib
 import json
-import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 from zipfile import ZipFile
 
-from release_evidence import evidence_paths
-
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "Entregables"
+DNDA = TARGET / "DNDA"
+REFERENCE_HASHES = {
+    "Codigo_Fuente.zip": "da3421ccd548b13da1beebecc49debf1a464010a8b5efcecf44e61407062a962",
+    "Manual_de_usuario.docx": "0a3d1a1c2f0345a67f74a62344a85b50d5d912548e815551356c5e8df29e444d",
+    "Manual_de_usuario.pdf": "053cfaed059f34c40340186fe0eb94def9f727e7cac70257a30f746dbac63821",
+    "Manual_tecnico.docx": "838e9b9653fc678290142518d3f43b7c7748b71a991ce3afcadd3a197b68b7da",
+    "Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx": "b97b53c8ce7db83fbec5ef3816b15f4876981688ca39a0614d382101b00bcb2c",
+}
+PORTABLE_NAME = "BikeEnergyLab-1.0.0-windows-x64.zip"
+DESCRIPTION_NAME = "Descripcion_del_Software_BikeEnergyLab_1.0.0.docx"
+FUNCTIONS_NAME = "Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx"
+EXPECTED = {*REFERENCE_HASHES, PORTABLE_NAME, DESCRIPTION_NAME}
 
 
-def sha(path):
+def sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def data_sha(data):
+def data_sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def read_json(path):
+def read_json(path: Path):
     return json.loads(path.read_text("utf-8"))
 
 
-review = read_json(ROOT / "results/documents-verification-1.0.0.json")
-release = read_json(ROOT / "results/release_verification.json")
-sourcezip = TARGET / "BikeEnergyLab-1.0.0-codigo-fuente.zip"
-portablezip = ROOT / "dist/BikeEnergyLab-1.0.0-windows-x64.zip"
-wheel = ROOT / "dist/packages/bikeenergylab-1.0.0-py3-none-any.whl"
-assert len(review["documents"]) == 4
-assert len(list(TARGET.glob("*.docx"))) == 4
-assert (
-    sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe")
-    == release["artifact_sha256"]["dist/BikeEnergyLab/BikeEnergyLab.exe"]
-)
-assert (
-    sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe")
-    == "2dedbac7d864d253ef41f6914a83adbb048c172bd69588b17909ab6b40b0e754"
-)
-assert (ROOT / "dist/BikeEnergyLab/_internal/scipy/stats/_sobol_direction_numbers.npz").is_file()
-assert (
-    read_json(ROOT / "dist/BikeEnergyLab/_internal/bikeenergylab/source_manifest.json")[
-        "source_sha256"
-    ]
-    == review["source_sha256"]
-)
-assert sha(TARGET / portablezip.name) == sha(portablezip)
+assert DNDA.is_dir() and DNDA.resolve().parent == TARGET.resolve()
+assert {p.name for p in DNDA.iterdir()} == set(REFERENCE_HASHES)
+assert {p.name for p in TARGET.iterdir()} == EXPECTED | {"DNDA"}
+assert {name: sha(DNDA / name) for name in REFERENCE_HASHES} == REFERENCE_HASHES
 manifest = read_json(ROOT / "results/delivery-1.0.0/SHA256SUMS.json")
-actual = {
-    p.relative_to(TARGET).as_posix(): sha(p)
-    for p in sorted(TARGET.rglob("*"))
-    if p.is_file() and p.name != "SHA256SUMS.json"
+actual = {name: sha(TARGET / name) for name in sorted(EXPECTED)}
+assert actual == manifest
+for name in [
+    "Codigo_Fuente.zip",
+    "Manual_de_usuario.docx",
+    "Manual_de_usuario.pdf",
+    "Manual_tecnico.docx",
+]:
+    assert actual[name] == REFERENCE_HASHES[name]
+
+with ZipFile(DNDA / FUNCTIONS_NAME) as reference, ZipFile(TARGET / FUNCTIONS_NAME) as clean:
+    assert reference.namelist() == clean.namelist()
+    assert reference.testzip() is None and clean.testzip() is None
+    for name in reference.namelist():
+        if name == "docProps/core.xml":
+            original = reference.read(name).decode("utf-8")
+            updated = clean.read(name).decode("utf-8")
+            assert updated == original.replace(
+                "Corrección de auditoría del 8 de octubre de 2026",
+                "Edición 1.0.0 del 8 de octubre de 2026",
+            )
+            assert updated != original
+        else:
+            assert reference.read(name) == clean.read(name), name
+
+review = read_json(ROOT / "results/documents-verification-1.0.0.json")
+assert review["version"] == "1.0.0" and len(review["documents"]) == 4
+assert review["total_pages"] == 67
+mapping = {
+    "Manual_de_usuario_BikeEnergyLab_1.0.0.docx": "Manual_de_usuario.docx",
+    "Manual_tecnico_BikeEnergyLab_1.0.0.docx": "Manual_tecnico.docx",
+    DESCRIPTION_NAME: DESCRIPTION_NAME,
+    FUNCTIONS_NAME: FUNCTIONS_NAME,
 }
-assert actual == manifest, "Delivery manifest differs from actual inventory"
-expected = {Path(d["path"]).name for d in review["documents"]} | {sourcezip.name, portablezip.name}
-assert set(actual) == expected and len(list(TARGET.iterdir())) == 6, (
-    "Unexpected files or folders in Entregables"
+for entry in review["documents"]:
+    root_name = mapping[Path(entry["path"]).name]
+    assert sha(ROOT / entry["path"]) == entry["sha256"] == actual[root_name]
+    with ZipFile(TARGET / root_name) as doc:
+        assert doc.testzip() is None
+        assert not any(
+            "auditor" in doc.read(name).decode("utf-8", errors="ignore").lower()
+            for name in ["word/document.xml", "docProps/core.xml"]
+        )
+
+source_path = TARGET / "Codigo_Fuente.zip"
+with ZipFile(source_path) as source:
+    names = source.namelist()
+    assert source.testzip() is None and len(names) == 40
+    assert all(name.startswith("bikeenergylab-1.0.0/") for name in names)
+    assert all(
+        not any(
+            part in {"docs", "results", "scripts", "tests", "build", "dist"}
+            for part in Path(name).parts
+        )
+        for name in names
+    )
+    assert any(name.endswith("/examples/run_examples.py") for name in names)
+    assert any(name.endswith("/src/bikeenergylab/gui/app.py") for name in names)
+
+portable_path = TARGET / PORTABLE_NAME
+assert sha(portable_path) == sha(ROOT / "dist" / PORTABLE_NAME)
+with ZipFile(portable_path) as portable:
+    names = portable.namelist()
+    assert portable.testzip() is None and len(names) == 2703
+    assert len(set(names)) == len(names)
+    assert all(
+        name == "BikeEnergyLab/BikeEnergyLab.exe" or name.startswith("BikeEnergyLab/_internal/")
+        for name in names
+    )
+    for name in names:
+        staged = ROOT / "dist" / Path(name)
+        assert staged.is_file() and data_sha(portable.read(name)) == sha(staged), name
+
+release = read_json(ROOT / "results/release_verification.json")
+assert release["artifact_sha256"]["dist/BikeEnergyLab/BikeEnergyLab.exe"] == sha(
+    ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe"
 )
-with ZipFile(sourcezip) as source, ZipFile(portablezip) as portable, ZipFile(wheel) as binary:
-    assert source.testzip() is None
-    assert portable.testzip() is None
-    assert binary.testzip() is None
-    assert not any(
-        "Metodologia_cientifica_BikeEnergyLab_1.0.0.docx" in name
-        for name in source.namelist() + portable.namelist()
-    )
-    assert not any(
-        "visual-qa/" in n or "docx-qa/" in n or "/~$" in n
-        for n in portable.namelist() + source.namelist()
-    )
-    portable_manifest = json.loads(portable.read("BikeEnergyLab/SHA256SUMS.json"))
-    for name, digest in portable_manifest.items():
-        assert data_sha(portable.read("BikeEnergyLab/" + name)) == digest, name
-    assert set(portable_manifest) == {
-        n.removeprefix("BikeEnergyLab/")
-        for n in portable.namelist()
-        if not n.endswith("/SHA256SUMS.json")
-    }
-    for path in (ROOT / "src/bikeenergylab").rglob("*.py"):
-        relative = path.relative_to(ROOT).as_posix()
-        assert source.read("bikeenergylab-1.0.0/" + relative) == path.read_bytes()
-        assert (
-            binary.read("bikeenergylab/" + path.relative_to(ROOT / "src/bikeenergylab").as_posix())
-            == path.read_bytes()
-        )
-    for folder in ["docs", "scripts"]:
-        for path in (ROOT / folder).rglob("*"):
-            if (
-                path.is_file()
-                and path.suffix
-                in [".py", ".ps1", ".md", ".docx", ".png", ".template", ".json", ".csv", ".whl"]
-                and "__pycache__" not in path.parts
-            ):
-                relative = path.relative_to(ROOT).as_posix()
-                assert source.read("bikeenergylab-1.0.0/" + relative) == path.read_bytes(), relative
-    for name in [
-        "README.md",
-        "MANIFEST.in",
-        "pyproject.toml",
-        "requirements-lock.txt",
-        "LICENSE",
-        "CITATION.cff",
-        "CHANGELOG.md",
-    ]:
-        assert source.read("bikeenergylab-1.0.0/" + name) == (ROOT / name).read_bytes()
-    for relative, path in evidence_paths(ROOT):
-        expected_hash = sha(path)
-        assert data_sha(source.read("bikeenergylab-1.0.0/" + relative)) == expected_hash
-        assert data_sha(portable.read("BikeEnergyLab/" + relative)) == expected_hash
-    captures = read_json(ROOT / "docs/images/gui-1.0.0/captures.json")
-    assert captures["source_matches_executable"]
-    assert captures["source_sha256"] == review["source_sha256"]
-    assert captures["executable_sha256"] == sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe")
-    example_captures = [
-        item["sha256"]
-        for item in captures["screenshots"]
-        if Path(item["file"]).name.startswith("ejemplo-")
-    ]
-    assert len(example_captures) == 9 and len(set(example_captures)) == 9
-    for document in review["documents"]:
-        name = Path(document["path"]).name
-        for path in [TARGET / name, ROOT / document["path"]]:
-            assert sha(path) == document["sha256"], path
-        assert (
-            data_sha(source.read("bikeenergylab-1.0.0/" + document["path"])) == document["sha256"]
-        )
-        assert data_sha(portable.read("BikeEnergyLab/" + document["path"])) == document["sha256"]
-        assert document["sha256"] == release["artifact_sha256"][document["path"]]
-    assert data_sha(portable.read("BikeEnergyLab/BikeEnergyLab.exe")) == sha(
-        ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe"
-    )
-now = datetime.now(timezone.utc).isoformat()
+assert release["artifact_sha256"][f"dist/{PORTABLE_NAME}"] == actual[PORTABLE_NAME]
+acceptance_path = ROOT / "build/runtime-check-20261008-152204/acceptance/verification.json"
+acceptance = read_json(acceptance_path)
+assert (
+    acceptance["version"] == "1.0.0" and acceptance["passed"] and acceptance["cases_passed"] == 114
+)
+assert all(case["passed"] for case in acceptance["cases"])
+
+stamp = datetime.now(timezone.utc).isoformat()
 portable_report = {
     "version": "1.0.0",
-    "revision": review["revision"],
-    "release_date": "2026-10-06",
-    "document_revision_date": review["document_revision_date"],
-    "completed_utc": now,
-    "source_sha256": review["source_sha256"],
-    "archive": portablezip.relative_to(ROOT).as_posix(),
-    "archive_sha256": sha(portablezip),
-    "manifest_files_verified": len(portable_manifest),
-    "reviewed_docx_included": 4,
-    "document_pages": review["total_pages"],
-    "document_hashes_match_reviewed_files": True,
-    "source_archive_docx_match": True,
-    "wheel_sources_match": True,
-    "active_metadata_version": "1.0.0",
-    "exe_matches_verified_distribution": True,
-    "internal_qa_artifacts_excluded": True,
+    "completed_utc": stamp,
+    "passed": True,
+    "archive": str(portable_path.relative_to(ROOT)).replace("\\", "/"),
+    "archive_sha256": actual[PORTABLE_NAME],
+    "files_verified": len(names),
+    "exe_sha256": sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe"),
+    "isolated_gui_cases_passed": 114,
+    "isolated_gui_report": str(acceptance_path.relative_to(ROOT)).replace("\\", "/"),
+    "runtime_only": True,
 }
 delivery_report = {
     "version": "1.0.0",
-    "revision": review["revision"],
-    "completed_utc": now,
-    "source_sha256": review["source_sha256"],
+    "completed_utc": stamp,
     "passed": True,
-    "files_verified": len(manifest),
-    "checks": [
-        "Only four Word documents and two ZIP archives in Entregables",
-        "All delivery and portable manifest SHA256 values and complete file inventories",
-        "Source ZIP and wheel Python sources match verified release",
-        "Source ZIP scripts, metadata, retained templates, screenshots and document sources match current files",
-        "Curated historical protocol records and primary acceptance logs match both ZIPs",
-        "Capture-source and packaged executable source fingerprints agree",
-        "Internal working instructions are absent from source ZIP",
-        "Four reviewed DOCX hashes match folder, source ZIP and portable ZIP",
-        "ZIP CRC integrity",
-        "Delivered executable SHA256 matches tested executable",
-        "Frozen SciPy Sobol data and source identity present",
-    ],
+    "files_verified": len(actual),
+    "dnda_files_untouched": len(REFERENCE_HASHES),
+    "dnda_sha256": REFERENCE_HASHES,
+    "source_zip_sha256": actual["Codigo_Fuente.zip"],
+    "portable_zip_sha256": actual[PORTABLE_NAME],
     "reviewed_docx": 4,
-    "document_pages": review["total_pages"],
-    "user_guide_captures": 25,
-    "exe_sha256": sha(ROOT / "dist/BikeEnergyLab/BikeEnergyLab.exe"),
-    "source_zip_sha256": sha(sourcezip),
-    "portable_zip_sha256": sha(portablezip),
-    "code_location_not_referenced_in_delivery": True,
+    "reviewed_pages": review["total_pages"],
+    "functions_metadata_cleaned_in_entregables_only": True,
+    "source_archive_compact": True,
+    "portable_archive_runtime_only": True,
 }
 for name, record in [
     ("portable-verification-1.0.0.json", portable_report),
     ("deliverables-verification-1.0.0.json", delivery_report),
 ]:
     path = ROOT / "results" / name
-    history = ROOT / "results/history" / ("pre-delivery-cleanup-" + name)
-    if not history.exists():
-        shutil.copyfile(path, history)
-    path.write_text(json.dumps(record, indent=2) + "\n", "utf-8")
-    shutil.copyfile(path, ROOT / "results/delivery-1.0.0/verification" / name)
-manifest = {
-    p.relative_to(TARGET).as_posix(): sha(p)
-    for p in sorted(TARGET.rglob("*"))
-    if p.is_file() and p.name != "SHA256SUMS.json"
-}
-(ROOT / "results/delivery-1.0.0/SHA256SUMS.json").write_text(
-    json.dumps(manifest, indent=2) + "\n", "utf-8"
-)
+    path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", "utf-8")
+    mirror = ROOT / "results/delivery-1.0.0/verification" / name
+    mirror.parent.mkdir(parents=True, exist_ok=True)
+    mirror.write_bytes(path.read_bytes())
 print(
     json.dumps(
         {
             "passed": True,
-            "delivery_files": len(manifest),
-            "portable_files": len(portable_manifest),
-            "reviewed_docx": 4,
-            "pages": review["total_pages"],
-            "source_zip_sha256": sha(sourcezip),
+            "files": len(actual),
+            "source_entries": 40,
+            "portable_entries": len(names),
+            "gui_cases": 114,
+            "dnda_unchanged": True,
         }
     )
 )

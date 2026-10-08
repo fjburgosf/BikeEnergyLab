@@ -1,7 +1,8 @@
 # Evidencia incluida con BikeEnergyLab 1.0.0
 
-Los ZIP de fuentes y Windows incluyen una selección verificable de resultados
-bajo este directorio. evidence-inventory-1.0.0.json enumera rutas y SHA256.
+Los dos ZIP finales contienen código fuente compacto o ejecutable Windows y sus
+dependencias. Los resultados de prueba permanecen en el proyecto de desarrollo.
+evidence-inventory-1.0.0.json enumera sus rutas y SHA256.
 La versión y los cuatro DOCX definitivos se revisaron el 8 de octubre de 2026.
 
 - build_logs/tests-v1.0.0.log conserva la ejecución histórica de 80 pruebas.
@@ -26,10 +27,9 @@ La versión y los cuatro DOCX definitivos se revisaron el 8 de octubre de 2026.
 Los expedientes crudos completos de protocolos, predicciones por ruta, imágenes
 de QA y el historial de builds permanecen en el espacio de desarrollo, bajo
 results/release-1.0.0 y results/history. No forman parte de estos ZIP.
-results/release_verification.json y results/delivery-1.0.0 del espacio de
-desarrollo registran los hashes finales de paquetes; se excluyen para evitar
-que un ZIP contenga su propio hash. El inventario de este directorio y los
-SHA256 de los seis archivos de Entregables permiten verificar ambas capas.
+results/release_verification.json y results/delivery-1.0.0 registran los hashes
+y la verificación de los siete archivos de Entregables. La carpeta DNDA se
+conserva intacta y fuera de ese recuento.
 
 Las prácticas y protocolos son sintéticos. Las pruebas de software comprueban
 implementación y distribución, no precisión física en bicicletas reales.

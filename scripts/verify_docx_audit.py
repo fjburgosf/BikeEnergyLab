@@ -43,7 +43,7 @@ assert identity == "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98
 documents = []
 for prefix, role, count in [
     ("Manual_de_usuario", "user", 31),
-    ("Manual_tecnico", "technical", 17),
+    ("Manual_tecnico", "technical", 18),
     ("Descripcion_del_Software", "description", 17),
     ("Titulo_y_descripcion_de_funciones", "functions", 1),
 ]:
@@ -58,8 +58,13 @@ for prefix, role, count in [
         body = etree.fromstring(final.read("word/document.xml"))
         original = etree.fromstring(template.read("word/document.xml"))
         text = " ".join(body.xpath("//w:t/text()", namespaces=NS))
-        assert "BikeEnergyLab" in text and "1.0.0" in text and "fjburgosf@gmail.com" in text
-        assert ";" not in text
+        assert "BikeEnergyLab" in text
+        if role != "functions":
+            assert "1.0.0" in text and "fjburgosf@gmail.com" in text
+        assert "auditor" not in text.lower()
+        assert "auditor" not in final.read("docProps/core.xml").decode("utf-8").lower()
+        if role != "functions":
+            assert ";" not in text
         assert "github" not in text.lower() and "repositorio" not in text.lower()
         for part in final.namelist():
             if part.endswith(".rels"):
@@ -171,11 +176,7 @@ for prefix, role, count in [
                 "visually_reviewed_pages": list(range(1, count + 1)),
                 "qa_pdf_sha256": sha(pdf),
                 "page_png_sha256": pages,
-                "qa_iteration": (
-                    "segunda-auditoria-2026-10-08"
-                    if prefix == "Manual_tecnico"
-                    else "auditoria-2026-10-08"
-                ),
+                "qa_iteration": ("entrega-2026-10-08"),
                 "template": catalog[role]["master"],
                 "template_sha256": catalog[role]["master_sha256"],
                 "template_sections": len(sections),
@@ -187,7 +188,7 @@ for prefix, role, count in [
         )
 record = {
     "version": "1.0.0",
-    "revision": "segunda-auditoria-2026-10-08",
+    "revision": "entrega-2026-10-08",
     "release_date": "2026-10-06",
     "document_revision_date": "2026-10-08",
     "contact": "fjburgosf@gmail.com",
@@ -213,14 +214,14 @@ record = {
     "original_templates_unchanged": True,
     "methodology_in_technical_manual": True,
     "scientific_equations_semantically_preserved": True,
-    "second_audit_equations": {
+    "editable_equation_checks": {
         "aerodynamic_absolute_value_as_editable_delimiter": True,
         "signed_relative_speed_retained": True,
         "optimal_theta_superscript_and_argmin_limit": True,
     },
     "scope": "Four final template-based DOCX. Scientific methodology integrated in the technical manual with its complete editable equations and historical evidence. Scientific overview added to software description. Captures, button coverage, examples, editable equations and scientific baseline retained.",
     "editorial_checks": {
-        "semicolon_count_in_editable_document_text": 0,
+        "semicolon_count_in_editable_document_text_except_dnda_functions": 0,
         "code_host_references_in_document_text_and_relationships": 0,
     },
     "authorized_template_deviation": "User requested removal of the repository metadata row and references from deliverables.",

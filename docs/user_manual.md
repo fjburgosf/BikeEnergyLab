@@ -12,7 +12,7 @@ El programa calcula la demanda necesaria para seguir una velocidad prescrita y c
 
 ### 1.3 Alcance del documento
 
-La revisión de auditoría del 8 de octubre de 2026 cubre los quince paneles, los botones, el tutorial y los ejemplos. El flujo utiliza **Cargar ejemplo** y después **Simular**. La selección del desplegable describe un caso. Cargarlo lo convierte en el ejemplo activo. El manifiesto docs/images/gui-1.0.0/captures.json registra la huella de las fuentes capturadas y la huella incorporada al EXE. Ambas coinciden en esta revisión. Las imágenes se tomaron de la GUI ejecutada desde fuentes y no muestran diálogos nativos del EXE.
+Este manual cubre los quince paneles, los botones, el tutorial y los ejemplos. El flujo utiliza **Cargar ejemplo** y después **Simular**. La selección del desplegable describe un caso. Cargarlo lo convierte en el ejemplo activo. El manifiesto docs/images/gui-1.0.0/captures.json registra la huella de las fuentes capturadas y la huella incorporada al EXE. Ambas coinciden en la versión 1.0.0. Las imágenes se tomaron de la GUI ejecutada desde fuentes y no muestran diálogos nativos del EXE.
 
 ## 2. Descripción general del sistema
 
@@ -226,4 +226,4 @@ Extraiga el ZIP completo y compruebe _internal. La entrega Windows x64 no tiene 
 
 ### 5.7 Soporte y límites
 
-Contacto: fjburgosf@gmail.com. Indique versión, revisión, YAML, entradas y error. La revisión histórica registra 80 pruebas y 114 comprobaciones GUI en fuentes y 114 en el EXE con respuestas controladas de diálogos. La suite completa se volvió a ejecutar el 8 de octubre. Los logs y reportes primarios se incluyen en results/build_logs y results/gui-button-verification-1.0.0 dentro de ambos ZIP. No se certifican todos los estados ni precisión física real. El manual técnico conserva resultados desfavorables y límites históricos. Derechos: LICENSE.
+Contacto: fjburgosf@gmail.com. Indique versión, configuración YAML, entradas y error. La verificación de la versión 1.0.0 registra 80 pruebas y 114 comprobaciones GUI en fuentes y 114 en el EXE con respuestas controladas de diálogos. La suite completa se volvió a ejecutar el 8 de octubre. Los logs y reportes primarios se conservan en el proyecto de desarrollo y no forman parte de los ZIP entregados. No se certifican todos los estados ni precisión física real. El manual técnico conserva resultados desfavorables y límites históricos. Los derechos de uso y distribución pertenecen a los autores.

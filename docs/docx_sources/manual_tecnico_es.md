@@ -8,13 +8,13 @@ BikeEnergyLab 1.0.0 modela energía, autonomía y misión de bicicletas eléctri
 
 ### 1.2 Contexto y alcance
 
-La revisión de auditoría del 8 de octubre de 2026 conserva la identidad de algoritmos y resultados históricos. Los ejemplos son sintéticos. Contacto: fjburgosf@gmail.com.
+Esta edición conserva la identidad de algoritmos y resultados históricos. Los ejemplos son sintéticos. Contacto: fjburgosf@gmail.com.
 
 ### 1.3 Pregunta de investigación y alcance
 
 La pregunta es si la física calibrada, el aprendizaje residual y una compuerta de confianza pueden mejorar la predicción energética ante nuevas rutas, ciclistas y condiciones. La hipótesis contrastable es que CGPRA mantiene o mejora el error respecto a M1, M2 y M3, especialmente ante cambios de distribución. Los protocolos permiten refutarla. El nombre del método no establece superioridad, novedad ni aceptación académica.
 
-La entrega utiliza datos sintéticos con verdad física y discrepancia declaradas. Los resultados que siguen pertenecen a esos protocolos, no a mediciones de una bicicleta real. La versión 1.0.0 incluye los ejemplos y el tutorial. Su núcleo numérico conserva el comportamiento de la revisión científica histórica del 4 de octubre de 2026. Se conserva la identidad de cada experimento para distinguirlos de las pruebas de software.
+La entrega utiliza datos sintéticos con verdad física y discrepancia declaradas. Los resultados que siguen pertenecen a esos protocolos, no a mediciones de una bicicleta real. La versión 1.0.0 incluye los ejemplos y el tutorial. Su núcleo numérico conserva el comportamiento de la versión científica histórica del 4 de octubre de 2026. Se conserva la identidad de cada experimento para distinguirlos de las pruebas de software.
 
 ## 2. Arquitectura del sistema
 
@@ -260,7 +260,7 @@ bikeenergylab sensitivity configs/flat.yaml --method sobol --samples 256
 
 {{SOURCE}}
 
-El núcleo fuera de la GUI coincide con el wheel de la revisión científica del 4 de octubre de 2026. Su copia y los expedientes completos están en results/history del espacio de desarrollo, fuera de los ZIP. La distribución contiene el baseline y los registros seleccionados que enumera results/README.md. Los cambios de interfaz no constituyen experimentos nuevos. La verificación actual de artefactos finales está en results/release_verification.json del espacio de desarrollo, fuera de los ZIP. La identidad histórica está en results/release_verification_1.0.0.json, incluido en los paquetes.
+El núcleo fuera de la GUI coincide con el wheel científico del 4 de octubre de 2026. Su copia y los expedientes completos están en results/history del espacio de desarrollo, fuera de los ZIP. Los registros de pruebas y resultados permanecen en el proyecto de desarrollo, fuera de los ZIP. Los cambios de interfaz no constituyen experimentos nuevos. La verificación actual de artefactos finales está en results/release_verification.json del espacio de desarrollo, fuera de los ZIP. La identidad histórica está en results/release_verification_1.0.0.json del proyecto de desarrollo.
 
 La precisión con bicicletas reales, la calibración de probabilidades, los parámetros independientes de hardware y la novedad académica requieren evidencia adicional. El software utiliza dinámica inversa con velocidad prescrita. Los residuos por ruta no identifican una corrección temporal aprendida de SOC, corriente o voltaje.
 
@@ -278,13 +278,13 @@ El protocolo causal utiliza 32 rutas sintéticas con Crr de 0.008 a 0.011, CdA d
 
 En este cambio declarado, M4 adaptativo mejoró al M4 congelado, pero la física adaptativa M1 tuvo el menor MAE. No se generaliza ese resultado a otros cambios ni a telemetría real. Los segmentos no se cuentan como observaciones independientes y tres semillas no justifican una afirmación estadística amplia.
 
-El ZIP distribuido incluye los CSV originales de agregados predictivos y métricas de deriva junto con protocolo y metadatos en results/release-1.0.0/predictive/EXP-20261004-111801-cadfae83 y results/release-1.0.0/prequential/EXP-20261004-111931-387d9cfc. Incluye índices de la suite EXP 01 a 15 y de once ejemplos API. Los expedientes crudos completos permanecen en el espacio de desarrollo y no se incluyen en los ZIP. La GUI 1.0.0 ofrece nueve ejercicios adicionales.
+El proyecto de desarrollo conserva los CSV originales de agregados predictivos y métricas de deriva, sus protocolos, metadatos, índices de la suite EXP 01 a 15 y once ejemplos API. Estos registros no forman parte de los ZIP finales. La GUI 1.0.0 ofrece nueve ejercicios adicionales.
 
 ### 7.3 Reproducción y límites de la evidencia
 
 {{SOURCE}}
 
-La ejecución histórica del 6 de octubre registró 80 pruebas de regresión, 114 controles GUI en fuentes y 114 en el EXE. Los logs primarios, el comando de pytest, las versiones y los reportes se incluyen en results/build_logs y results/release-1.0.0/acceptance.json. El inventario de hashes distribuido está en results/evidence-inventory-1.0.0.json. Los hashes de los ZIP finales se conservan por separado en el espacio de desarrollo. El 8 de octubre se volvió a ejecutar la suite completa en Windows con una carpeta temporal aislada. Los protocolos científicos crudos del espacio de desarrollo conservan sus semillas, datos y hashes y no se presentan como nuevos resultados. Las pruebas verifican implementación y distribución, no precisión física.
+La ejecución histórica del 6 de octubre registró 80 pruebas de regresión, 114 controles GUI en fuentes y 114 en el EXE. Los logs primarios, el comando de pytest, las versiones y los reportes se conservan en results/build_logs y results/release-1.0.0/acceptance.json dentro del proyecto de desarrollo. Los hashes de los ZIP finales se conservan por separado en el espacio de desarrollo. El 8 de octubre se volvió a ejecutar la suite completa en Windows con una carpeta temporal aislada. Los protocolos científicos crudos del espacio de desarrollo conservan sus semillas, datos y hashes y no se presentan como nuevos resultados. Las pruebas verifican implementación y distribución, no precisión física.
 
 La revisión de botones utiliza widgets reales y diálogos con respuestas controladas. También comprueba Cargar ejemplo seguido de Simular para los nueve casos. Esta revisión verifica el despacho de los procedimientos, no el aspecto de todos los diálogos de Windows ni todos los estados posibles. Las copias de las tablas históricas en docs/validation_data conservan sus hashes y permiten regenerar este documento desde el código fuente.
 
@@ -303,11 +303,11 @@ La versión 1.0.0 pasó 80 pruebas, lint y formato, y el recorrido GUI en españ
 .\scripts\build_windows.ps1
 ```
 
-PyInstaller genera una carpeta onedir. El ejecutable necesita conservar _internal con las DLL, recursos Tk y Matplotlib, metadatos y dependencias. Los backends SVG y PDF y los datos de scipy.stats requeridos por Sobol se incluyen explícitamente. El ZIP incorpora manuales, configuraciones, ejemplos, datos sintéticos, avisos de terceros y SHA256SUMS.json. No hay instalador ni firma digital.
+PyInstaller genera una carpeta onedir. El ejecutable necesita conservar _internal con las DLL, recursos Tk y Matplotlib, metadatos y dependencias. Los backends SVG y PDF y los datos de scipy.stats requeridos por Sobol se incluyen explícitamente. El ZIP Windows contiene BikeEnergyLab.exe y _internal. Los nueve ejemplos y el tutorial están integrados en el ejecutable. Los manuales y el ZIP de fuentes se entregan por separado. No hay instalador ni firma digital.
 
-Las fuentes, el lock y los scripts permiten repetir el proceso. No se promete igualdad binaria entre builds. La revisión ampliada invoca los botones reales de Tk con respuestas controladas de diálogos, incluyendo archivos, ejemplos, tutorial, modelos, sensibilidad, benchmark, EXP 01 a 15 y exportación. Otra máquina Windows y una revisión de todos los diálogos nativos aportarían evidencia adicional.
+Las fuentes, el lock y los scripts permiten repetir el proceso. No se promete igualdad binaria entre builds. La revisión ampliada invoca los botones reales de Tk con respuestas controladas de diálogos, incluyendo archivos, ejemplos, tutorial, modelos, sensibilidad, benchmark, EXP 01 a 15 y exportación. Otra máquina Windows y la revisión manual de todos los diálogos nativos aportarían evidencia adicional.
 
-La carpeta Entregables contiene únicamente los cuatro DOCX, el ZIP portátil y el ZIP de código fuente. El EXE y sus dependencias están dentro del ZIP portátil. Extraiga el paquete fuera de Entregables y conserve la carpeta BikeEnergyLab completa. Los registros de revisión y hashes de los seis archivos se guardan en results/delivery-1.0.0 del espacio de desarrollo. Ese directorio no forma parte de los ZIP.
+Los documentos Word se entregan por separado. El ZIP de fuentes contiene el código de la aplicación y los datos necesarios para ejecutar los ejemplos desde Python. El ZIP Windows contiene el EXE y _internal. Extraiga este paquete y conserve ambos elementos juntos. Los registros de pruebas y los hashes de entrega se guardan en el proyecto de desarrollo, fuera de los ZIP.
 
 ## 9. Glosario y referencias académicas
 

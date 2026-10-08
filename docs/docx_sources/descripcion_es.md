@@ -7,11 +7,11 @@
 | Nombre y versión | BikeEnergyLab 1.0.0 |
 | Tipo de producto | Framework científico de modelado energético de bicicletas eléctricas |
 | Autores | Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández |
-| Año y revisión | 2026, corrección de auditoría del 8 de octubre |
+| Año y versión | 2026, versión 1.0.0 |
 | Contacto | fjburgosf@gmail.com |
 | Lenguaje y distribución | Python 3.11 o superior. Aplicación portátil Windows x64 |
 | Estado | Funcional y verificado mediante pruebas de software y datos sintéticos |
-| Derechos | Los establecidos en LICENSE. No se presume una licencia abierta |
+| Derechos | Derechos reservados a los autores. No se presume una licencia abierta |
 
 ## 2. Descripción general del software
 
@@ -25,7 +25,7 @@ El ejecutable requiere Windows x64 y conservar su carpeta _internal. Funciona si
 
 ### 2.2 Justificación de los requisitos
 
-NumPy y SciPy proporcionan cálculo e identificación. Pandas procesa datos. Scikit-learn implementa regresión y aprendizaje residual. Matplotlib genera figuras. PyYAML conserva configuraciones. La distribución onedir incluye estas dependencias, sus licencias y los datos de SciPy necesarios para Sobol. El costo de cálculo crece con las rutas, segmentos, muestras y protocolos seleccionados. No se atribuye un tiempo universal de ejecución.
+NumPy y SciPy proporcionan cálculo e identificación. Pandas procesa datos. Scikit-learn implementa regresión y aprendizaje residual. Matplotlib genera figuras. PyYAML conserva configuraciones. La distribución onedir incluye estas dependencias y los datos de SciPy necesarios para Sobol. El costo de cálculo crece con las rutas, segmentos, muestras y protocolos seleccionados. No se atribuye un tiempo universal de ejecución.
 
 ## 3. Objetivos y área de aplicación
 
@@ -53,7 +53,7 @@ CGPRA combina física calibrada y regresión de residuos por ruta. Su compuerta 
 
 La configuración utiliza dataclasses y YAML validado. Los módulos separan rutas, física, motor, batería, calibración, modelos residuales, incertidumbre y presentación. Nuevos mapas o curvas deben conservar las unidades, registrar sus límites y aportar pruebas apropiadas. La API permite reutilizar el núcleo sin abrir la interfaz gráfica.
 
-Los scripts de distribución y generación documental forman parte de las fuentes. Las plantillas de estilo conservadas y las capturas permiten reproducir los documentos. La documentación, los paquetes y sus hashes deben actualizarse conjuntamente después de cada cambio.
+El proyecto de desarrollo conserva los scripts de distribución y las fuentes documentales. Las plantillas de estilo y las capturas permiten reproducir los documentos. Los archivos entregados y sus hashes se actualizan conjuntamente cuando cambia la distribución.
 
 ## 6. Robustez desempeño y consistencia
 
@@ -63,7 +63,7 @@ La configuración rechaza secciones y campos desconocidos, verifica límites y c
 
 ### 6.2 Desempeño
 
-La revisión histórica registra 80 pruebas de regresión y 114 comprobaciones de interfaz en fuentes y 114 en el ejecutable. El 8 de octubre se volvió a completar la suite de 80 pruebas. Los logs, reportes y hashes pertinentes están dentro de ambos ZIP en results. El wheel aislado y el EXE coincidieron en predicciones con tolerancia de 1e-8. Estas comprobaciones verifican implementación y empaquetado, y no establecen tiempos de respuesta ni exactitud física universal.
+Las pruebas de software registran 80 pruebas de regresión y 114 comprobaciones de interfaz en fuentes y 114 en el ejecutable. La suite completa de 80 pruebas se repitió el 8 de octubre de 2026. Los registros de prueba se conservan en el proyecto de desarrollo, fuera de los ZIP entregados. El wheel aislado y el EXE coincidieron en predicciones con tolerancia de 1e-8. Estas comprobaciones verifican implementación y empaquetado, no exactitud física universal.
 
 ### 6.3 Consistencia y reproducibilidad
 
@@ -87,15 +87,15 @@ La entrega comprobada incluye Windows x64 y ejecución Python en este equipo. La
 
 ### 9.2 Dependencias relevantes
 
-Los requisitos mínimos están en pyproject.toml y las versiones usadas en requirements-lock.txt. El paquete portátil incluye intérprete, recursos Tk/Matplotlib, DLL, metadatos, datos de SciPy y avisos de terceros. _internal debe permanecer junto al EXE.
+Los requisitos mínimos están en pyproject.toml y las versiones usadas en requirements-lock.txt. El paquete portátil incluye BikeEnergyLab.exe y la carpeta _internal con intérprete, recursos Tk/Matplotlib, DLL, metadatos y datos de SciPy. _internal debe permanecer junto al EXE. Los nueve ejemplos y el tutorial están integrados en la aplicación.
 
 ### 9.3 Portabilidad de resultados
 
-CSV, YAML, JSON y figuras permiten analizar resultados sin depender de la sesión abierta. La portabilidad requiere conservar mapas, rutas y metadatos copiados. El ZIP de fuentes incluye configuración, pruebas, scripts, documentos y componentes de estilo.
+CSV, YAML, JSON y figuras permiten analizar resultados sin depender de la sesión abierta. La portabilidad requiere conservar mapas, rutas y metadatos copiados. El ZIP de fuentes contiene el código de la aplicación, configuraciones, datos sintéticos de ejemplo, un script de ejemplos y los metadatos mínimos de instalación.
 
 ## 10. Documentación y soporte técnico
 
-La entrega incluye manual de usuario ilustrado, manual técnico con metodología científica, descripción del software y título/funciones en Word. Entregables contiene únicamente estos cuatro DOCX, el ZIP de fuentes y el ZIP portátil. El ZIP portátil incluye el EXE con sus dependencias. Se extrae fuera de Entregables para ejecutar el programa.
+El manual de usuario, el manual técnico con metodología científica, la descripción del software y el documento de título y funciones se entregan por separado en Word. El ZIP de fuentes contiene solo el código necesario para instalar el proyecto y ejecutar sus ejemplos. El ZIP Windows contiene el EXE y sus dependencias, sin manuales ni archivos de generación documental. Se extrae antes de ejecutar el programa.
 
 El contacto del proyecto es fjburgosf@gmail.com. Al informar un problema, conservar la versión, YAML, datos, mensaje de error y carpeta de exportación. Revisar antes la sección de solución de problemas del manual.
 
@@ -135,10 +135,10 @@ CGPRA es una formulación provisional evaluable. La integración de física, cor
 
 ## 14. Aportes y autoría
 
-Los autores identificados del software son Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Esta entrega comprende el núcleo científico, interfaz, ejemplos, tutorial, pruebas, distribución y documentación. No se asignan contribuciones individuales adicionales sin una declaración de los autores. Conservar CITATION.cff y las condiciones de LICENSE al citar o distribuir.
+Los autores identificados del software son Francisco Javier Burgos Flórez y Juan Guillermo Popayán Hernández. Esta entrega comprende el núcleo científico, interfaz, ejemplos, tutorial, pruebas, distribución y documentación. No se asignan contribuciones individuales adicionales sin una declaración de los autores. Cualquier cita o distribución debe respetar los derechos de los autores.
 
 ## Referencias
 
-Las referencias bibliográficas verificadas del proyecto se mantienen en docs/references.md y se desarrollan en el manual técnico de BikeEnergyLab. Las fuentes de evidencia conservan los protocolos del 4 de octubre de 2026 y su identidad histórica. La revisión editorial del 7 de octubre no constituye una nueva validación física.
+Las referencias bibliográficas del proyecto se desarrollan en el manual técnico de BikeEnergyLab. Los protocolos sintéticos del 4 de octubre de 2026 conservan su identidad histórica en el proyecto de desarrollo. No constituyen una validación física con bicicletas reales.
 
 {{SOURCE}}
