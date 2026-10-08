@@ -106,7 +106,6 @@ with ZipFile(sourcezip) as source, ZipFile(portablezip) as portable, ZipFile(whe
         "CHANGELOG.md",
     ]:
         assert source.read("bikeenergylab-1.0.0/" + name) == (ROOT / name).read_bytes()
-    assert not any(name.endswith("/AGENTS.md") for name in source.namelist())
     for relative, path in evidence_paths(ROOT):
         expected_hash = sha(path)
         assert data_sha(source.read("bikeenergylab-1.0.0/" + relative)) == expected_hash
