@@ -6,34 +6,35 @@
   "version": "1.0.0",
   "source_uploaded": true,
   "branch": "main",
-  "source_commit": "15acd1775715858835ffe5f093e710715689c033",
-  "documentation_revision": "editorial-2026-10-07",
-  "documentation_commit": "15acd1775715858835ffe5f093e710715689c033",
+  "source_commit": "68b4297418cc0b81950b8b228f6998e3c0616ff4",
+  "documentation_revision": "delivery-2026-10-08",
+  "documentation_commit": "68b4297418cc0b81950b8b228f6998e3c0616ff4",
   "source_sha256": "25a63aafb85d6936b886c5b15f9f5addc3086267861aad7702fe4b53fa98338f",
   "final_documents_uploaded": true,
   "remote_commit_verified": true,
-  "completed_utc": "2026-10-07T23:40:12.322301+00:00",
+  "completed_utc": "2026-10-08T13:25:43.893901+00:00",
   "documents": [
     {
       "path": "docs/docx/Manual_de_usuario_BikeEnergyLab_1.0.0.docx",
-      "sha256": "7e9cd7bc6e6081854d240a1ca06b3265555e60df30ca8b685043b483cf4d102e"
+      "sha256": "55e3a3a1436f55843c5b7fb59aee48c5e6b70e2e310b7fd1dfcad792c2aa6db5"
     },
     {
       "path": "docs/docx/Manual_tecnico_BikeEnergyLab_1.0.0.docx",
-      "sha256": "ebcbceff97747954fe418886e9d0bd41adeb2133c327c197cb3bf82261eca263"
+      "sha256": "225e9bc1c1d77662401d5c3160ba124a5e2d06d6cbf3982c070adb9c074aa52c"
     },
     {
       "path": "docs/docx/Metodologia_cientifica_BikeEnergyLab_1.0.0.docx",
-      "sha256": "81f8c59cbcc142ad2698a733af743c4f657fe011286cdbbee14f9c8c5010ea02"
+      "sha256": "59d5e94451746adb123740ae24dd93eff54fb20c911e1dbf1b0e604e6a06dd1b"
     },
     {
       "path": "docs/docx/Descripcion_del_Software_BikeEnergyLab_1.0.0.docx",
-      "sha256": "a4f7621b9bbb7c79a0f3c4909237c0b26a4a53d4045e5f4bc0904b076160e2d7"
+      "sha256": "9d0bee1cb01c9049e9bae25b148e3d90ca991f905098a6d6de6914b6537b2924"
     },
     {
       "path": "docs/docx/Titulo_y_descripcion_de_funciones_BikeEnergyLab_1.0.0.docx",
-      "sha256": "17ae350d0e291c74b9fd62f80c107e87bc43fb8ce43f0c1d5633088271dfdd39"
+      "sha256": "6d53110e9683b743538a115814eca0628a81bcf900317b1205776d308b11e98c"
     }
   ],
-  "delivery_omits_code_location": true
+  "delivery_omits_code_location": true,
+  "delivery_file_count": 7
 }
